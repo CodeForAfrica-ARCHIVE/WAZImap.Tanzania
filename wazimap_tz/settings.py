@@ -7,36 +7,36 @@ from wazimap.settings import *  # noqa
 
 
 # insert our overrides before both census and wazimap
-INSTALLED_APPS = ['wazimap_ke'] + INSTALLED_APPS
+INSTALLED_APPS = ['wazimap_tz'] + INSTALLED_APPS
 
 
-DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://censusreporter_ke:censusreporter_ke@localhost/censusreporter_ke')
+DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://wazimap:wazimap@localhost/wazimap_tz')
 DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 
 # Localise this instance of Wazimap
-WAZIMAP['name'] = 'Wazimap Kenya'
-WAZIMAP['url'] = 'http://kenya.wazimap.org'
-WAZIMAP['country_code'] = 'KE'
-WAZIMAP['profile_builder'] = 'wazimap_ke.profiles.get_census_profile'
+WAZIMAP['name'] = 'Wazimap Tanzania'
+WAZIMAP['url'] = 'http://tanzania.wazimap.org'
+WAZIMAP['country_code'] = 'TZ'
+WAZIMAP['profile_builder'] = 'wazimap_tz.profiles.get_census_profile'
 WAZIMAP['levels'] = {
     'country': {
         'plural': 'countries',
-        'children': ['county'],
+        'children': ['region'],
     },
-    'county': {
-        'plural': 'counties',
+    'region': {
+        'plural': 'regions',
     }
 }
 WAZIMAP['comparative_levels'] = ['country']
 WAZIMAP['geometry_data'] = {
     'country': 'geo/country.topojson',
-    'county': 'geo/county.topojson',
+    'region': 'geo/region.topojson',
 }
 
 WAZIMAP['ga_tracking_id'] = 'UA-44795600-8'
 WAZIMAP['twitter'] = '@Code4Africa'
 
-WAZIMAP['map_centre'] = [0.3051933453207569, 37.908818734483155]
+WAZIMAP['map_centre'] = [-6.1523563,35.6754813]
 WAZIMAP['map_zoom'] = 6

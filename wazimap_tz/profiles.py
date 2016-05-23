@@ -6,7 +6,7 @@ from wazimap.data.utils import get_session, calculate_median, merge_dicts, get_s
 
 
 # ensure tables are loaded
-import wazimap_ke.tables  # noqa
+import wazimap_tz.tables  # noqa
 
 
 PROFILE_SECTIONS = (
@@ -14,6 +14,8 @@ PROFILE_SECTIONS = (
     'education',
     'employment',
     'households',
+    'literacy',
+    'attendance',
 )
 
 EMPLOYMENT_RECODES = OrderedDict([
@@ -55,8 +57,8 @@ def get_census_profile(geo_code, geo_level, profile_name=None):
 
         # tweaks to make the data nicer
         # show X largest groups on their own and group the rest as 'Other'
-        group_remainder(data['households']['roofing_material_distribution'], 5)
-        group_remainder(data['households']['wall_material_distribution'], 5)
+        #group_remainder(data['households']['roofing_material_distribution'], 5)
+        #group_remainder(data['households']['wall_material_distribution'], 5)
 
         return data
 
@@ -262,4 +264,110 @@ def get_households_profile(geo_code, geo_level, session):
         'roofing_material_distribution': roofing_dist,
         'floor_material_distribution': floor_dist,
         'wall_material_distribution': wall_dist,
+    }
+
+def get_literacy_profile(geo_code, geo_level, session):
+    # literacy tests stats
+    literacy_data, _ = get_stat_data(
+        'literacy test', geo_level, geo_code, session)
+
+    all_subjects = \
+        literacy_data['All subject tests']['numerators']['this']
+
+    english_test_dist = \
+        literacy_data['English literacy test']['numerators']['this']
+    english_test_dist = {
+        'Passed': {
+            'name': 'Passed',
+            'numerators': {'this': english_test_dist},
+            'values': {'this': round(english_test_dist, 2)},
+        },
+        'Failed': {
+            'name': 'Failed',
+            'numerators': {'this': 100 - english_test_dist},
+            'values': {'this': 100 - round(english_test_dist, 2)},
+        }
+    }
+
+    swahili_test_dist = literacy_data['Swahili literacy test']['numerators']['this']
+    swahili_test_dist = {
+        'Passed': {
+            'name': 'Passed',
+            'numerators': {'this': swahili_test_dist},
+            'values': {'this': round(swahili_test_dist, 2)},
+        },
+        'Failed': {
+            'name': 'Failed',
+            'numerators': {'this': 100 - swahili_test_dist},
+            'values': {'this': 100 - round(swahili_test_dist, 2)},
+        }
+    }
+
+    numeracy_test_dist = \
+        literacy_data['Numeracy test']['numerators']['this']
+    numeracy_test_dist = {
+        'Passed': {
+            'name': 'Passed',
+            'numerators': {'this': numeracy_test_dist},
+            'values': {'this': round(numeracy_test_dist, 2)},
+        },
+        'Failed': {
+            'name': 'Failed',
+            'numerators': {'this': 100 - numeracy_test_dist},
+            'values': {'this': 100 - round(numeracy_test_dist, 2)},
+        }
+    }
+
+    return  {
+        'literacy_data': literacy_data,
+        'english_test_dist': english_test_dist,
+        'swahili_test_dist': swahili_test_dist,
+        'numeracy_test_dist': numeracy_test_dist,
+        'all_subjects_dist': {
+            'name': 'Passed all subject tests',
+            'numerators': {'this': all_subjects},
+            'values': {'this': round(all_subjects, 2)}
+        }
+    }
+
+def get_attendance_profile(geo_code, geo_level, session):
+    # literacy tests stats
+    attendance_data, _ = get_stat_data(
+        'school attendance', geo_level, geo_code, session)
+
+    print attendance_data
+    print '-' * 30
+    dropped_out_dist = \
+        attendance_data['Dropped out of primary school']['numerators']['this']
+    dropped_out_dist = {
+        'Dropped out': {
+            'name': 'Dropped out',
+            'numerators': {'this': dropped_out_dist},
+            'values': {'this': round(dropped_out_dist, 2)},
+        },
+        'In school': {
+            'name': 'In school',
+            'numerators': {'this': 100 - dropped_out_dist},
+            'values': {'this': 100 - round(dropped_out_dist, 2)},
+        }
+    }
+
+    out_of_school_dist = attendance_data['Out of school']['numerators']['this']
+    out_of_school_dist = {
+        'Out of school': {
+            'name': 'Out of school',
+            'numerators': {'this': out_of_school_dist},
+            'values': {'this': round(out_of_school_dist, 2)},
+        },
+        'In school': {
+            'name': 'In school',
+            'numerators': {'this': 100 - out_of_school_dist},
+            'values': {'this': 100 - round(out_of_school_dist, 2)},
+        }
+    }
+
+    return  {
+        'attendance_data': attendance_data,
+        'dropped_out_dist': dropped_out_dist,
+        'out_of_school_dist': out_of_school_dist,
     }

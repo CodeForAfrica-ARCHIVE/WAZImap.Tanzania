@@ -122,4 +122,43 @@
     </div>
 </article>
 
+<hr>
+<article class="clearfix">
+    <h2><a href="http://www.uwezo.net/wp-content/uploads/2012/08/TZ_Uwezo2012ALAReport.pdf">Uwezo Annual Assessment Report 2014</a></h2>
+</article>
+
+<article id="literacy-test" class="clearfix">
+    <header class="section-contents">
+        <h1>Literacy tests</h1>
+    </header>
+    <div class="section-container">
+         <section class="clearfix stat-row">
+            <div class="column-third">
+                {% include 'profile/_blocks/_stat_list.html' with stat=literacy.all_subjects_dist stat_type='percentage' %}
+            </div>
+         </section>
+
+         <section class="clearfix stat-row">
+            <div class="column-third"  id="chart-pie-literacy-english_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing English literacy tests"></div>
+            <div class="column-third"  id="chart-pie-literacy-swahili_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing Swahili literacy tests"></div>
+            <div class="column-third"  id="chart-pie-literacy-numeracy_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing numeracy literacy tests"></div>
+        </section>
+
+    </div>
+</article>
+
+<article id="attendance" class="clearfix">
+    <header class="section-contents">
+        <h1>School attendance</h1>
+    </header>
+    <div class="section-container">
+
+         <section class="clearfix stat-row">
+            <div class="column-half"  id="chart-pie-attendance-dropped_out_dist" data-stat-type="percentage" data-chart-title="Percentage of children aged 9-13 who dropped out of primary school"></div>
+            <div class="column-half"  id="chart-pie-attendance-out_of_school_dist" data-stat-type="percentage" data-chart-title="Percentage of children aged 7-16 who are not in school"></div>
+        </section>
+
+    </div>
+</article>
+
 {% endblock %}

@@ -12,3 +12,5 @@ FieldTable(['main type of lighting fuel'], universe='Households', table_per_leve
 FieldTable(['main type of floor material'], universe='Households', table_per_level=False)
 FieldTable(['main type of wall material'], universe='Households', table_per_level=False)
 FieldTable(['main type of roofing material'], universe='Households', table_per_level=False)
+FieldTable(['literacy test'], table_per_level=False)
+FieldTable(['school attendance'], table_per_level=False)
