@@ -35,7 +35,7 @@ CREATE TABLE health_facilities_type (
 -- Data for Name: health_facilities_type; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY	health_facilities_type (geo_level, geo_code, type, total) FROM stdin;
+COPY health_facilities_type (geo_level, geo_code, type, total) FROM stdin;
 country	TZ	Stand Alone VCT Centre	174
 country	TZ	Health Training Institution	7
 country	TZ	Sub District Hospital	137
@@ -62,39 +62,6 @@ country	TZ	District Health Office	4
 country	TZ	Dispensary	4624
 country	TZ	Dental Clinic	30
 country	TZ	Blood Bank	1
-region	30	Dispensary	188
-region	30	District Hospital	4
-region	30	Health Centre	21
-region	30	Medical Clinic	13
-region	30	Nursing Home	1
-region	30	Other Hospital	2
-region	30	Sub District Hospital	1
-region	30	Health Training Institution	1
-region	30	Stand Alone VCT Centre	1
-region	36	Dispensary	112
-region	36	District Health Office	1
-region	36	District Hospital	1
-region	36	Health Centre 	15
-region	36	Medical Clinic	2
-region	36	Other Hospital	2
-region	36	Sub District Hospital	2
-region	36	Stand Alone VCT Centre	3
-region	39	Dispensary	98
-region	39	District Hospital	6
-region	39	Health Centre	18
-region	39	Stand Alone Labs	1
-region	39	Medical Clinic	37
-region	39	Other Hospital	1
-region	39	Sub District Hospital	5
-region	39	Stand Alone VCT Centre	1
-region	40	Dispensary	54
-region	40	District Hospital	5
-region	40	Health Centre	14
-region	40	Medical Clinic	17
-region	40	Nursing Home	4
-region	40	Other Hospital	1
-region	40	Sub District Hospital	1
-region	40	VCT Centre	1
 region	28	Dispensary	90
 region	28	District Hospital	2
 region	28	Health Centre	22
@@ -113,7 +80,7 @@ region	14	Provincial General Hospital	1
 region	14	Regional Blood Transfusion Centre	1
 region	14	Sub District Hospital	2
 region	14	Health Training Institution  	1
-region	14	Stand Alone VCT Centre 	
+region	14	Stand Alone VCT Centre 	6
 region	7	Dispensary	62
 region	7	District Hospital	3
 region	7	Health Centre	22
@@ -123,55 +90,6 @@ region	7	Nursing Home	6
 region	7	Other Hospital	6
 region	7	Provincial General Hospital	1
 region	7	Sub District Hospital	4
-region	43	Dispensary	123
-region	43	District Hospital	5
-region	43	Health Centre	48
-region	43	Medical Centre	1
-region	43	Medical Clinic	20
-region	43	Nursing Home	6
-region	43	Other Hospital	1
-region	43	Sub District Hospital	7
-region	43	Stand Alone VCT Centre	15
-region	11	Dispensary	37
-region	11	District Hospital	2
-region	11	Health Centre	5
-region	11	Medical Clinic	3
-region	11	Nursing Home	2
-region	11	Other Hospital	1
-region	34	Dental Clinic	5
-region	34	Dispensary	91
-region	34	District Hospital	2
-region	34	Health Centre	28
-region	34	Health Project	1
-region	34	Stand Alone Labs	1
-region	34	Maternity Home	3
-region	34	Medical Centre	1
-region	34	Medical Clinic	143
-region	34	Nursing Home	11
-region	34	Other Hospital	9
-region	34	Radiology Unit	1
-region	34	Sub District Hospital	1
-region	34	Stand Alone VCT Centre	5
-region	37	Dispensary	120
-region	37	District Hospital	4
-region	37	Health Centre	48
-region	37	Health Programme	1
-region	37	Maternity Home	1
-region	37	Medical Clinic	69
-region	37	Nursing Home	9
-region	37	Other Hospital	4
-region	37	Provincial General Hospital	1
-region	37	Sub District Hospital	7
-region	37	Stand Alone VCT Centre	3
-region	35	Dispensary	152
-region	35	District Hospital	4
-region	35	Health Centre	14
-region	35	Medical Centre	1
-region	35	Medical Clinic	10
-region	35	Unlisted	1
-region	35	Other Hospital	8
-region	35	Sub District Hospital	3
-region	35	Stand Alone VCT Centre	5
 region	22	Dispensary	135
 region	22	District Hospital	3
 region	22	Health Centre	40
@@ -205,24 +123,6 @@ region	20	Nursing Home	9
 region	20	Other Hospital	1
 region	20	Radiology Unit	1
 region	20	Sub District Hospital	3
-region	45	Dispensary	85
-region	45	District Hospital	8
-region	45	Health Centre	27
-region	45	Medical Clinic	22
-region	45	Nursing Home	4
-region	45	Other Hospital	7
-region	45	Sub District Hospital	7
-region	45	Stand Alone VCT Centre	1
-region	42	Dispensary	92
-region	42	District Hospital	3
-region	42	Health Centre	32
-region	42	Health Programme	1
-region	42	Medical Clinic	34
-region	42	Nursing Home	6
-region	42	Other Hospital	12
-region	42	Provincial General Hospital	1
-region	42	Sub District Hospital	7
-region	42	Stand Alone VCT Centre	1
 region	15	Dispensary	269
 region	15	District Hospital	3
 region	15	Health Centre	37
@@ -308,16 +208,6 @@ region	12	Radiology Unit	2
 region	12	Sub District Hospital	9
 region	12	Health Training Institution	1
 region	12	Stand Alone VCT Centre	2
-region	44	Dispensary	112
-region	44	District Hospital	4
-region	44	Health Centre	25
-region	44	Health Project	2
-region	44	Maternity Home	1
-region	44	Medical Clinic	42
-region	44	Nursing Home	6
-region	44	Other Hospital	8
-region	44	Sub District Hospital	6
-region	44	Stand Alone VCT Centre	7
 region	1	Dispensary	43
 region	1	District Hospital	2
 region	1	Health Centre	12
@@ -330,6 +220,19 @@ region	1	Other Hospital	16
 region	1	Provincial General Hospital	1
 region	1	Regional Blood Transfusion Centre	1
 region	1	Stand Alone VCT Centre	9
+region	8	Dispensary	72
+region	8	District Hospital	4
+region	8	Health Centre	27
+region	8	Medical Centre	1
+region	8	Medical Clinic	42
+region	8	Nursing Home	4
+region	8	Other Hospital	1
+region	8	Sub District Hospital	6
+region	24	Dispensary	97
+region	24	District Hospital	2
+region	24	Health Centre	7
+region	24	Medical Clinic	15
+region	24	Other Hospital	1
 region	21	Dispensary	130
 region	21	District Hospital	2
 region	21	Health Centre	17
@@ -339,62 +242,6 @@ region	21	Medical Centre	1
 region	21	Medical Clinic	118
 region	21	Nursing Home	3
 region	21	Other Hospital	3
-region	21	Sub District Hospital	5
-region	47	Dental Clinic	10
-region	47	Dispensary	195
-region	47	District Health Office	1
-region	47	District Hospital	3
-region	47	Eye Centre	2
-region	47	Eye Clinic	1
-region	47	Health Centre	90
-region	47	Health Programme	5
-region	47	Health Project	3
-region	47	Stand Alone Labs	13
-region	47	Maternity Home	15
-region	47	Medical Centre	10
-region	47	Medical Clinic	440
-region	47	National Referral Hospital	2
-region	47	Nursing Home	25
-region	47	Other Hospital	39
-region	47	Radiology Unit	1
-region	47	Health Training Institution	3
-region	47	Stand Alone VCT Centre	55
-region	32	Dispensary	161
-region	32	District Hospital	3
-region	32	Health Centre	47
-region	32	Health Project	2
-region	32	Laboratory (Stand-alone)	1
-region	32	Maternity Home	7
-region	32	Medical Clinic	159
-region	32	Unlisted	1
-region	32	Nursing Home	12
-region	32	Other Hospital	16
-region	32	Provincial General Hospital	1
-region	32	Sub District Hospital	3
-region	32	Stand Alone VCT Centre	10
-region	29	Dispensary	153
-region	29	District Hospital	2
-region	29	Health Centre	19
-region	29	Health Programme	1
-region	29	Medical Clinic	17
-region	29	Other Hospital	2
-region	29	Rural Health Training Centre	1
-region	29	Sub District Hospital	3
-region	29	Stand Alone VCT Centre	7
-region	33	Dispensary	108
-region	33	District Hospital	3
-region	33	Health Centre	26
-region	33	Maternity Home	1
-region	33	Medical Clinic	15
-region	33	Nursing Home	1
-region	33	Other Hospital	5
-region	33	Sub District Hospital	1
-region	33	Stand Alone VCT Centre	3
-region	46	Dispensary	58
-region	46	District Hospital	3
-region	46	Health Centre	44
-region	46	Medical Clinic	23
-region	46	Nursing Home	3
 region	46	Sub District Hospital	5
 region	18	Dispensary	49
 region	18	District Hospital	1
@@ -424,15 +271,6 @@ region	25	Health Centre	5
 region	25	Medical Clinic	15
 region	25	Other Hospital	1
 region	25	SubDistrict Hospital	1
-region	41	Dispensary	99
-region	41	District Hospital	2
-region	41	Health Centre	39
-region	41	Maternity Home	1
-region	41	Medical Clinic	17
-region	41	Nursing Home	1
-region	41	Other Hospital	6
-region	41	Sub District Hospital	4
-region	41	Stand Alone VCT Centre	5
 region	6	Dispensary	47
 region	6	District Hospital	3
 region	6	Health Centre	17
@@ -486,32 +324,9 @@ region	27	National Referral Hospital	1
 region	27	Nursing Home	1
 region	27	Other Hospital	9
 region	27	Sub District Hospital	1
-region	27	Stand Alone VCT Centre 	2
-region	38	Dispensary	29
-region	38	District Hospital	1
-region	38	Eye Centre	1
-region	38	Health Centre	21
-region	38	Medical Centre	2
-region	38	Medical Clinic	30
-region	38	Nursing Home	2
-region	38	Other Hospital	2
-region	38	Sub District Hospital	2
-region	38	Stand Alone VCT Centre	3
-region	8	Dispensary	72
-region	8	District Hospital	4
-region	8	Health Centre	27
-region	8	Medical Centre	1
-region	8	Medical Clinic	42
-region	8	Nursing Home	4
-region	8	Other Hospital	1
-region	8	Sub District Hospital	6
-region	24	Dispensary	97
-region	24	District Hospital	2
-region	24	Health Centre	7
-region	24	Medical Clinic	15
-region	24	Other Hospital	1
-region	24	Sub District Hospital	2
+region	27	Stand Alone VCT Centre 	29
 \.
+--
 --
 -- Name: health_facilities_type_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --

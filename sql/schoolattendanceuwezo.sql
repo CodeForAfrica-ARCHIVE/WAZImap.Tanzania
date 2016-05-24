@@ -25,7 +25,7 @@ SET default_with_oids = false;
 
 CREATE TABLE schoolattendance (
     geo_level character varying(15) NOT NULL,
-    geo_code character varying(10) NOT NULL,
+    geo_code character varying(255) NOT NULL,
     "school attendance" character varying(128) NOT NULL,
     total integer NOT NULL
 );
@@ -38,7 +38,7 @@ CREATE TABLE schoolattendance (
 COPY schoolattendance (geo_level, geo_code, "school attendance", total) FROM stdin;
 country	TZ	dropped out of primary school	15
 region	1	dropped out of primary school	2
-region	2	dropped out of primary school	0
+region	2	dropped out of primary school	5
 region	3	dropped out of primary school	23
 region	4	dropped out of primary school	29
 region	5	dropped out of primary school	24
@@ -92,7 +92,7 @@ region	24	out of school	25
 region	25	out of school	12
 region	26	out of school	1
 region	27	out of school	26
-/.
+\.
 --
 -- Name: schoolattendance_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
