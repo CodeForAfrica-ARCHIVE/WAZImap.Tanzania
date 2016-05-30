@@ -11,7 +11,7 @@ INSTALLED_APPS = ['wazimap_tz'] + INSTALLED_APPS
 
 
 #DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://wazimap_tz:824gYnKqil4NigNAUanVaP@wazimap.cfgmtx8ishfx.eu-west-1.rds.amazonaws.com/wazimap_tz')
-DATABASE_URL = os.environ.get('DATABASE_URL', 'wazimap://wazimap:127.0.0.1/wazimap_tz')
+DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://wazimap:wazimap@localhost/wazimap_tz')
 DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
