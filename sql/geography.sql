@@ -34,12 +34,13 @@ CREATE TABLE wazimap_geography (
     id integer NOT NULL,
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    name character varying(20) NOT NULL,
+    name character varying(40) NOT NULL,
     year integer,
     osm_area_id integer,
     square_kms double precision,
     parent_level character varying(15),
-    parent_code character varying(10)
+    parent_code character varying(10),
+    long_name character varying(128) NOT NULL
 );
 
 
@@ -73,55 +74,35 @@ ALTER TABLE ONLY wazimap_geography ALTER COLUMN id SET DEFAULT nextval('wazimap_
 -- Data for Name: wazimap_geography; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY wazimap_geography (id, geo_level, geo_code, name, year, osm_area_id, square_kms, parent_level, parent_code) FROM stdin;
-1	country	KE	Kenya	2009	662008	\N	\N	\N
-2	county	1	Mombasa	2009	662784	\N	country	KE
-3	county	2	Kwale	2009	509519	\N	country	KE
-4	county	3	Kilifi	2009	662783	\N	country	KE
-5	county	4	Tana River	2009	509533	\N	country	KE
-6	county	5	Lamu	2009	509521	\N	country	KE
-7	county	6	Taita-Taveta	2009	509532	\N	country	KE
-8	county	7	Garissa	2009	662782	\N	country	KE
-9	county	8	Wajir	2009	509538	\N	country	KE
-10	county	9	Mandera	2009	509522	\N	country	KE
-11	county	10	Marsabit	2009	509523	\N	country	KE
-12	county	11	Isiolo	2009	509513	\N	country	KE
-13	county	12	Meru	2009	509524	\N	country	KE
-14	county	13	Tharaka-Nithi	2009	509534	\N	country	KE
-15	county	14	Embu	2009	509511	\N	country	KE
-16	county	15	Kitui	2009	509518	\N	country	KE
-17	county	16	Machakos	2009	509501	\N	country	KE
-18	county	17	Makueni	2009	509502	\N	country	KE
-19	county	18	Nyandarua	2009	509528	\N	country	KE
-20	county	19	Nyeri	2009	509529	\N	country	KE
-21	county	20	Kirinyaga	2009	509517	\N	country	KE
-22	county	21	Murang'a	2009	509526	\N	country	KE
-23	county	22	Kiambu	2009	509515	\N	country	KE
-24	county	23	Turkana	2009	509536	\N	country	KE
-25	county	24	West Pokot	2009	509539	\N	country	KE
-26	county	25	Samburu	2009	509530	\N	country	KE
-27	county	26	Trans Nzoia	2009	509535	\N	country	KE
-28	county	27	Uasin Gishu	2009	509537	\N	country	KE
-29	county	28	Elgeyo-Marakwet	2009	509510	\N	country	KE
-30	county	29	Nandi	2009	509527	\N	country	KE
-31	county	30	Baringo	2009	509508	\N	country	KE
-32	county	31	Laikipia	2009	509520	\N	country	KE
-33	county	32	Nakuru	2009	509466	\N	country	KE
-34	county	33	Narok	2009	509385	\N	country	KE
-35	county	34	Kajiado	2009	662770	\N	country	KE
-36	county	35	Kericho	2009	509468	\N	country	KE
-37	county	36	Bomet	2009	509383	\N	country	KE
-38	county	37	Kakamega	2009	509514	\N	country	KE
-39	county	38	Vihiga	2009	509473	\N	country	KE
-40	county	39	Bungoma	2009	509509	\N	country	KE
-41	county	40	Busia	2009	509472	\N	country	KE
-42	county	41	Siaya	2009	509471	\N	country	KE
-43	county	42	Kisumu	2009	509469	\N	country	KE
-44	county	43	Homa Bay	2009	509464	\N	country	KE
-45	county	44	Migori	2009	662769	\N	country	KE
-46	county	45	Kisii	2009	509384	\N	country	KE
-47	county	46	Nyamira	2009	509470	\N	country	KE
-48	county	47	Nairobi	2009	509503	\N	country	KE
+COPY wazimap_geography (id, geo_level, geo_code, name, year, osm_area_id, square_kms, parent_level, parent_code, long_name) FROM stdin;
+1	country	TZ	Tanzania	2009	13	5117	/N	/N	Tanzania
+2	region	1	Arusha	2009	40648	13473	country	TZ	Arusha
+3	region	2	Dar-es-salaam	2009	49956	23198	country	TZ	Dar-es-salaam
+4	region	3	Dodoma	2009	46312	24523	country	TZ	Dodoma
+5	region	4	Iringa	2009	17953	15308	country	TZ	Iringa
+6	region	5	Kagera	2009	33917	10345	country	TZ	Kagera
+7	region	6	Kaskazini-Pemba	2009	31668	39319	country	TZ	Kaskazini-Pemba
+8	region	7	 Kaskazini-Unguja	2009	14434	10146	country	TZ	 Kaskazini-Unguja
+9	region	8	Kigoma	2009	6303	23612	country	TZ	Kigoma
+10	region	9	Kilimanjaro	2009	37763	12674	country	TZ	Kilimanjaro
+11	region	10	Kusini Pemba	2009	40126	31144	country	TZ	Kusini Pemba
+12	region	11	Lindi	2009	17743	31259	country	TZ	Lindi
+13	region	12	Manyara	2009	40145	22786	country	TZ	Manyara
+14	region	13	Mara	2009	7426	11133	country	TZ	Mara
+15	region	14	Mbeya	2009	15916	32637	country	TZ	Mbeya
+16	region	15	Morogoro	2009	44211	19069	country	TZ	Morogoro
+17	region	16	Mtwara	2009	43102	33695	country	TZ	Mtwara
+18	region	17	Mwanza	2009	5194	19323	country	TZ	Mwanza
+19	region	18	Pwani	2009	38757	27014	country	TZ	Pwani
+20	region	19	Rukwa	2009	35418	7896	country	TZ	Rukwa
+21	region	20	Ruvuma	2009	7120	31251	country	TZ	Ruvuma
+22	region	21	Shinyanga	2009	35555	9209	country	TZ	Shinyanga
+23	region	22	Simiyu	2009	8108	32399	country	TZ	Simiyu
+24	region	23	Singida	2009	21032	35420	country	TZ	Singida
+25	region	24	Tabora	2009	20684	25389	country	TZ	Tabora
+26	region	25	Tanga	2009	41562	18823	country	TZ	Tanga
+27	region	26	Zanzibar South and Central	2009	19811	40272	country	TZ	'Zanzibar South and Central'
+28	region	27	Zanzibar West	2009	28667	2031	country	TZ	'Zanzibar West'
 \.
 
 

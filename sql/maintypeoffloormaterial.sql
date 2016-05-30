@@ -271,11 +271,11 @@ region	24	earth	524
 region	24	other	81304
 region	24	tiles	11578
 region	24	wood	137
-country	KE	cement	8738097
-country	KE	earth	65762
-country	KE	other	4937121
-country	KE	tiles	3582001
-country	KE	wood	135692
+country	TZ	cement	8738097
+country	TZ	earth	65762
+country	TZ	other	4937121
+country	TZ	tiles	3582001
+country	TZ	wood	135692
 \.
 
 
