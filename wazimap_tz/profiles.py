@@ -16,6 +16,8 @@ PROFILE_SECTIONS = (
     'households',
     'literacy',
     'attendance',
+    'pupil_teacher_ratios',
+    'school_amenities',
 )
 
 EMPLOYMENT_RECODES = OrderedDict([
@@ -57,8 +59,8 @@ def get_census_profile(geo_code, geo_level, profile_name=None):
 
         # tweaks to make the data nicer
         # show X largest groups on their own and group the rest as 'Other'
-        #group_remainder(data['households']['roofing_material_distribution'], 5)
-        #group_remainder(data['households']['wall_material_distribution'], 5)
+        group_remainder(data['households']['roofing_material_distribution'], 5)
+        group_remainder(data['households']['wall_material_distribution'], 5)
 
         return data
 
@@ -331,12 +333,10 @@ def get_literacy_profile(geo_code, geo_level, session):
     }
 
 def get_attendance_profile(geo_code, geo_level, session):
-    # literacy tests stats
+    # attendance stats
     attendance_data, _ = get_stat_data(
         'school attendance', geo_level, geo_code, session)
 
-    print attendance_data
-    print '-' * 30
     dropped_out_dist = \
         attendance_data['Dropped out of primary school']['numerators']['this']
     dropped_out_dist = {
@@ -370,4 +370,69 @@ def get_attendance_profile(geo_code, geo_level, session):
         'attendance_data': attendance_data,
         'dropped_out_dist': dropped_out_dist,
         'out_of_school_dist': out_of_school_dist,
+    }
+
+def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):
+    # pupil teacher ratios
+    ratio_data, _ = get_stat_data(
+        'pupil teacher ratios', geo_level, geo_code, session)
+
+    pupil_teacher_ratio = ratio_data['Pupil teacher ratio']['numerators']['this']
+    pupils_per_textbook = ratio_data['Pupils per textbook']['numerators']['this']
+
+    pupil_attendance_rate_dist = \
+        ratio_data['Government school attendance rate']['numerators']['this']
+    pupil_attendance_rate_dist = get_dictionary("Attending school", "Absent", pupil_attendance_rate_dist)
+
+    teachers_absent_dist = ratio_data['Teachers absent']['numerators']['this']
+    teachers_absent_dist = get_dictionary("Teachers absent", "Teachers present", teachers_absent_dist)
+
+    return  {
+        'pupil_attendance_rate_dist': pupil_attendance_rate_dist,
+        'teachers_absent_dist': teachers_absent_dist,
+        'pupil_teacher_ratio': {
+            'name': 'For every one teacher there are ' +  str(pupil_teacher_ratio) + " pupils",
+            'numerators': {'this': pupil_teacher_ratio},
+            'values': {'this': pupil_teacher_ratio}
+        },
+        'pupils_per_textbook': {
+            'name': 'Pupils per textbook',
+            'numerators': {'this': pupils_per_textbook},
+            'values': {'this': pupils_per_textbook}
+        }
+    }
+
+def get_school_amenities_profile(geo_code, geo_level, session):
+    # school amenities
+    data, _ = get_stat_data('school amenity', geo_level, geo_code, session)
+
+    library_data = data['Library']['numerators']['this']
+    library_data = get_dictionary("Have a library", "Don't", library_data)
+
+    drinking_water_data = data['Drinking water']['numerators']['this']
+    drinking_water_data = get_dictionary("Have clean drinking water", "Don't", drinking_water_data)
+
+    feeding_program_data = data['Feeding program']['numerators']['this']
+    feeding_program_data = get_dictionary("Have a feeding program", "Don't", feeding_program_data)
+
+    return  {
+        'library_data': library_data,
+        'drinking_water_data': drinking_water_data,
+        'feeding_program_data': feeding_program_data,
+
+    }
+
+def get_dictionary(key_one, key_two, val):
+    #return a dictionary with the second dictionary being 100 - val
+    return {
+        key_one: {
+            'name': key_one,
+            'numerators': {'this': val},
+            'values': {'this': round(val, 2)},
+        },
+        key_two: {
+            'name': key_two,
+            'numerators': {'this': 100 - val},
+            'values': {'this': 100 - round(val, 2)},
+        }
     }

@@ -161,4 +161,40 @@
     </div>
 </article>
 
+<article id="pupil-teacher-ratios" class="clearfix">
+    <header class="section-contents">
+        <h1>Pupil teacher ratios</h1>
+    </header>
+    <div class="section-container">
+         <section class="clearfix stat-row">
+            <div class="column-half">
+                {% include 'profile/_blocks/_stat_list.html' with stat=pupil_teacher_ratios.pupil_teacher_ratio stat_type='number' %}
+            </div>
+             <div class="column-half">
+                {% include 'profile/_blocks/_stat_list.html' with stat=pupil_teacher_ratios.pupils_per_textbook stat_type='number' %}
+            </div>
+         </section>
+
+         <section class="clearfix stat-row">
+            <div class="column-half"  id="chart-pie-pupil_teacher_ratios-pupil_attendance_rate_dist" data-stat-type="percentage" data-chart-title="Pupil attendance rates in govt schools"></div>
+            <div class="column-half"  id="chart-pie-pupil_teacher_ratios-teachers_absent_dist" data-stat-type="percentage" data-chart-title="Average number of teachers absent"></div>
+        </section>
+
+    </div>
+</article>
+
+<article id="school_amenities" class="clearfix">
+    <header class="section-contents">
+        <h1>School amenities</h1>
+    </header>
+    <div class="section-container">
+         <section class="clearfix stat-row">
+            <div class="column-third"  id="chart-pie-school_amenities-library_data" data-stat-type="percentage" data-chart-title="Schools with libraries"></div>
+            <div class="column-third"  id="chart-pie-school_amenities-drinking_water_data" data-stat-type="percentage" data-chart-title="Schools with clean drinking water"></div>
+            <div class="column-third"  id="chart-pie-school_amenities-feeding_program_data" data-stat-type="percentage" data-chart-title="Schools with feeding programs"></div>
+        </section>
+
+    </div>
+</article>
+
 {% endblock %}
