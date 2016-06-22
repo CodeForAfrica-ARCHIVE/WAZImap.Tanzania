@@ -27,12 +27,17 @@ WAZIMAP['levels'] = {
     },
     'region': {
         'plural': 'regions',
+        'children': ['district'],
+    },
+    'district': {
+        'plural': 'districts'
     }
 }
 WAZIMAP['comparative_levels'] = ['country']
 WAZIMAP['geometry_data'] = {
     'country': 'geo/country.topojson',
     'region': 'geo/region.topojson',
+    'district': 'geo/district.topojson',
 }
 
 WAZIMAP['ga_tracking_id'] = 'UA-44795600-8'
