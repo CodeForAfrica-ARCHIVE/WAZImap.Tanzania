@@ -10,10 +10,10 @@ import wazimap_tz.tables  # noqa
 
 
 PROFILE_SECTIONS = (
-    'demographics',
-    'education',
-    'employment',
-    'households',
+    #'demographics',
+    #'education',
+    #'employment',
+    #'households',
     'literacy',
     'attendance',
     'pupil_teacher_ratios',
@@ -59,8 +59,8 @@ def get_census_profile(geo_code, geo_level, profile_name=None):
 
         # tweaks to make the data nicer
         # show X largest groups on their own and group the rest as 'Other'
-        group_remainder(data['households']['roofing_material_distribution'], 5)
-        group_remainder(data['households']['wall_material_distribution'], 5)
+        #group_remainder(data['households']['roofing_material_distribution'], 5)
+        #group_remainder(data['households']['wall_material_distribution'], 5)
 
         return data
 

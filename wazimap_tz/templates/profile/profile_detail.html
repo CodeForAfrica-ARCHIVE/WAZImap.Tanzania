@@ -7,120 +7,120 @@
 {% endblock %}
 
 {% block profile_detail %}
-<article id="demographics" class="clearfix">
-    <header class="section-contents">
-        <h1>Demographics</h1>
-    </header>
-    <div class="section-container">
+<!--<article id="demographics" class="clearfix">-->
+    <!--<header class="section-contents">-->
+        <!--<h1>Demographics</h1>-->
+    <!--</header>-->
+    <!--<div class="section-container">-->
 
-        <section class="clearfix stat-row">
-            <h2 class="header-for-columns"><a class="permalink" href="#pop_count" id="pop_count">Population <i class="fa fa-link"></i></a></h2>
-            <div class="column-quarter">
-                {% include 'profile/_blocks/_stat_list.html' with stat=demographics.total_population stat_type='number' %}
-            </div>
-            <div class="column-quarter" id="chart-pie-demographics-sex_ratio" data-stat-type="percentage" data-chart-title="Sex"></div>
-            <div class="column-quarter">
-                {% include 'profile/_blocks/_stat_list.html' with stat=demographics.urbanised stat_type='percentage' %}
-            </div>
-            <div class="column-quarter" id="chart-grouped_column-demographics-urban_distribution" data-stat-type="scaled-percentage" data-chart-title="Urban vs rural by sex"></div>
-        </section>
-        <section class="clearfix stat-row">
-            <h2 class="header-for-columns"><a class="permalink" href="#age" id="age">Age <i class="fa fa-link"></i></a></h2>
-            <div class="column-quarter">
-                {% include 'profile/_blocks/_stat_list.html' with stat=demographics.median_age stat_type='number' %}
-            </div>
-            <div class="column-half">
-                <div id="chart-histogram-demographics-age_group_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by age range"></div>
-            </div>
-            <div class="column-quarter" id="chart-pie-demographics-age_category_distribution" data-stat-type="percentage" data-chart-title="Population by age category"></div>
-        </section>
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2 class="header-for-columns"><a class="permalink" href="#pop_count" id="pop_count">Population <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-quarter">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=demographics.total_population stat_type='number' %}-->
+            <!--</div>-->
+            <!--<div class="column-quarter" id="chart-pie-demographics-sex_ratio" data-stat-type="percentage" data-chart-title="Sex"></div>-->
+            <!--<div class="column-quarter">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=demographics.urbanised stat_type='percentage' %}-->
+            <!--</div>-->
+            <!--<div class="column-quarter" id="chart-grouped_column-demographics-urban_distribution" data-stat-type="scaled-percentage" data-chart-title="Urban vs rural by sex"></div>-->
+        <!--</section>-->
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2 class="header-for-columns"><a class="permalink" href="#age" id="age">Age <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-quarter">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=demographics.median_age stat_type='number' %}-->
+            <!--</div>-->
+            <!--<div class="column-half">-->
+                <!--<div id="chart-histogram-demographics-age_group_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by age range"></div>-->
+            <!--</div>-->
+            <!--<div class="column-quarter" id="chart-pie-demographics-age_category_distribution" data-stat-type="percentage" data-chart-title="Population by age category"></div>-->
+        <!--</section>-->
 
-    </div>
-</article>
+    <!--</div>-->
+<!--</article>-->
 
-<article id="education" class="clearfix">
-    <header class="section-contents">
-        <h1>Education</h1>
-    </header>
-    <div class="section-container">
+<!--<article id="education" class="clearfix">-->
+    <!--<header class="section-contents">-->
+        <!--<h1>Education</h1>-->
+    <!--</header>-->
+    <!--<div class="section-container">-->
 
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#highest-education-level-reached" id="highest-education-level-reached">Educational level <i class="fa fa-link"></i></a></h2>
-            <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=education.education_reached_secondary_or_higher stat_type='percentage' %}
-            </div>
-            <div class="column-two-thirds" id="chart-histogram-education-education_reached_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by highest education level reached" data-qualifier="Universe: {{ education.education_reached_distribution.metadata.universe }}"></div>
-        </section>
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#school-attendance" id="school-attendance">School attendance <i class="fa fa-link"></i></a></h2>
-            <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=education.school_attendance_never stat_type='percentage' %}
-            </div>
-            <div class="column-two-thirds" id="chart-grouped_column-education-school_attendance_distribution" data-stat-type="scaled-percentage" data-chart-title="School attendance by sex" data-qualifier="Universe: {{ education.school_attendance_distribution.metadata.universe }}"></div>
-        </section>
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#highest-education-level-reached" id="highest-education-level-reached">Educational level <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=education.education_reached_secondary_or_higher stat_type='percentage' %}-->
+            <!--</div>-->
+            <!--<div class="column-two-thirds" id="chart-histogram-education-education_reached_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by highest education level reached" data-qualifier="Universe: {{ education.education_reached_distribution.metadata.universe }}"></div>-->
+        <!--</section>-->
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#school-attendance" id="school-attendance">School attendance <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=education.school_attendance_never stat_type='percentage' %}-->
+            <!--</div>-->
+            <!--<div class="column-two-thirds" id="chart-grouped_column-education-school_attendance_distribution" data-stat-type="scaled-percentage" data-chart-title="School attendance by sex" data-qualifier="Universe: {{ education.school_attendance_distribution.metadata.universe }}"></div>-->
+        <!--</section>-->
 
-    </div>
-</article>
+    <!--</div>-->
+<!--</article>-->
 
-<article id="employment" class="clearfix">
-    <header class="section-contents">
-        <h1>Employment</h1>
-    </header>
-    <div class="section-container">
+<!--<article id="employment" class="clearfix">-->
+    <!--<header class="section-contents">-->
+        <!--<h1>Employment</h1>-->
+    <!--</header>-->
+    <!--<div class="section-container">-->
 
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#employment">Employment <i class="fa fa-link"></i></a></h2>
-            <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=employment.employed stat_type='percentage' %}
-            </div>
-            <div class="column-two-thirds" id="chart-grouped_column-employment-activity_status_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by employment status" data-qualifier="Universe: {{ employment.activity_status_distribution.metadata.universe }}"></div>
-        </section>
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#employment">Employment <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=employment.employed stat_type='percentage' %}-->
+            <!--</div>-->
+            <!--<div class="column-two-thirds" id="chart-grouped_column-employment-activity_status_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by employment status" data-qualifier="Universe: {{ employment.activity_status_distribution.metadata.universe }}"></div>-->
+        <!--</section>-->
 
-    </div>
-</article>
+    <!--</div>-->
+<!--</article>-->
 
-<article id="households" class="clearfix">
-    <header class="section-contents">
-        <h1>Households</h1>
-    </header>
-    <div class="section-container">
+<!--<article id="households" class="clearfix">-->
+    <!--<header class="section-contents">-->
+        <!--<h1>Households</h1>-->
+    <!--</header>-->
+    <!--<div class="section-container">-->
 
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#households">Households <i class="fa fa-link"></i></a></h2>
-            <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=households.total_households stat_type='number' %}
-            </div>
-        </section>
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#households-water" id="households-water">Main source of water <i class="fa fa-link"></i></a></h2>
-            <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=households.piped_water stat_type='percentage' %}
-            </div>
-            <div class="column-two-thirds" id="chart-histogram-households-water_source_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main source of water"></div>
-        </section>
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#households-lighting" id="households-lighting">Main source of lighting <i class="fa fa-link"></i></a></h2>
-            <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=households.lighting_electricity stat_type='percentage' %}
-            </div>
-            <div class="column-two-thirds" id="chart-histogram-households-lighting_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of lighting fuel"></div>
-        </section>
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#households-waste" id="households-waste">Main mode of human waste disposal <i class="fa fa-link"></i></a></h2>
-            <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=households.sewer_or_septic stat_type='percentage' %}
-            </div>
-            <div class="column-two-thirds" id="chart-histogram-households-waste_disposal_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main mode of human waste disposal"></div>
-        </section>
-        <section class="clearfix stat-row">
-            <h2><a class="permalink" href="#households-materials" id="households-materials">Household construction materials <i class="fa fa-link"></i></a></h2>
-            <div class="column-third" id="chart-pie-households-roofing_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of roofing material"></div>
-            <div class="column-third" id="chart-pie-households-floor_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of floor material"></div>
-            <div class="column-third" id="chart-pie-households-wall_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of wall material"></div>
-        </section>
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#households">Households <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.total_households stat_type='number' %}-->
+            <!--</div>-->
+        <!--</section>-->
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#households-water" id="households-water">Main source of water <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.piped_water stat_type='percentage' %}-->
+            <!--</div>-->
+            <!--<div class="column-two-thirds" id="chart-histogram-households-water_source_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main source of water"></div>-->
+        <!--</section>-->
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#households-lighting" id="households-lighting">Main source of lighting <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.lighting_electricity stat_type='percentage' %}-->
+            <!--</div>-->
+            <!--<div class="column-two-thirds" id="chart-histogram-households-lighting_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of lighting fuel"></div>-->
+        <!--</section>-->
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#households-waste" id="households-waste">Main mode of human waste disposal <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.sewer_or_septic stat_type='percentage' %}-->
+            <!--</div>-->
+            <!--<div class="column-two-thirds" id="chart-histogram-households-waste_disposal_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main mode of human waste disposal"></div>-->
+        <!--</section>-->
+        <!--<section class="clearfix stat-row">-->
+            <!--<h2><a class="permalink" href="#households-materials" id="households-materials">Household construction materials <i class="fa fa-link"></i></a></h2>-->
+            <!--<div class="column-third" id="chart-pie-households-roofing_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of roofing material"></div>-->
+            <!--<div class="column-third" id="chart-pie-households-floor_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of floor material"></div>-->
+            <!--<div class="column-third" id="chart-pie-households-wall_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of wall material"></div>-->
+        <!--</section>-->
 
-    </div>
-</article>
+    <!--</div>-->
+<!--</article>-->
 
 <hr>
 <article class="clearfix">
