@@ -1,0 +1,169 @@
+31	district	22	lushoto	region	28	lushoto
+32	district	23	korogwe	region	28	korogwe
+33	district	24	muheza	region	28	muheza
+34	district	25	tanga	region	28	tanga
+35	district	26	pangani	region	28	pangani
+36	district	27	handeni	region	28	handeni
+37	district	28	kilindi	region	28	kilindi
+38	district	29	mkinga	region	28	mkinga
+39	district	30	korogwe urban	region	28	korogwe urban
+40	district	31	handeni urban	region	28	handeni urban
+41	district	89	nzega	region	29	nzega
+42	district	90	igunga	region	29	igunga
+43	district	91	uyui	region	29	uyui
+44	district	92	urambo	region	29	urambo
+45	district	93	sikonge	region	29	sikonge
+46	district	94	tabora urban	region	29	tabora urban
+47	district	95	kaliua	region	29	kaliua
+48	district	167	chake chake	region	12	chake chake
+49	district	168	mkoani	region	12	mkoani
+50	district	128	tarime	region	16	tarime
+51	district	129	serengeti	region	16	serengeti
+52	district	130	musoma	region	16	musoma
+53	district	131	bunda	region	16	bunda
+54	district	132	rorya	region	16	rorya
+55	district	133	butiama	region	16	butiama
+56	district	169	musoma urban	region	16	musoma urban
+57	district	134	babati	region	15	babati
+58	district	135	hanang	region	15	hanang
+59	district	136	mbulu	region	15	mbulu
+60	district	137	simanjiro	region	15	simanjiro
+61	district	138	kiteto	region	15	kiteto
+62	district	139	babati urban	region	15	babati urban
+63	district	161	kati	region	13	kati
+64	district	162	kusini	region	13	kusini
+65	district	49	kilwa	region	14	kilwa
+66	district	50	lindi rural	region	14	lindi rural
+67	district	51	nachingwea	region	14	nachingwea
+68	district	52	liwale	region	14	liwale
+69	district	53	ruangwa	region	14	ruangwa
+70	district	54	lindi urban	region	14	lindi urban
+71	district	96	kalambo	region	23	kalambo
+72	district	97	sumbawanga rural	region	23	sumbawanga rural
+73	district	98	nkasi	region	23	nkasi
+74	district	99	sumbawanga urban	region	23	sumbawanga urban
+75	district	55	mtwara rural	region	19	mtwara rural
+76	district	56	newala	region	19	newala
+77	district	57	masasi	region	19	masasi
+78	district	58	tandahimba	region	19	tandahimba
+79	district	59	mtwara urban	region	19	mtwara urban
+80	district	60	nanyumbu	region	19	nanyumbu
+81	district	61	masasi urban	region	19	masasi urban
+82	district	46	kinondoni	region	2	kinondoni
+83	district	47	ilala	region	2	ilala
+84	district	48	temeke	region	2	temeke
+85	district	163	magharibi	region	30	magharibi
+86	district	164	mjini	region	30	mjini
+87	district	108	shinyanga urban	region	25	shinyanga urban
+88	district	109	kishapu	region	25	kishapu
+89	district	110	shinyanga rural	region	25	shinyanga rural
+90	district	111	kahama	region	25	kahama
+91	district	112	kahama urban	region	25	kahama urban
+92	district	15	rombo	region	11	rombo
+93	district	16	mwanga	region	11	mwanga
+94	district	17	same	region	11	same
+95	district	18	moshi	region	11	moshi
+96	district	19	hai	region	11	hai
+97	district	20	moshi urban	region	11	moshi urban
+98	district	21	siha	region	11	siha
+99	district	100	kibondo	region	10	kibondo
+100	district	101	kasulu	region	10	kasulu
+101	district	102	kigoma rural	region	10	kigoma rural
+102	district	103	kigoma urban	region	10	kigoma urban
+103	district	104	uvinza	region	10	uvinza
+104	district	105	buhigwe	region	10	buhigwe
+105	district	106	kakonko	region	10	kakonko
+106	district	107	kasulu urban	region	10	kasulu urban
+107	district	1	kondoa	region	3	kondoa
+108	district	2	mpwapwa	region	3	mpwapwa
+109	district	3	kongwa	region	3	kongwa
+110	district	4	chamwino	region	3	chamwino
+111	district	5	dodoma urban	region	3	dodoma urban
+112	district	6	bahi	region	3	bahi
+113	district	7	chemba	region	3	chemba
+114	district	39	bagamoyo	region	22	bagamoyo
+115	district	40	kibaha	region	22	kibaha
+116	district	41	kisarawe	region	22	kisarawe
+117	district	42	mkuranga	region	22	mkuranga
+118	district	43	rufiji	region	22	rufiji
+119	district	44	mafia	region	22	mafia
+120	district	45	kibaha urban	region	22	kibaha urban
+121	district	32	kilosa	region	18	kilosa
+122	district	33	morogoro	region	18	morogoro
+123	district	34	kilombero	region	18	kilombero
+124	district	35	ulanga	region	18	ulanga
+125	district	36	morogoro urban	region	18	morogoro urban
+126	district	37	mvomero	region	18	mvomero
+127	district	38	gairo	region	18	gairo
+128	district	159	kaskazini a	region	8	kaskazini a
+129	district	160	kaskazini b	region	8	kaskazini b
+130	district	165	wete	region	7	wete
+131	district	166	micheweni	region	7	micheweni
+132	district	83	iramba	region	27	iramba
+133	district	84	singida	region	27	singida
+134	district	85	manyoni	region	27	manyoni
+135	district	86	singida urban	region	27	singida urban
+136	district	87	ikungi	region	27	ikungi
+137	district	88	mkalama	region	27	mkalama
+138	district	149	bariadi	region	26	bariadi
+139	district	150	itilima	region	26	itilima
+140	district	151	meatu	region	26	meatu
+141	district	152	maswa	region	26	maswa
+142	district	153	busega	region	26	busega
+143	district	140	njombe urban	region	21	njombe urban
+144	district	141	wanging'ombe	region	21	wanging'ombe
+145	district	142	makete	region	21	makete
+146	district	143	njombe rural	region	21	njombe rural
+147	district	144	ludewa	region	21	ludewa
+148	district	145	makambako urban	region	21	makambako urban
+149	district	121	ukerewe	region	20	ukerewe
+150	district	122	magu	region	20	magu
+151	district	123	nyamagana	region	20	nyamagana
+152	district	124	kwimba	region	20	kwimba
+153	district	125	sengerema	region	20	sengerema
+154	district	126	ilemela	region	20	ilemela
+155	district	127	misungwi	region	20	misungwi
+156	district	113	karagwe	region	6	karagwe
+157	district	114	bukoba rural	region	6	bukoba rural
+158	district	115	muleba	region	6	muleba
+159	district	116	biharamulo	region	6	biharamulo
+160	district	117	ngara	region	6	ngara
+161	district	118	bukoba urban	region	6	bukoba urban
+162	district	119	missenyi	region	6	missenyi
+163	district	120	kyerwa	region	6	kyerwa
+164	district	8	monduli	region	1	monduli
+165	district	9	meru	region	1	meru
+166	district	10	arusha urban	region	1	arusha urban
+167	district	11	karatu	region	1	karatu
+168	district	12	ngorongoro	region	1	ngorongoro
+169	district	13	arusha	region	1	arusha
+170	district	14	longido	region	1	longido
+171	district	68	iringa rural	region	5	iringa rural
+172	district	69	mufindi	region	5	mufindi
+173	district	70	iringa urban	region	5	iringa urban
+174	district	71	kilolo	region	5	kilolo
+175	district	72	mafinga urban	region	5	mafinga urban
+176	district	146	mpanda urban	region	9	mpanda urban
+177	district	147	mpanda rural	region	9	mpanda rural
+178	district	148	mlele	region	9	mlele
+179	district	73	chunya	region	17	chunya
+180	district	74	mbeya rural	region	17	mbeya rural
+181	district	75	kyela	region	17	kyela
+182	district	76	rungwe	region	17	rungwe
+183	district	77	ileje	region	17	ileje
+184	district	78	mbozi	region	17	mbozi
+185	district	79	mbarali	region	17	mbarali
+186	district	80	mbeya urban	region	17	mbeya urban
+187	district	81	momba	region	17	momba
+188	district	82	tunduma	region	17	tunduma
+189	district	62	tunduru	region	24	tunduru
+190	district	63	songea rural	region	24	songea rural
+191	district	64	mbinga	region	24	mbinga
+192	district	65	songea urban	region	24	songea urban
+193	district	66	namtumbo	region	24	namtumbo
+194	district	67	nyasa	region	24	nyasa
+195	district	154	geita	region	4	geita
+196	district	155	nyang'wale	region	4	nyang'wale
+197	district	156	mbogwe	region	4	mbogwe
+198	district	157	bukombe	region	4	bukombe
+199	district	158	chato	region	4	chato
