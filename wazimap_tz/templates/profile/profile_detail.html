@@ -2,7 +2,7 @@
 
 {% block profile_header_tail %}
     <div class="column-full">
-        <p class="caption"><strong>Census data:</strong> 2009</p>
+        <p class="caption"><strong>Census data:</strong> 2012</p>
     </div>
 {% endblock %}
 
@@ -124,7 +124,7 @@
 
 <hr>
 <article class="clearfix">
-    <h2><a href="http://www.uwezo.net/wp-content/uploads/2012/08/TZ_Uwezo2012ALAReport.pdf">Uwezo Annual Assessment Report 2014</a></h2>
+    <h2><a href="#">Uwezo Annual Assessment Report 2015</a></h2>
 </article>
 
 <article id="literacy-test" class="clearfix">
@@ -161,40 +161,65 @@
     </div>
 </article>
 
-<article id="pupil-teacher-ratios" class="clearfix">
+<hr>
+<article class="clearfix">
+    <h2><a href="http://www.pepfar.gov/documents/organization/255251.xlsx">The United States President's Emergency Plan for AIDS relief </a></h2>
+</article>
+
+<article id="pepfar" class="clearfix">
     <header class="section-contents">
-        <h1>Pupil teacher ratios</h1>
+        <h1>PEPFAR</h1>
     </header>
     <div class="section-container">
          <section class="clearfix stat-row">
             <div class="column-half">
-                {% include 'profile/_blocks/_stat_list.html' with stat=pupil_teacher_ratios.pupil_teacher_ratio stat_type='number' %}
-            </div>
-             <div class="column-half">
-                {% include 'profile/_blocks/_stat_list.html' with stat=pupil_teacher_ratios.pupils_per_textbook stat_type='number' %}
+                {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.HTC_TST stat_type='number' %}
             </div>
          </section>
 
          <section class="clearfix stat-row">
-            <div class="column-half"  id="chart-pie-pupil_teacher_ratios-pupil_attendance_rate_dist" data-stat-type="percentage" data-chart-title="Pupil attendance rates in govt schools"></div>
-            <div class="column-half"  id="chart-pie-pupil_teacher_ratios-teachers_absent_dist" data-stat-type="percentage" data-chart-title="Average number of teachers absent"></div>
+            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_STAT stat_type='percentage' %}</div>
+            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_STAT_POS stat_type='percentage' %}</div>
+            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_ARV stat_type='percentage' %}</div>
         </section>
-
     </div>
 </article>
 
-<article id="school_amenities" class="clearfix">
-    <header class="section-contents">
-        <h1>School amenities</h1>
-    </header>
-    <div class="section-container">
-         <section class="clearfix stat-row">
-            <div class="column-third"  id="chart-pie-school_amenities-library_data" data-stat-type="percentage" data-chart-title="Schools with libraries"></div>
-            <div class="column-third"  id="chart-pie-school_amenities-drinking_water_data" data-stat-type="percentage" data-chart-title="Schools with clean drinking water"></div>
-            <div class="column-third"  id="chart-pie-school_amenities-feeding_program_data" data-stat-type="percentage" data-chart-title="Schools with feeding programs"></div>
-        </section>
 
-    </div>
-</article>
+<!--<article id="pupil-teacher-ratios" class="clearfix">-->
+    <!--<header class="section-contents">-->
+        <!--<h1>Pupil teacher ratios</h1>-->
+    <!--</header>-->
+    <!--<div class="section-container">-->
+         <!--<section class="clearfix stat-row">-->
+            <!--<div class="column-half">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=pupil_teacher_ratios.pupil_teacher_ratio stat_type='number' %}-->
+            <!--</div>-->
+             <!--<div class="column-half">-->
+                <!--{% include 'profile/_blocks/_stat_list.html' with stat=pupil_teacher_ratios.pupils_per_textbook stat_type='number' %}-->
+            <!--</div>-->
+         <!--</section>-->
+
+         <!--<section class="clearfix stat-row">-->
+            <!--<div class="column-half"  id="chart-pie-pupil_teacher_ratios-pupil_attendance_rate_dist" data-stat-type="percentage" data-chart-title="Pupil attendance rates in govt schools"></div>-->
+            <!--<div class="column-half"  id="chart-pie-pupil_teacher_ratios-teachers_absent_dist" data-stat-type="percentage" data-chart-title="Average number of teachers absent"></div>-->
+        <!--</section>-->
+
+    <!--</div>-->
+<!--</article>-->
+
+<!--<article id="school_amenities" class="clearfix">-->
+    <!--<header class="section-contents">-->
+        <!--<h1>School amenities</h1>-->
+    <!--</header>-->
+    <!--<div class="section-container">-->
+         <!--<section class="clearfix stat-row">-->
+            <!--<div class="column-third"  id="chart-pie-school_amenities-library_data" data-stat-type="percentage" data-chart-title="Schools with libraries"></div>-->
+            <!--<div class="column-third"  id="chart-pie-school_amenities-drinking_water_data" data-stat-type="percentage" data-chart-title="Schools with clean drinking water"></div>-->
+            <!--<div class="column-third"  id="chart-pie-school_amenities-feeding_program_data" data-stat-type="percentage" data-chart-title="Schools with feeding programs"></div>-->
+        <!--</section>-->
+
+    <!--</div>-->
+<!--</article>-->
 
 {% endblock %}

@@ -16,8 +16,9 @@ PROFILE_SECTIONS = (
     #'households',
     'literacy',
     'attendance',
-    'pupil_teacher_ratios',
-    'school_amenities',
+    'pepfar',
+    #'pupil_teacher_ratios',
+    #'school_amenities',
 )
 
 EMPLOYMENT_RECODES = OrderedDict([
@@ -273,48 +274,45 @@ def get_literacy_profile(geo_code, geo_level, session):
     literacy_data, _ = get_stat_data(
         'literacy test', geo_level, geo_code, session)
 
-    all_subjects = \
-        literacy_data['All subject tests']['numerators']['this']
+    all_subjects = literacy_data['All subjects']['numerators']['this']
 
-    english_test_dist = \
-        literacy_data['English literacy test']['numerators']['this']
+    english_test_dist = literacy_data['English']['numerators']['this']
     english_test_dist = {
         'Passed': {
-            'name': 'Passed',
+            'name': 'Competent in English',
             'numerators': {'this': english_test_dist},
             'values': {'this': round(english_test_dist, 2)},
         },
         'Failed': {
-            'name': 'Failed',
+            'name': 'Not competent',
             'numerators': {'this': 100 - english_test_dist},
             'values': {'this': 100 - round(english_test_dist, 2)},
         }
     }
 
-    swahili_test_dist = literacy_data['Swahili literacy test']['numerators']['this']
+    swahili_test_dist = literacy_data['Swahili']['numerators']['this']
     swahili_test_dist = {
         'Passed': {
-            'name': 'Passed',
+            'name': 'Competent in Swahili',
             'numerators': {'this': swahili_test_dist},
             'values': {'this': round(swahili_test_dist, 2)},
         },
         'Failed': {
-            'name': 'Failed',
+            'name': 'Not competent',
             'numerators': {'this': 100 - swahili_test_dist},
             'values': {'this': 100 - round(swahili_test_dist, 2)},
         }
     }
 
-    numeracy_test_dist = \
-        literacy_data['Numeracy test']['numerators']['this']
+    numeracy_test_dist = literacy_data['Math']['numerators']['this']
     numeracy_test_dist = {
         'Passed': {
-            'name': 'Passed',
+            'name': 'Competence in Math',
             'numerators': {'this': numeracy_test_dist},
             'values': {'this': round(numeracy_test_dist, 2)},
         },
         'Failed': {
-            'name': 'Failed',
+            'name': 'Not competent',
             'numerators': {'this': 100 - numeracy_test_dist},
             'values': {'this': 100 - round(numeracy_test_dist, 2)},
         }
@@ -326,7 +324,7 @@ def get_literacy_profile(geo_code, geo_level, session):
         'swahili_test_dist': swahili_test_dist,
         'numeracy_test_dist': numeracy_test_dist,
         'all_subjects_dist': {
-            'name': 'Passed all subject tests',
+            'name': 'Competent in all subjects',
             'numerators': {'this': all_subjects},
             'values': {'this': round(all_subjects, 2)}
         }
@@ -338,24 +336,24 @@ def get_attendance_profile(geo_code, geo_level, session):
         'school attendance', geo_level, geo_code, session)
 
     dropped_out_dist = \
-        attendance_data['Dropped out of primary school']['numerators']['this']
+        attendance_data['Pupils in school']['numerators']['this']
     dropped_out_dist = {
         'Dropped out': {
-            'name': 'Dropped out',
+            'name': 'Pupils in school',
             'numerators': {'this': dropped_out_dist},
             'values': {'this': round(dropped_out_dist, 2)},
         },
         'In school': {
-            'name': 'In school',
+            'name': ' Not in school',
             'numerators': {'this': 100 - dropped_out_dist},
             'values': {'this': 100 - round(dropped_out_dist, 2)},
         }
     }
 
-    out_of_school_dist = attendance_data['Out of school']['numerators']['this']
+    out_of_school_dist = attendance_data['Drop outs']['numerators']['this']
     out_of_school_dist = {
         'Out of school': {
-            'name': 'Out of school',
+            'name': 'Dropped out',
             'numerators': {'this': out_of_school_dist},
             'values': {'this': round(out_of_school_dist, 2)},
         },
@@ -366,6 +364,12 @@ def get_attendance_profile(geo_code, geo_level, session):
         }
     }
 
+    print {
+        'attendance_data': attendance_data,
+        'dropped_out_dist': dropped_out_dist,
+        'out_of_school_dist': out_of_school_dist,
+    }
+    print '^' * 30
     return  {
         'attendance_data': attendance_data,
         'dropped_out_dist': dropped_out_dist,
@@ -420,6 +424,40 @@ def get_school_amenities_profile(geo_code, geo_level, session):
         'drinking_water_data': drinking_water_data,
         'feeding_program_data': feeding_program_data,
 
+    }
+
+#PEPFAR DATA
+def get_pepfar_profile(geo_code, geo_level, session):
+    # PEPFAR stats
+    pepfar_data, _ = get_stat_data("pepfar", geo_level, geo_code, session)
+    HTC_TST = pepfar_data['HTC_TST']['numerators']['this']
+    PMTCT_STAT = pepfar_data['PMTCT_STAT']['values']['this']
+    PMTCT_STAT_POS = pepfar_data['PMTCT_STAT_POS']['values']['this']
+    PMTCT_ARV = pepfar_data['PMTCT_ARV']['values']['this']
+    return {
+        'HTC_TST': {
+            'name': ' Number of individuals who received HIV Testing and Counseling (HTC) services for HIV and their\
+             test results',
+            'numerators': {'this': HTC_TST},
+            'values': {'this': HTC_TST}
+        },
+        'PMTCT_STAT': {
+            'name': ' Number of pregnant women with known HIV status (includes women who were tested for\
+HIV and received their results)',
+            'numerators': {'this': PMTCT_STAT},
+            'values': {'this': PMTCT_STAT}
+        },
+        'PMTCT_STAT_POS': {
+            'name': ' Number of pregnant women with positive HIV status',
+            'numerators': {'this': PMTCT_STAT_POS},
+            'values': {'this': PMTCT_STAT_POS}
+        },
+        'PMTCT_ARV': {
+            'name': 'Number of HIV-positive pregnant women who received antiretroviral medications to\
+reduce risk of mother-to-child-transmission (MTCT) during pregnancy and delivery',
+            'numerators': {'this': PMTCT_ARV},
+            'values': {'this': PMTCT_ARV}
+        },
     }
 
 def get_dictionary(key_one, key_two, val):
