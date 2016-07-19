@@ -81,12 +81,12 @@ COPY wazimap_geography (id, geo_level, geo_code, name, parent_level, parent_code
 5	region	5	iringa	country	TZ	iringa	2012	0
 6	region	6	kagera	country	TZ	kagera	2012	0
 7	region	7	kaskazini pemba	country	TZ	kaskazini pemba	2012	0
-8	region	8	kaskazini ugunja	country	TZ	kaskazini ugunja	2012	0
+8	region	8	kaskazini unguja	country	TZ	kaskazini unguja	2012	0
 9	region	9	katavi	country	TZ	katavi	2012	0
 10	region	10	kigoma	country	TZ	kigoma	2012	0
 11	region	11	kilimanjaro	country	TZ	kilimanjaro	2012	0
 12	region	12	kusini pemba	country	TZ	kusini pemba	2012	0
-13	region	13	kusini ungunja	country	TZ	kusini ugunja	2012	0
+13	region	13	kusini unguja	country	TZ	kusini unguja	2012	0
 14	region	14	lindi	country	TZ	lindi	2012	0
 15	region	15	manyara	country	TZ	manyara	2012	0
 16	region	16	mara	country	TZ	mara	2012	0
