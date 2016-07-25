@@ -425,31 +425,130 @@ def get_pepfar_profile(geo_code, geo_level, session):
     pepfar_data, _ = get_stat_data("pepfar", geo_level, geo_code, session)
     HTC_TST = pepfar_data['HTC_TST']['numerators']['this']
     PMTCT_STAT = pepfar_data['PMTCT_STAT']['values']['this']
-    PMTCT_STAT_POS = pepfar_data['PMTCT_STAT_POS']['values']['this']
-    PMTCT_ARV = pepfar_data['PMTCT_ARV']['values']['this']
+    PMTCT_STAT_POS = pepfar_data['PMTCT_STAT_POS']['numerators']['this']
+    PMTCT_ARV = pepfar_data['PMTCT_ARV']['numerators']['this']
+    PMTCT_EID = pepfar_data['PMTCT_EID']['numerators']['this']
+    PMTCT_EID_POS = pepfar_data['PMTCT_EID_POS']['numerators']['this']
+    PMTCT_CTX = pepfar_data['PMTCT_CTX']['numerators']['this']
+    CARE_NEW = pepfar_data['CARE_NEW']['numerators']['this']
+    TX_NEW = pepfar_data['TX_NEW']['numerators']['this']
+    CARE_CURR = pepfar_data['CARE_CURR']['numerators']['this']
+    TB_SCREEN = pepfar_data['TB_SCREEN']['numerators']['this']
+    TX_CURR = pepfar_data['TX_CURR']['numerators']['this']
+    TB_ART = pepfar_data['TB_ART']['numerators']['this']
+    TX_RET_NUM = pepfar_data['TX_RET_NUM']['numerators']['this']
+    TX_RET_DEN = pepfar_data['TX_RET_DEN']['numerators']['this']
+    VMMC_CIRC = pepfar_data['VMMC_CIRC']['numerators']['this']
+    OVC_SERV = pepfar_data['OVC_SERV']['numerators']['this']
+    PP_PREV = pepfar_data['PP_PREV']['numerators']['this']
+    KP_PREV = pepfar_data['KP_PREV']['numerators']['this']
     return {
         'HTC_TST': {
-            'name': ' Number of individuals who received HIV Testing and Counseling (HTC) services for HIV and their\
-             test results',
+            'name': 'Number of individuals who received HIV Testing and Counseling (HTC) services for HIV and their\
+                        test results',
             'numerators': {'this': HTC_TST},
             'values': {'this': HTC_TST}
         },
-        'PMTCT_STAT': {
-            'name': ' Number of pregnant women with known HIV status (includes women who were tested for\
-HIV and received their results)',
-            'numerators': {'this': PMTCT_STAT},
-            'values': {'this': PMTCT_STAT}
-        },
+        'PMTCT_STAT': get_dictionary('Know status', "Don't" , PMTCT_STAT),
         'PMTCT_STAT_POS': {
-            'name': ' Number of pregnant women with positive HIV status',
+            'name': 'Number of pregnant women with positive HIV status',
             'numerators': {'this': PMTCT_STAT_POS},
             'values': {'this': PMTCT_STAT_POS}
         },
         'PMTCT_ARV': {
             'name': 'Number of HIV-positive pregnant women who received antiretroviral medications to\
-reduce risk of mother-to-child-transmission (MTCT) during pregnancy and delivery',
+                        reduce risk of mother-to-child-transmission (MTCT) during pregnancy and delivery',
             'numerators': {'this': PMTCT_ARV},
             'values': {'this': PMTCT_ARV}
+        },
+        'PMTCT_EID': {
+            'name': 'Number of infants born to HIV-positive women who had a virologic HIV test done within two months\
+             of birth',
+            'numerators': {'this': PMTCT_EID},
+            'values': {'this': PMTCT_EID}
+        },
+        'PMTCT_EID_POS': {
+            'name': 'Number of infants born to HIV-positive women who had a virologic HIV test done within two months\
+                    of birth who tested positive for HIV',
+            'numerators': {'this': PMTCT_EID_POS},
+            'values': {'this': PMTCT_EID_POS}
+        },
+        'PMTCT_CTX': {
+            'name': 'Number of infants born to HIV-positive pregnant women who began Cotrimoxazole (CTX) prophylaxis \
+                        within two months of birth',
+            'numerators': {'this': PMTCT_CTX},
+            'values': {'this': PMTCT_CTX}
+        },
+        'CARE_NEW': {
+            'name': 'Number of HIV-positive adults and children newly enrolled in clinical care during the\
+                    reporting period who received at least one of the following at enrollment: clinical assessment (WHO\
+                    staging) OR CD4 count',
+            'numerators': {'this': CARE_NEW},
+            'values': {'this': CARE_NEW}
+        },
+        'TX_NEW': {
+            'name': ' Number of adults and children newly enrolled on antiretroviral therapy (ART)',
+            'numerators': {'this': TX_NEW},
+            'values': {'this': TX_NEW}
+        },
+        'CARE_CURR': {
+            'name': 'Number of HIV-positive adults and children who received at least one of the following\
+                    during the reporting period: clinical assessment (WHO staging) OR CD4 count OR viral load',
+            'numerators': {'this': CARE_CURR},
+            'values': {'this': CARE_CURR}
+        },
+        'TB_SCREEN': {
+            'name': 'Number of PLHIV in HIV clinical care who were screened for TB symptoms at the last clinical\
+                    visit',
+            'numerators': {'this': TB_SCREEN},
+            'values': {'this': TB_SCREEN}
+        },
+        'TX_CURR': {
+            'name': ' Number of adults and children currently receiving ART',
+            'numerators': {'this': TX_CURR},
+            'values': {'this': TX_CURR}
+        },
+        'TB_ART': {
+            'name': 'Number of HIV-positive new and relapsed registered TB cases on ART during TB treatment',
+            'numerators': {'this': TB_ART},
+            'values': {'this': TB_ART}
+        },
+        'TX_RET_NUM': {
+            'name': 'Number of adults and children known to be alive and on treatment 12 months after\
+                    initiation of antiretroviral therapy',
+            'numerators': {'this': TX_RET_NUM},
+            'values': {'this': TX_RET_NUM}
+        },
+        'TX_RET_DEN': {
+            'name': 'Number of adults and children initiated on antiretroviral therapy treatment within the last\
+                    12 months. This variable is the denominator of TX_RET_NUM and should be used to calculate retention\
+                    in HIV treatment programs for those who initiated ART 12 months ago. ',
+            'numerators': {'this': TX_RET_DEN},
+            'values': {'this': TX_RET_DEN}
+        },
+        'VMMC_CIRC': {
+            'name': 'Number of males circumcised as part of the voluntary medical male circumcision (VMMC)\
+                    for HIV prevention program within the reporting period',
+            'numerators': {'this': VMMC_CIRC},
+            'values': {'this': VMMC_CIRC}
+        },
+        'OVC_SERV': {
+            'name': 'Number of active beneficiaries served by PEPFAR OVC programs for children and families\
+                    affected by HIV/AIDS',
+            'numerators': {'this': OVC_SERV},
+            'values': {'this': OVC_SERV}
+        },
+        'PP_PREV': {
+            'name': 'Number of individuals from priority populations who completed a standardized HIV\
+                    prevention intervention, including the specified minimum components, during the reporting period',
+            'numerators': {'this': PP_PREV},
+            'values': {'this': PP_PREV}
+        },
+        'KP_PREV': {
+            'name': ' Number of key populations reached with individual and/or small group level HIV preventive\
+                    interventions that are based on evidence and/or meet the minimum standards required',
+            'numerators': {'this': KP_PREV},
+            'values': {'this': KP_PREV}
         },
     }
 
