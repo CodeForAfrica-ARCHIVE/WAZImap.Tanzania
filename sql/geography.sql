@@ -82,7 +82,7 @@ COPY wazimap_geography (id, geo_level, geo_code, name, parent_level, parent_code
 6	region	6	Kagera	country	TZ	Kagera	2012	39627
 7	region	7	Kaskazini pemba	country	TZ	Kaskazini pemba	2012	574
 8	region	8	Kaskazini unguja	country	TZ	Kaskazini unguja	2012	470
-9	region	9	Katavi	country	TZ	Katavi	2012	45843
+9	region	9	Katavi	country	TZ	Katavi	2012	45843moro
 10	region	10	Kigoma	country	TZ	Kigoma	2012	45066
 11	region	11	Kilimanjaro	country	TZ	Kilimanjaro	2012	13209
 12	region	12	Kusini pemba	country	TZ	Kusini pemba	2012	332
@@ -99,7 +99,7 @@ COPY wazimap_geography (id, geo_level, geo_code, name, parent_level, parent_code
 23	region	23	Rukwa	country	TZ	Rukwa	2012	75240
 24	region	24	Ruvuma	country	TZ	Ruvuma	2012	66477
 25	region	25	Shinyanga	country	TZ	Shinyanga	2012	40781
-26	region	26	Simiyu	country	TZ	Simiyu	2012	23807
+26	region	26	Simiyu	country	TZ	Simiyu	2012	2380
 27	region	27	Singida	country	TZ	Singida	2012	49437
 28	region	28	Tanga	country	TZ	Tanga	2012	27348
 29	region	29	Tabora	country	TZ	Tabora	2012	76151

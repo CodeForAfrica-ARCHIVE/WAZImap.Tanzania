@@ -10,7 +10,7 @@ import wazimap_tz.tables  # noqa
 
 
 PROFILE_SECTIONS = (
-    #'demographics',
+    'demographics',
     #'education',
     #'employment',
     #'households',
