@@ -277,43 +277,43 @@ def get_literacy_profile(geo_code, geo_level, session):
 
     english_test_dist = literacy_data['English']['numerators']['this']
     english_test_dist = {
-        'Failed': {
-            'name': 'Not competent',
-            'numerators': {'this': 100 - english_test_dist},
-            'values': {'this': 100 - round(english_test_dist, 2)},
-        },
         'Passed': {
             'name': 'Competent in English',
             'numerators': {'this': english_test_dist},
             'values': {'this': round(english_test_dist, 2)},
+        },
+        'Failed': {
+            'name': 'Not competent',
+            'numerators': {'this': 100 - english_test_dist},
+            'values': {'this': 100 - round(english_test_dist, 2)},
         }
     }
 
     swahili_test_dist = literacy_data['Swahili']['numerators']['this']
     swahili_test_dist = {
-        'Failed': {
-            'name': 'Not competent',
-            'numerators': {'this': 100 - swahili_test_dist},
-            'values': {'this': 100 - round(swahili_test_dist, 2)},
-        },
         'Passed': {
             'name': 'Competent in Swahili',
             'numerators': {'this': swahili_test_dist},
             'values': {'this': round(swahili_test_dist, 2)},
         },
+        'Failed': {
+            'name': 'Not competent',
+            'numerators': {'this': 100 - swahili_test_dist},
+            'values': {'this': 100 - round(swahili_test_dist, 2)},
+        }
     }
 
     numeracy_test_dist = literacy_data['Math']['numerators']['this']
     numeracy_test_dist = {
-        'Failed': {
-            'name': 'Not competent',
-            'numerators': {'this': 100 - numeracy_test_dist},
-            'values': {'this': 100 - round(numeracy_test_dist, 2)},
-        },
         'Passed': {
             'name': 'Competence in Math',
             'numerators': {'this': numeracy_test_dist},
             'values': {'this': round(numeracy_test_dist, 2)},
+        },
+        'Failed': {
+            'name': 'Not competent',
+            'numerators': {'this': 100 - numeracy_test_dist},
+            'values': {'this': 100 - round(numeracy_test_dist, 2)},
         }
     }
 
@@ -322,6 +322,9 @@ def get_literacy_profile(geo_code, geo_level, session):
         'english_test_dist': english_test_dist,
         'swahili_test_dist': swahili_test_dist,
         'numeracy_test_dist': numeracy_test_dist,
+        'numeracy_sort': '-value' if numeracy_test_dist <= 50 else 'value',
+        'english_sort': '-value' if english_test_dist <= 50 else 'value',
+        'swahili_sort': '-value' if swahili_test_dist <= 49 else 'value',
         'all_subjects_dist': {
             'name': 'Competent in all subjects',
             'numerators': {'this': all_subjects},
@@ -337,13 +340,13 @@ def get_attendance_profile(geo_code, geo_level, session):
     dropped_out_dist = \
         attendance_data['Pupils in school']['numerators']['this']
     dropped_out_dist = {
-        'Dropped out': {
+        'Pupils in school': {
             'name': 'Pupils in school',
             'numerators': {'this': dropped_out_dist},
             'values': {'this': round(dropped_out_dist, 2)},
         },
-        'In school': {
-            'name': ' Not in school',
+        'Dropped out': {
+            'name': 'Dropped out',
             'numerators': {'this': 100 - dropped_out_dist},
             'values': {'this': 100 - round(dropped_out_dist, 2)},
         }
@@ -366,6 +369,8 @@ def get_attendance_profile(geo_code, geo_level, session):
         'attendance_data': attendance_data,
         'dropped_out_dist': dropped_out_dist,
         'out_of_school_dist': out_of_school_dist,
+        'drop_out_sort': '-value' if dropped_out_dist <= 50 else 'value',
+        'out_of_school_sort': '-value' if out_of_school_dist <= 50 else 'value'
     }
 
 def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):

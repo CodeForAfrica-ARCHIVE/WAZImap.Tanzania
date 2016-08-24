@@ -129,7 +129,7 @@
 
 <article id="literacy-test" class="clearfix">
     <header class="section-contents">
-        <h1>Literacy tests</h1>
+        <h1>Literacy & numeracy tests</h1>
     </header>
     <div class="section-container">
          <section class="clearfix stat-row">
@@ -139,9 +139,9 @@
          </section>
 
          <section class="clearfix stat-row">
-            <div class="column-third"  id="chart-pie-literacy-english_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing English literacy tests"></div>
-            <div class="column-third"  id="chart-pie-literacy-swahili_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing Swahili literacy tests"></div>
-            <div class="column-third"  id="chart-pie-literacy-numeracy_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing numeracy literacy tests"></div>
+            <div class="column-third"  id="chart-pie-literacy-english_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing English literacy tests" data-initial-sort="{{literacy.english_sort}}"></div>
+            <div class="column-third"  id="chart-pie-literacy-swahili_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing Swahili literacy tests" data-initial-sort="{{literacy.swahili_sort}}"></div>
+            <div class="column-third"  id="chart-pie-literacy-numeracy_test_dist" data-stat-type="percentage" data-chart-title="Percentage of children passing Numeracy tests" data-initial-sort="{{literacy.numeracy_sort}}"></div>
         </section>
 
     </div>
@@ -154,8 +154,8 @@
     <div class="section-container">
 
          <section class="clearfix stat-row">
-            <div class="column-half"  id="chart-pie-attendance-dropped_out_dist" data-stat-type="percentage" data-chart-title="Percentage of children aged 9-13 who dropped out of primary school"></div>
-            <div class="column-half"  id="chart-pie-attendance-out_of_school_dist" data-stat-type="percentage" data-chart-title="Percentage of children aged 7-16 who are not in school"></div>
+             <div class="column-half"  id="chart-pie-attendance-out_of_school_dist" data-stat-type="percentage" data-chart-title="Percentage of children aged 7-16 who are not in school" data-initial-sort="{{attendance.out_of_school_sort}}"></div>
+             <div class="column-half"  id="chart-pie-attendance-dropped_out_dist" data-stat-type="percentage" data-chart-title="Percentage of children aged 9-13 who dropped out of primary school" data-initial-sort="{{attendance.drop_out_sort}}"></div>
         </section>
 
     </div>
