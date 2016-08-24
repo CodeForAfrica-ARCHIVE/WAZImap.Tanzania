@@ -306,7 +306,7 @@ def get_literacy_profile(geo_code, geo_level, session):
     numeracy_test_dist = literacy_data['Math']['numerators']['this']
     numeracy_test_dist = {
         'Passed': {
-            'name': 'Competence in Math',
+            'name': 'Competent in Math',
             'numerators': {'this': numeracy_test_dist},
             'values': {'this': round(numeracy_test_dist, 2)},
         },
