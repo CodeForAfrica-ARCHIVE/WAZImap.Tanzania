@@ -16166,322 +16166,322 @@ district	44	rural	female	80	297
 district	44	rural	male	80	226
 district	44	urban	female	80	66
 district	44	urban	male	80	29
- district	45	rural	female	1	0
- district	45	rural	male	1	0
- district	45	urban	female	1	1454
- district	45	urban	male	1	1431
- district	45	rural	female	2	0
- district	45	rural	male	2	0
- district	45	urban	female	2	1570
- district	45	urban	male	2	1630
- district	45	rural	female	3	0
- district	45	rural	male	3	0
- district	45	urban	female	3	1469
- district	45	urban	male	3	1498
- district	45	rural	female	4	0
- district	45	rural	male	4	0
- district	45	urban	female	4	1571
- district	45	urban	male	4	1633
- district	45	rural	female	5	0
- district	45	rural	male	5	0
- district	45	urban	female	5	1605
- district	45	urban	male	5	1596
- district	45	rural	female	6	0
- district	45	rural	male	6	0
- district	45	urban	female	6	1632
- district	45	urban	male	6	1556
- district	45	rural	female	7	0
- district	45	rural	male	7	0
- district	45	urban	female	7	1629
- district	45	urban	male	7	1668
- district	45	rural	female	8	0
- district	45	rural	male	8	0
- district	45	urban	female	8	1336
- district	45	urban	male	8	1386
- district	45	rural	female	9	0
- district	45	rural	male	9	0
- district	45	urban	female	9	1341
- district	45	urban	male	9	1300
- district	45	rural	female	11	0
- district	45	rural	male	11	0
- district	45	urban	female	11	1172
- district	45	urban	male	11	1127
- district	45	rural	female	12	0
- district	45	rural	male	12	0
- district	45	urban	female	12	1766
- district	45	urban	male	12	1698
- district	45	rural	female	13	0
- district	45	rural	male	13	0
- district	45	urban	female	13	1328
- district	45	urban	male	13	1236
- district	45	rural	female	14	0
- district	45	rural	male	14	0
- district	45	urban	female	14	1518
- district	45	urban	male	14	1253
- district	45	rural	female	15	0
- district	45	rural	male	15	0
- district	45	urban	female	15	1378
- district	45	urban	male	15	1249
- district	45	rural	female	16	0
- district	45	rural	male	16	0
- district	45	urban	female	16	1509
- district	45	urban	male	16	1324
- district	45	rural	female	17	0
- district	45	rural	male	17	0
- district	45	urban	female	17	1507
- district	45	urban	male	17	1338
- district	45	rural	female	18	0
- district	45	rural	male	18	0
- district	45	urban	female	18	1709
- district	45	urban	male	18	1473
- district	45	rural	female	19	0
- district	45	rural	male	19	0
- district	45	urban	female	19	1452
- district	45	urban	male	19	1236
- district	45	rural	female	20	0
- district	45	rural	male	20	0
- district	45	urban	female	20	2021
- district	45	urban	male	20	1629
- district	45	rural	female	21	0
- district	45	rural	male	21	0
- district	45	urban	female	21	1261
- district	45	urban	male	21	1056
- district	45	rural	female	22	0
- district	45	rural	male	22	0
- district	45	urban	female	22	1718
- district	45	urban	male	22	1533
- district	45	rural	female	23	0
- district	45	rural	male	23	0
- district	45	urban	female	23	1355
- district	45	urban	male	23	1030
- district	45	rural	female	24	0
- district	45	rural	male	24	0
- district	45	urban	female	24	1336
- district	45	urban	male	24	1137
- district	45	rural	female	25	0
- district	45	rural	male	25	0
- district	45	urban	female	25	1484
- district	45	urban	male	25	1351
- district	45	rural	female	26	0
- district	45	rural	male	26	0
- district	45	urban	female	26	1310
- district	45	urban	male	26	1113
- district	45	rural	female	27	0
- district	45	rural	male	27	0
- district	45	urban	female	27	1114
- district	45	urban	male	27	1002
- district	45	rural	female	28	0
- district	45	rural	male	28	0
- district	45	urban	female	28	1601
- district	45	urban	male	28	1343
- district	45	rural	female	29	0
- district	45	rural	male	29	0
- district	45	urban	female	29	988
- district	45	urban	male	29	870
- district	45	rural	female	30	0
- district	45	rural	male	30	0
- district	45	urban	female	30	1791
- district	45	urban	male	30	1670
- district	45	rural	female	31	0
- district	45	rural	male	31	0
- district	45	urban	female	31	662
- district	45	urban	male	31	618
- district	45	rural	female	32	0
- district	45	rural	male	32	0
- district	45	urban	female	32	1255
- district	45	urban	male	32	1244
- district	45	rural	female	33	0
- district	45	rural	male	33	0
- district	45	urban	female	33	823
- district	45	urban	male	33	758
- district	45	rural	female	34	0
- district	45	rural	male	34	0
- district	45	urban	female	34	749
- district	45	urban	male	34	740
- district	45	rural	female	35	0
- district	45	rural	male	35	0
- district	45	urban	female	35	1069
- district	45	urban	male	35	1236
- district	45	rural	female	36	0
- district	45	rural	male	36	0
- district	45	urban	female	36	822
- district	45	urban	male	36	731
- district	45	rural	female	37	0
- district	45	rural	male	37	0
- district	45	urban	female	37	715
- district	45	urban	male	37	667
- district	45	rural	female	38	0
- district	45	rural	male	38	0
- district	45	urban	female	38	857
- district	45	urban	male	38	842
- district	45	rural	female	39	0
- district	45	rural	male	39	0
- district	45	urban	female	39	597
- district	45	urban	male	39	574
- district	45	rural	female	40	0
- district	45	rural	male	40	0
- district	45	urban	female	40	1135
- district	45	urban	male	40	1161
- district	45	rural	female	41	0
- district	45	rural	male	41	0
- district	45	urban	female	41	342
- district	45	urban	male	41	364
- district	45	rural	female	42	0
- district	45	rural	male	42	0
- district	45	urban	female	42	657
- district	45	urban	male	42	770
- district	45	rural	female	43	0
- district	45	rural	male	43	0
- district	45	urban	female	43	435
- district	45	urban	male	43	418
- district	45	rural	female	44	0
- district	45	rural	male	44	0
- district	45	urban	female	44	418
- district	45	urban	male	44	449
- district	45	rural	female	45	0
- district	45	rural	male	45	0
- district	45	urban	female	45	613
- district	45	urban	male	45	711
- district	45	rural	female	46	0
- district	45	rural	male	46	0
- district	45	urban	female	46	358
- district	45	urban	male	46	430
- district	45	rural	female	47	0
- district	45	rural	male	47	0
- district	45	urban	female	47	333
- district	45	urban	male	47	387
- district	45	rural	female	48	0
- district	45	rural	male	48	0
- district	45	urban	female	48	521
- district	45	urban	male	48	486
- district	45	rural	female	49	0
- district	45	rural	male	49	0
- district	45	urban	female	49	301
- district	45	urban	male	49	330
- district	45	rural	female	50	0
- district	45	rural	male	50	0
- district	45	urban	female	50	648
- district	45	urban	male	50	613
- district	45	rural	female	51	0
- district	45	rural	male	51	0
- district	45	urban	female	51	264
- district	45	urban	male	51	305
- district	45	rural	female	52	0
- district	45	rural	male	52	0
- district	45	urban	female	52	372
- district	45	urban	male	52	479
- district	45	rural	female	53	0
- district	45	rural	male	53	0
- district	45	urban	female	53	228
- district	45	urban	male	53	264
- district	45	rural	female	54	0
- district	45	rural	male	54	0
- district	45	urban	female	54	252
- district	45	urban	male	54	351
- district	45	rural	female	55	0
- district	45	rural	male	55	0
- district	45	urban	female	55	346
- district	45	urban	male	55	371
- district	45	rural	female	56	0
- district	45	rural	male	56	0
- district	45	urban	female	56	261
- district	45	urban	male	56	284
- district	45	rural	female	57	0
- district	45	rural	male	57	0
- district	45	urban	female	57	173
- district	45	urban	male	57	220
- district	45	rural	female	58	0
- district	45	rural	male	58	0
- district	45	urban	female	58	307
- district	45	urban	male	58	276
- district	45	rural	female	59	0
- district	45	rural	male	59	0
- district	45	urban	female	59	171
- district	45	urban	male	59	179
- district	45	rural	female	60	0
- district	45	rural	male	60	0
- district	45	urban	female	60	569
- district	45	urban	male	60	512
- district	45	rural	female	61	0
- district	45	rural	male	61	0
- district	45	urban	female	61	120
- district	45	urban	male	61	171
- district	45	rural	female	62	0
- district	45	rural	male	62	0
- district	45	urban	female	62	234
- district	45	urban	male	62	272
- district	45	rural	female	63	0
- district	45	rural	male	63	0
- district	45	urban	female	63	134
- district	45	urban	male	63	166
- district	45	rural	female	64	0
- district	45	rural	male	64	0
- district	45	urban	female	64	130
- district	45	urban	male	64	176
- district	45	rural	female	65	0
- district	45	rural	male	65	0
- district	45	urban	female	65	315
- district	45	urban	male	65	228
- district	45	rural	female	66	0
- district	45	rural	male	66	0
- district	45	urban	female	66	107
- district	45	urban	male	66	105
- district	45	rural	female	67	0
- district	45	rural	male	67	0
- district	45	urban	female	67	134
- district	45	urban	male	67	165
- district	45	rural	female	68	0
- district	45	rural	male	68	0
- district	45	urban	female	68	138
- district	45	urban	male	68	148
- district	45	rural	female	69	0
- district	45	rural	male	69	0
- district	45	urban	female	69	79
- district	45	urban	male	69	87
- district	45	rural	female	70	0
- district	45	rural	male	70	0
- district	45	urban	female	70	467
- district	45	urban	male	70	327
- district	45	rural	female	71	0
- district	45	rural	male	71	0
- district	45	urban	female	71	43
- district	45	urban	male	71	41
- district	45	rural	female	72	0
- district	45	rural	male	72	0
- district	45	urban	female	72	139
- district	45	urban	male	72	124
- district	45	rural	female	73	0
- district	45	rural	male	73	0
- district	45	urban	female	73	53
- district	45	urban	male	73	97
- district	45	rural	female	74	0
- district	45	rural	male	74	0
- district	45	urban	female	74	74
- district	45	urban	male	74	81
- district	45	rural	female	75	0
- district	45	rural	male	75	0
- district	45	urban	female	75	182
- district	45	urban	male	75	138
- district	45	rural	female	76	0
- district	45	rural	male	76	0
- district	45	urban	female	76	67
- district	45	urban	male	76	76
- district	45	rural	female	77	0
- district	45	rural	male	77	0
- district	45	urban	female	77	48
- district	45	urban	male	77	56
- district	45	rural	female	78	0
- district	45	rural	male	78	0
- district	45	urban	female	78	83
- district	45	urban	male	78	71
- district	45	rural	female	79	0
- district	45	rural	male	79	0
- district	45	urban	female	79	49
- district	45	urban	male	79	58
- district	45	rural	female	80	0
- district	45	rural	male	80	0
- district	45	urban	female	80	915
- district	45	urban	male	80	637
+district	45	rural	female	1	0
+district	45	rural	male	1	0
+district	45	urban	female	1	1454
+district	45	urban	male	1	1431
+district	45	rural	female	2	0
+district	45	rural	male	2	0
+district	45	urban	female	2	1570
+district	45	urban	male	2	1630
+district	45	rural	female	3	0
+district	45	rural	male	3	0
+district	45	urban	female	3	1469
+district	45	urban	male	3	1498
+district	45	rural	female	4	0
+district	45	rural	male	4	0
+district	45	urban	female	4	1571
+district	45	urban	male	4	1633
+district	45	rural	female	5	0
+district	45	rural	male	5	0
+district	45	urban	female	5	1605
+district	45	urban	male	5	1596
+district	45	rural	female	6	0
+district	45	rural	male	6	0
+district	45	urban	female	6	1632
+district	45	urban	male	6	1556
+district	45	rural	female	7	0
+district	45	rural	male	7	0
+district	45	urban	female	7	1629
+district	45	urban	male	7	1668
+district	45	rural	female	8	0
+district	45	rural	male	8	0
+district	45	urban	female	8	1336
+district	45	urban	male	8	1386
+district	45	rural	female	9	0
+district	45	rural	male	9	0
+district	45	urban	female	9	1341
+district	45	urban	male	9	1300
+district	45	rural	female	11	0
+district	45	rural	male	11	0
+district	45	urban	female	11	1172
+district	45	urban	male	11	1127
+district	45	rural	female	12	0
+district	45	rural	male	12	0
+district	45	urban	female	12	1766
+district	45	urban	male	12	1698
+district	45	rural	female	13	0
+district	45	rural	male	13	0
+district	45	urban	female	13	1328
+district	45	urban	male	13	1236
+district	45	rural	female	14	0
+district	45	rural	male	14	0
+district	45	urban	female	14	1518
+district	45	urban	male	14	1253
+district	45	rural	female	15	0
+district	45	rural	male	15	0
+district	45	urban	female	15	1378
+district	45	urban	male	15	1249
+district	45	rural	female	16	0
+district	45	rural	male	16	0
+district	45	urban	female	16	1509
+district	45	urban	male	16	1324
+district	45	rural	female	17	0
+district	45	rural	male	17	0
+district	45	urban	female	17	1507
+district	45	urban	male	17	1338
+district	45	rural	female	18	0
+district	45	rural	male	18	0
+district	45	urban	female	18	1709
+district	45	urban	male	18	1473
+district	45	rural	female	19	0
+district	45	rural	male	19	0
+district	45	urban	female	19	1452
+district	45	urban	male	19	1236
+district	45	rural	female	20	0
+district	45	rural	male	20	0
+district	45	urban	female	20	2021
+district	45	urban	male	20	1629
+district	45	rural	female	21	0
+district	45	rural	male	21	0
+district	45	urban	female	21	1261
+district	45	urban	male	21	1056
+district	45	rural	female	22	0
+district	45	rural	male	22	0
+district	45	urban	female	22	1718
+district	45	urban	male	22	1533
+district	45	rural	female	23	0
+district	45	rural	male	23	0
+district	45	urban	female	23	1355
+district	45	urban	male	23	1030
+district	45	rural	female	24	0
+district	45	rural	male	24	0
+district	45	urban	female	24	1336
+district	45	urban	male	24	1137
+district	45	rural	female	25	0
+district	45	rural	male	25	0
+district	45	urban	female	25	1484
+district	45	urban	male	25	1351
+district	45	rural	female	26	0
+district	45	rural	male	26	0
+district	45	urban	female	26	1310
+district	45	urban	male	26	1113
+district	45	rural	female	27	0
+district	45	rural	male	27	0
+district	45	urban	female	27	1114
+district	45	urban	male	27	1002
+district	45	rural	female	28	0
+district	45	rural	male	28	0
+district	45	urban	female	28	1601
+district	45	urban	male	28	1343
+district	45	rural	female	29	0
+district	45	rural	male	29	0
+district	45	urban	female	29	988
+district	45	urban	male	29	870
+district	45	rural	female	30	0
+district	45	rural	male	30	0
+district	45	urban	female	30	1791
+district	45	urban	male	30	1670
+district	45	rural	female	31	0
+district	45	rural	male	31	0
+district	45	urban	female	31	662
+district	45	urban	male	31	618
+district	45	rural	female	32	0
+district	45	rural	male	32	0
+district	45	urban	female	32	1255
+district	45	urban	male	32	1244
+district	45	rural	female	33	0
+district	45	rural	male	33	0
+district	45	urban	female	33	823
+district	45	urban	male	33	758
+district	45	rural	female	34	0
+district	45	rural	male	34	0
+district	45	urban	female	34	749
+district	45	urban	male	34	740
+district	45	rural	female	35	0
+district	45	rural	male	35	0
+district	45	urban	female	35	1069
+district	45	urban	male	35	1236
+district	45	rural	female	36	0
+district	45	rural	male	36	0
+district	45	urban	female	36	822
+district	45	urban	male	36	731
+district	45	rural	female	37	0
+district	45	rural	male	37	0
+district	45	urban	female	37	715
+district	45	urban	male	37	667
+district	45	rural	female	38	0
+district	45	rural	male	38	0
+district	45	urban	female	38	857
+district	45	urban	male	38	842
+district	45	rural	female	39	0
+district	45	rural	male	39	0
+district	45	urban	female	39	597
+district	45	urban	male	39	574
+district	45	rural	female	40	0
+district	45	rural	male	40	0
+district	45	urban	female	40	1135
+district	45	urban	male	40	1161
+district	45	rural	female	41	0
+district	45	rural	male	41	0
+district	45	urban	female	41	342
+district	45	urban	male	41	364
+district	45	rural	female	42	0
+district	45	rural	male	42	0
+district	45	urban	female	42	657
+district	45	urban	male	42	770
+district	45	rural	female	43	0
+district	45	rural	male	43	0
+district	45	urban	female	43	435
+district	45	urban	male	43	418
+district	45	rural	female	44	0
+district	45	rural	male	44	0
+district	45	urban	female	44	418
+district	45	urban	male	44	449
+district	45	rural	female	45	0
+district	45	rural	male	45	0
+district	45	urban	female	45	613
+district	45	urban	male	45	711
+district	45	rural	female	46	0
+district	45	rural	male	46	0
+district	45	urban	female	46	358
+district	45	urban	male	46	430
+district	45	rural	female	47	0
+district	45	rural	male	47	0
+district	45	urban	female	47	333
+district	45	urban	male	47	387
+district	45	rural	female	48	0
+district	45	rural	male	48	0
+district	45	urban	female	48	521
+district	45	urban	male	48	486
+district	45	rural	female	49	0
+district	45	rural	male	49	0
+district	45	urban	female	49	301
+district	45	urban	male	49	330
+district	45	rural	female	50	0
+district	45	rural	male	50	0
+district	45	urban	female	50	648
+district	45	urban	male	50	613
+district	45	rural	female	51	0
+district	45	rural	male	51	0
+district	45	urban	female	51	264
+district	45	urban	male	51	305
+district	45	rural	female	52	0
+district	45	rural	male	52	0
+district	45	urban	female	52	372
+district	45	urban	male	52	479
+district	45	rural	female	53	0
+district	45	rural	male	53	0
+district	45	urban	female	53	228
+district	45	urban	male	53	264
+district	45	rural	female	54	0
+district	45	rural	male	54	0
+district	45	urban	female	54	252
+district	45	urban	male	54	351
+district	45	rural	female	55	0
+district	45	rural	male	55	0
+district	45	urban	female	55	346
+district	45	urban	male	55	371
+district	45	rural	female	56	0
+district	45	rural	male	56	0
+district	45	urban	female	56	261
+district	45	urban	male	56	284
+district	45	rural	female	57	0
+district	45	rural	male	57	0
+district	45	urban	female	57	173
+district	45	urban	male	57	220
+district	45	rural	female	58	0
+district	45	rural	male	58	0
+district	45	urban	female	58	307
+district	45	urban	male	58	276
+district	45	rural	female	59	0
+district	45	rural	male	59	0
+district	45	urban	female	59	171
+district	45	urban	male	59	179
+district	45	rural	female	60	0
+district	45	rural	male	60	0
+district	45	urban	female	60	569
+district	45	urban	male	60	512
+district	45	rural	female	61	0
+district	45	rural	male	61	0
+district	45	urban	female	61	120
+district	45	urban	male	61	171
+district	45	rural	female	62	0
+district	45	rural	male	62	0
+district	45	urban	female	62	234
+district	45	urban	male	62	272
+district	45	rural	female	63	0
+district	45	rural	male	63	0
+district	45	urban	female	63	134
+district	45	urban	male	63	166
+district	45	rural	female	64	0
+district	45	rural	male	64	0
+district	45	urban	female	64	130
+district	45	urban	male	64	176
+district	45	rural	female	65	0
+district	45	rural	male	65	0
+district	45	urban	female	65	315
+district	45	urban	male	65	228
+district	45	rural	female	66	0
+district	45	rural	male	66	0
+district	45	urban	female	66	107
+district	45	urban	male	66	105
+district	45	rural	female	67	0
+district	45	rural	male	67	0
+district	45	urban	female	67	134
+district	45	urban	male	67	165
+district	45	rural	female	68	0
+district	45	rural	male	68	0
+district	45	urban	female	68	138
+district	45	urban	male	68	148
+district	45	rural	female	69	0
+district	45	rural	male	69	0
+district	45	urban	female	69	79
+district	45	urban	male	69	87
+district	45	rural	female	70	0
+district	45	rural	male	70	0
+district	45	urban	female	70	467
+district	45	urban	male	70	327
+district	45	rural	female	71	0
+district	45	rural	male	71	0
+district	45	urban	female	71	43
+district	45	urban	male	71	41
+district	45	rural	female	72	0
+district	45	rural	male	72	0
+district	45	urban	female	72	139
+district	45	urban	male	72	124
+district	45	rural	female	73	0
+district	45	rural	male	73	0
+district	45	urban	female	73	53
+district	45	urban	male	73	97
+district	45	rural	female	74	0
+district	45	rural	male	74	0
+district	45	urban	female	74	74
+district	45	urban	male	74	81
+district	45	rural	female	75	0
+district	45	rural	male	75	0
+district	45	urban	female	75	182
+district	45	urban	male	75	138
+district	45	rural	female	76	0
+district	45	rural	male	76	0
+district	45	urban	female	76	67
+district	45	urban	male	76	76
+district	45	rural	female	77	0
+district	45	rural	male	77	0
+district	45	urban	female	77	48
+district	45	urban	male	77	56
+district	45	rural	female	78	0
+district	45	rural	male	78	0
+district	45	urban	female	78	83
+district	45	urban	male	78	71
+district	45	rural	female	79	0
+district	45	rural	male	79	0
+district	45	urban	female	79	49
+district	45	urban	male	79	58
+district	45	rural	female	80	0
+district	45	rural	male	80	0
+district	45	urban	female	80	915
+district	45	urban	male	80	637
 region	2	rural	female	1	0
 region	2	rural	male	1	0
 region	2	urban	female	1	49482
@@ -37326,322 +37326,322 @@ district	102	rural	female	80	1661
 district	102	rural	male	80	1425
 district	102	urban	female	80	62
 district	102	urban	male	80	46
- district	103	rural	female	1	0
- district	103	rural	male	1	0
- district	103	urban	female	1	2964
- district	103	urban	male	1	2916
- district	103	rural	female	2	0
- district	103	rural	male	2	0
- district	103	urban	female	2	3340
- district	103	urban	male	2	3353
- district	103	rural	female	3	0
- district	103	rural	male	3	0
- district	103	urban	female	3	3337
- district	103	urban	male	3	3275
- district	103	rural	female	4	0
- district	103	rural	male	4	0
- district	103	urban	female	4	3237
- district	103	urban	male	4	3233
- district	103	rural	female	5	0
- district	103	rural	male	5	0
- district	103	urban	female	5	3035
- district	103	urban	male	5	3241
- district	103	rural	female	6	0
- district	103	rural	male	6	0
- district	103	urban	female	6	3119
- district	103	urban	male	6	3026
- district	103	rural	female	7	0
- district	103	rural	male	7	0
- district	103	urban	female	7	3095
- district	103	urban	male	7	3248
- district	103	rural	female	8	0
- district	103	rural	male	8	0
- district	103	urban	female	8	2931
- district	103	urban	male	8	2779
- district	103	rural	female	9	0
- district	103	rural	male	9	0
- district	103	urban	female	9	2544
- district	103	urban	male	9	2500
- district	103	rural	female	11	0
- district	103	rural	male	11	0
- district	103	urban	female	11	2353
- district	103	urban	male	11	2234
- district	103	rural	female	12	0
- district	103	rural	male	12	0
- district	103	urban	female	12	3592
- district	103	urban	male	12	3546
- district	103	rural	female	13	0
- district	103	rural	male	13	0
- district	103	urban	female	13	2826
- district	103	urban	male	13	2718
- district	103	rural	female	14	0
- district	103	rural	male	14	0
- district	103	urban	female	14	3058
- district	103	urban	male	14	2759
- district	103	rural	female	15	0
- district	103	rural	male	15	0
- district	103	urban	female	15	2813
- district	103	urban	male	15	2598
- district	103	rural	female	16	0
- district	103	rural	male	16	0
- district	103	urban	female	16	3112
- district	103	urban	male	16	2678
- district	103	rural	female	17	0
- district	103	rural	male	17	0
- district	103	urban	female	17	2740
- district	103	urban	male	17	2566
- district	103	rural	female	18	0
- district	103	rural	male	18	0
- district	103	urban	female	18	3227
- district	103	urban	male	18	3112
- district	103	rural	female	19	0
- district	103	rural	male	19	0
- district	103	urban	female	19	2457
- district	103	urban	male	19	2161
- district	103	rural	female	20	0
- district	103	rural	male	20	0
- district	103	urban	female	20	3303
- district	103	urban	male	20	2854
- district	103	rural	female	21	0
- district	103	rural	male	21	0
- district	103	urban	female	21	1610
- district	103	urban	male	21	1645
- district	103	rural	female	22	0
- district	103	rural	male	22	0
- district	103	urban	female	22	2454
- district	103	urban	male	22	2375
- district	103	rural	female	23	0
- district	103	rural	male	23	0
- district	103	urban	female	23	1774
- district	103	urban	male	23	1659
- district	103	rural	female	24	0
- district	103	rural	male	24	0
- district	103	urban	female	24	1691
- district	103	urban	male	24	1562
- district	103	rural	female	25	0
- district	103	rural	male	25	0
- district	103	urban	female	25	2342
- district	103	urban	male	25	2026
- district	103	rural	female	26	0
- district	103	rural	male	26	0
- district	103	urban	female	26	1656
- district	103	urban	male	26	1312
- district	103	rural	female	27	0
- district	103	rural	male	27	0
- district	103	urban	female	27	1595
- district	103	urban	male	27	1273
- district	103	rural	female	28	0
- district	103	rural	male	28	0
- district	103	urban	female	28	2252
- district	103	urban	male	28	1727
- district	103	rural	female	29	0
- district	103	rural	male	29	0
- district	103	urban	female	29	1224
- district	103	urban	male	29	1011
- district	103	rural	female	30	0
- district	103	rural	male	30	0
- district	103	urban	female	30	2911
- district	103	urban	male	30	2264
- district	103	rural	female	31	0
- district	103	rural	male	31	0
- district	103	urban	female	31	760
- district	103	urban	male	31	655
- district	103	rural	female	32	0
- district	103	rural	male	32	0
- district	103	urban	female	32	1701
- district	103	urban	male	32	1441
- district	103	rural	female	33	0
- district	103	rural	male	33	0
- district	103	urban	female	33	994
- district	103	urban	male	33	913
- district	103	rural	female	34	0
- district	103	rural	male	34	0
- district	103	urban	female	34	872
- district	103	urban	male	34	837
- district	103	rural	female	35	0
- district	103	rural	male	35	0
- district	103	urban	female	35	1968
- district	103	urban	male	35	1834
- district	103	rural	female	36	0
- district	103	rural	male	36	0
- district	103	urban	female	36	1027
- district	103	urban	male	36	987
- district	103	rural	female	37	0
- district	103	rural	male	37	0
- district	103	urban	female	37	933
- district	103	urban	male	37	920
- district	103	rural	female	38	0
- district	103	rural	male	38	0
- district	103	urban	female	38	1278
- district	103	urban	male	38	1125
- district	103	rural	female	39	0
- district	103	rural	male	39	0
- district	103	urban	female	39	723
- district	103	urban	male	39	639
- district	103	rural	female	40	0
- district	103	rural	male	40	0
- district	103	urban	female	40	2087
- district	103	urban	male	40	1897
- district	103	rural	female	41	0
- district	103	rural	male	41	0
- district	103	urban	female	41	452
- district	103	urban	male	41	410
- district	103	rural	female	42	0
- district	103	rural	male	42	0
- district	103	urban	female	42	909
- district	103	urban	male	42	888
- district	103	rural	female	43	0
- district	103	rural	male	43	0
- district	103	urban	female	43	532
- district	103	urban	male	43	601
- district	103	rural	female	44	0
- district	103	rural	male	44	0
- district	103	urban	female	44	528
- district	103	urban	male	44	569
- district	103	rural	female	45	0
- district	103	rural	male	45	0
- district	103	urban	female	45	1147
- district	103	urban	male	45	1213
- district	103	rural	female	46	0
- district	103	rural	male	46	0
- district	103	urban	female	46	503
- district	103	urban	male	46	485
- district	103	rural	female	47	0
- district	103	rural	male	47	0
- district	103	urban	female	47	487
- district	103	urban	male	47	454
- district	103	rural	female	48	0
- district	103	rural	male	48	0
- district	103	urban	female	48	741
- district	103	urban	male	48	784
- district	103	rural	female	49	0
- district	103	rural	male	49	0
- district	103	urban	female	49	439
- district	103	urban	male	49	386
- district	103	rural	female	50	0
- district	103	rural	male	50	0
- district	103	urban	female	50	1572
- district	103	urban	male	50	1150
- district	103	rural	female	51	0
- district	103	rural	male	51	0
- district	103	urban	female	51	334
- district	103	urban	male	51	396
- district	103	rural	female	52	0
- district	103	rural	male	52	0
- district	103	urban	female	52	490
- district	103	urban	male	52	692
- district	103	rural	female	53	0
- district	103	rural	male	53	0
- district	103	urban	female	53	324
- district	103	urban	male	53	404
- district	103	rural	female	54	0
- district	103	rural	male	54	0
- district	103	urban	female	54	391
- district	103	urban	male	54	399
- district	103	rural	female	55	0
- district	103	rural	male	55	0
- district	103	urban	female	55	552
- district	103	urban	male	55	595
- district	103	rural	female	56	0
- district	103	rural	male	56	0
- district	103	urban	female	56	282
- district	103	urban	male	56	389
- district	103	rural	female	57	0
- district	103	rural	male	57	0
- district	103	urban	female	57	218
- district	103	urban	male	57	317
- district	103	rural	female	58	0
- district	103	rural	male	58	0
- district	103	urban	female	58	390
- district	103	urban	male	58	459
- district	103	rural	female	59	0
- district	103	rural	male	59	0
- district	103	urban	female	59	154
- district	103	urban	male	59	225
- district	103	rural	female	60	0
- district	103	rural	male	60	0
- district	103	urban	female	60	1045
- district	103	urban	male	60	639
- district	103	rural	female	61	0
- district	103	rural	male	61	0
- district	103	urban	female	61	109
- district	103	urban	male	61	132
- district	103	rural	female	62	0
- district	103	rural	male	62	0
- district	103	urban	female	62	251
- district	103	urban	male	62	315
- district	103	rural	female	63	0
- district	103	rural	male	63	0
- district	103	urban	female	63	137
- district	103	urban	male	63	182
- district	103	rural	female	64	0
- district	103	rural	male	64	0
- district	103	urban	female	64	105
- district	103	urban	male	64	197
- district	103	rural	female	65	0
- district	103	rural	male	65	0
- district	103	urban	female	65	419
- district	103	urban	male	65	342
- district	103	rural	female	66	0
- district	103	rural	male	66	0
- district	103	urban	female	66	105
- district	103	urban	male	66	118
- district	103	rural	female	67	0
- district	103	rural	male	67	0
- district	103	urban	female	67	130
- district	103	urban	male	67	179
- district	103	rural	female	68	0
- district	103	rural	male	68	0
- district	103	urban	female	68	187
- district	103	urban	male	68	126
- district	103	rural	female	69	0
- district	103	rural	male	69	0
- district	103	urban	female	69	69
- district	103	urban	male	69	71
- district	103	rural	female	70	0
- district	103	rural	male	70	0
- district	103	urban	female	70	727
- district	103	urban	male	70	367
- district	103	rural	female	71	0
- district	103	rural	male	71	0
- district	103	urban	female	71	42
- district	103	urban	male	71	57
- district	103	rural	female	72	0
- district	103	rural	male	72	0
- district	103	urban	female	72	141
- district	103	urban	male	72	130
- district	103	rural	female	73	0
- district	103	rural	male	73	0
- district	103	urban	female	73	48
- district	103	urban	male	73	74
- district	103	rural	female	74	0
- district	103	rural	male	74	0
- district	103	urban	female	74	56
- district	103	urban	male	74	65
- district	103	rural	female	75	0
- district	103	rural	male	75	0
- district	103	urban	female	75	221
- district	103	urban	male	75	199
- district	103	rural	female	76	0
- district	103	rural	male	76	0
- district	103	urban	female	76	51
- district	103	urban	male	76	63
- district	103	rural	female	77	0
- district	103	rural	male	77	0
- district	103	urban	female	77	51
- district	103	urban	male	77	46
- district	103	rural	female	78	0
- district	103	rural	male	78	0
- district	103	urban	female	78	91
- district	103	urban	male	78	79
- district	103	rural	female	79	0
- district	103	rural	male	79	0
- district	103	urban	female	79	35
- district	103	urban	male	79	33
- district	103	rural	female	80	0
- district	103	rural	male	80	0
- district	103	urban	female	80	1205
- district	103	urban	male	80	627
+district	103	rural	female	1	0
+district	103	rural	male	1	0
+district	103	urban	female	1	2964
+district	103	urban	male	1	2916
+district	103	rural	female	2	0
+district	103	rural	male	2	0
+district	103	urban	female	2	3340
+district	103	urban	male	2	3353
+district	103	rural	female	3	0
+district	103	rural	male	3	0
+district	103	urban	female	3	3337
+district	103	urban	male	3	3275
+district	103	rural	female	4	0
+district	103	rural	male	4	0
+district	103	urban	female	4	3237
+district	103	urban	male	4	3233
+district	103	rural	female	5	0
+district	103	rural	male	5	0
+district	103	urban	female	5	3035
+district	103	urban	male	5	3241
+district	103	rural	female	6	0
+district	103	rural	male	6	0
+district	103	urban	female	6	3119
+district	103	urban	male	6	3026
+district	103	rural	female	7	0
+district	103	rural	male	7	0
+district	103	urban	female	7	3095
+district	103	urban	male	7	3248
+district	103	rural	female	8	0
+district	103	rural	male	8	0
+district	103	urban	female	8	2931
+district	103	urban	male	8	2779
+district	103	rural	female	9	0
+district	103	rural	male	9	0
+district	103	urban	female	9	2544
+district	103	urban	male	9	2500
+district	103	rural	female	11	0
+district	103	rural	male	11	0
+district	103	urban	female	11	2353
+district	103	urban	male	11	2234
+district	103	rural	female	12	0
+district	103	rural	male	12	0
+district	103	urban	female	12	3592
+district	103	urban	male	12	3546
+district	103	rural	female	13	0
+district	103	rural	male	13	0
+district	103	urban	female	13	2826
+district	103	urban	male	13	2718
+district	103	rural	female	14	0
+district	103	rural	male	14	0
+district	103	urban	female	14	3058
+district	103	urban	male	14	2759
+district	103	rural	female	15	0
+district	103	rural	male	15	0
+district	103	urban	female	15	2813
+district	103	urban	male	15	2598
+district	103	rural	female	16	0
+district	103	rural	male	16	0
+district	103	urban	female	16	3112
+district	103	urban	male	16	2678
+district	103	rural	female	17	0
+district	103	rural	male	17	0
+district	103	urban	female	17	2740
+district	103	urban	male	17	2566
+district	103	rural	female	18	0
+district	103	rural	male	18	0
+district	103	urban	female	18	3227
+district	103	urban	male	18	3112
+district	103	rural	female	19	0
+district	103	rural	male	19	0
+district	103	urban	female	19	2457
+district	103	urban	male	19	2161
+district	103	rural	female	20	0
+district	103	rural	male	20	0
+district	103	urban	female	20	3303
+district	103	urban	male	20	2854
+district	103	rural	female	21	0
+district	103	rural	male	21	0
+district	103	urban	female	21	1610
+district	103	urban	male	21	1645
+district	103	rural	female	22	0
+district	103	rural	male	22	0
+district	103	urban	female	22	2454
+district	103	urban	male	22	2375
+district	103	rural	female	23	0
+district	103	rural	male	23	0
+district	103	urban	female	23	1774
+district	103	urban	male	23	1659
+district	103	rural	female	24	0
+district	103	rural	male	24	0
+district	103	urban	female	24	1691
+district	103	urban	male	24	1562
+district	103	rural	female	25	0
+district	103	rural	male	25	0
+district	103	urban	female	25	2342
+district	103	urban	male	25	2026
+district	103	rural	female	26	0
+district	103	rural	male	26	0
+district	103	urban	female	26	1656
+district	103	urban	male	26	1312
+district	103	rural	female	27	0
+district	103	rural	male	27	0
+district	103	urban	female	27	1595
+district	103	urban	male	27	1273
+district	103	rural	female	28	0
+district	103	rural	male	28	0
+district	103	urban	female	28	2252
+district	103	urban	male	28	1727
+district	103	rural	female	29	0
+district	103	rural	male	29	0
+district	103	urban	female	29	1224
+district	103	urban	male	29	1011
+district	103	rural	female	30	0
+district	103	rural	male	30	0
+district	103	urban	female	30	2911
+district	103	urban	male	30	2264
+district	103	rural	female	31	0
+district	103	rural	male	31	0
+district	103	urban	female	31	760
+district	103	urban	male	31	655
+district	103	rural	female	32	0
+district	103	rural	male	32	0
+district	103	urban	female	32	1701
+district	103	urban	male	32	1441
+district	103	rural	female	33	0
+district	103	rural	male	33	0
+district	103	urban	female	33	994
+district	103	urban	male	33	913
+district	103	rural	female	34	0
+district	103	rural	male	34	0
+district	103	urban	female	34	872
+district	103	urban	male	34	837
+district	103	rural	female	35	0
+district	103	rural	male	35	0
+district	103	urban	female	35	1968
+district	103	urban	male	35	1834
+district	103	rural	female	36	0
+district	103	rural	male	36	0
+district	103	urban	female	36	1027
+district	103	urban	male	36	987
+district	103	rural	female	37	0
+district	103	rural	male	37	0
+district	103	urban	female	37	933
+district	103	urban	male	37	920
+district	103	rural	female	38	0
+district	103	rural	male	38	0
+district	103	urban	female	38	1278
+district	103	urban	male	38	1125
+district	103	rural	female	39	0
+district	103	rural	male	39	0
+district	103	urban	female	39	723
+district	103	urban	male	39	639
+district	103	rural	female	40	0
+district	103	rural	male	40	0
+district	103	urban	female	40	2087
+district	103	urban	male	40	1897
+district	103	rural	female	41	0
+district	103	rural	male	41	0
+district	103	urban	female	41	452
+district	103	urban	male	41	410
+district	103	rural	female	42	0
+district	103	rural	male	42	0
+district	103	urban	female	42	909
+district	103	urban	male	42	888
+district	103	rural	female	43	0
+district	103	rural	male	43	0
+district	103	urban	female	43	532
+district	103	urban	male	43	601
+district	103	rural	female	44	0
+district	103	rural	male	44	0
+district	103	urban	female	44	528
+district	103	urban	male	44	569
+district	103	rural	female	45	0
+district	103	rural	male	45	0
+district	103	urban	female	45	1147
+district	103	urban	male	45	1213
+district	103	rural	female	46	0
+district	103	rural	male	46	0
+district	103	urban	female	46	503
+district	103	urban	male	46	485
+district	103	rural	female	47	0
+district	103	rural	male	47	0
+district	103	urban	female	47	487
+district	103	urban	male	47	454
+district	103	rural	female	48	0
+district	103	rural	male	48	0
+district	103	urban	female	48	741
+district	103	urban	male	48	784
+district	103	rural	female	49	0
+district	103	rural	male	49	0
+district	103	urban	female	49	439
+district	103	urban	male	49	386
+district	103	rural	female	50	0
+district	103	rural	male	50	0
+district	103	urban	female	50	1572
+district	103	urban	male	50	1150
+district	103	rural	female	51	0
+district	103	rural	male	51	0
+district	103	urban	female	51	334
+district	103	urban	male	51	396
+district	103	rural	female	52	0
+district	103	rural	male	52	0
+district	103	urban	female	52	490
+district	103	urban	male	52	692
+district	103	rural	female	53	0
+district	103	rural	male	53	0
+district	103	urban	female	53	324
+district	103	urban	male	53	404
+district	103	rural	female	54	0
+district	103	rural	male	54	0
+district	103	urban	female	54	391
+district	103	urban	male	54	399
+district	103	rural	female	55	0
+district	103	rural	male	55	0
+district	103	urban	female	55	552
+district	103	urban	male	55	595
+district	103	rural	female	56	0
+district	103	rural	male	56	0
+district	103	urban	female	56	282
+district	103	urban	male	56	389
+district	103	rural	female	57	0
+district	103	rural	male	57	0
+district	103	urban	female	57	218
+district	103	urban	male	57	317
+district	103	rural	female	58	0
+district	103	rural	male	58	0
+district	103	urban	female	58	390
+district	103	urban	male	58	459
+district	103	rural	female	59	0
+district	103	rural	male	59	0
+district	103	urban	female	59	154
+district	103	urban	male	59	225
+district	103	rural	female	60	0
+district	103	rural	male	60	0
+district	103	urban	female	60	1045
+district	103	urban	male	60	639
+district	103	rural	female	61	0
+district	103	rural	male	61	0
+district	103	urban	female	61	109
+district	103	urban	male	61	132
+district	103	rural	female	62	0
+district	103	rural	male	62	0
+district	103	urban	female	62	251
+district	103	urban	male	62	315
+district	103	rural	female	63	0
+district	103	rural	male	63	0
+district	103	urban	female	63	137
+district	103	urban	male	63	182
+district	103	rural	female	64	0
+district	103	rural	male	64	0
+district	103	urban	female	64	105
+district	103	urban	male	64	197
+district	103	rural	female	65	0
+district	103	rural	male	65	0
+district	103	urban	female	65	419
+district	103	urban	male	65	342
+district	103	rural	female	66	0
+district	103	rural	male	66	0
+district	103	urban	female	66	105
+district	103	urban	male	66	118
+district	103	rural	female	67	0
+district	103	rural	male	67	0
+district	103	urban	female	67	130
+district	103	urban	male	67	179
+district	103	rural	female	68	0
+district	103	rural	male	68	0
+district	103	urban	female	68	187
+district	103	urban	male	68	126
+district	103	rural	female	69	0
+district	103	rural	male	69	0
+district	103	urban	female	69	69
+district	103	urban	male	69	71
+district	103	rural	female	70	0
+district	103	rural	male	70	0
+district	103	urban	female	70	727
+district	103	urban	male	70	367
+district	103	rural	female	71	0
+district	103	rural	male	71	0
+district	103	urban	female	71	42
+district	103	urban	male	71	57
+district	103	rural	female	72	0
+district	103	rural	male	72	0
+district	103	urban	female	72	141
+district	103	urban	male	72	130
+district	103	rural	female	73	0
+district	103	rural	male	73	0
+district	103	urban	female	73	48
+district	103	urban	male	73	74
+district	103	rural	female	74	0
+district	103	rural	male	74	0
+district	103	urban	female	74	56
+district	103	urban	male	74	65
+district	103	rural	female	75	0
+district	103	rural	male	75	0
+district	103	urban	female	75	221
+district	103	urban	male	75	199
+district	103	rural	female	76	0
+district	103	rural	male	76	0
+district	103	urban	female	76	51
+district	103	urban	male	76	63
+district	103	rural	female	77	0
+district	103	rural	male	77	0
+district	103	urban	female	77	51
+district	103	urban	male	77	46
+district	103	rural	female	78	0
+district	103	rural	male	78	0
+district	103	urban	female	78	91
+district	103	urban	male	78	79
+district	103	rural	female	79	0
+district	103	rural	male	79	0
+district	103	urban	female	79	35
+district	103	urban	male	79	33
+district	103	rural	female	80	0
+district	103	rural	male	80	0
+district	103	urban	female	80	1205
+district	103	urban	male	80	627
 district	104	rural	female	1	6859
 district	104	rural	male	1	6869
 district	104	urban	female	1	562

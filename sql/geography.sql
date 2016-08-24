@@ -82,7 +82,7 @@ COPY wazimap_geography (id, geo_level, geo_code, name, parent_level, parent_code
 6	region	6	Kagera	country	TZ	Kagera	2012	39627
 7	region	7	Kaskazini pemba	country	TZ	Kaskazini pemba	2012	574
 8	region	8	Kaskazini unguja	country	TZ	Kaskazini unguja	2012	470
-9	region	9	Katavi	country	TZ	Katavi	2012	45843moro
+9	region	9	Katavi	country	TZ	Katavi	2012	45843
 10	region	10	Kigoma	country	TZ	Kigoma	2012	45066
 11	region	11	Kilimanjaro	country	TZ	Kilimanjaro	2012	13209
 12	region	12	Kusini pemba	country	TZ	Kusini pemba	2012	332
