@@ -449,6 +449,30 @@ def get_pepfar_profile(geo_code, geo_level, session):
     OVC_SERV = pepfar_data['OVC_SERV']['numerators']['this']
     PP_PREV = pepfar_data['PP_PREV']['numerators']['this']
     KP_PREV = pepfar_data['KP_PREV']['numerators']['this']
+    try:
+        HTP = round((HTC_TST_POS / HTC_TST) * 100)
+        HTPP = round((((HTC_TST - HTC_TST_POS) * 1.0) / HTC_TST) * 100)
+    except:
+        HTP = 0
+        HTPP = 0
+    try:
+        PSP = round(((PMTCT_STAT_POS * 1.0) / PMTCT_STAT) * 100)
+        PSPP = round((((PMTCT_STAT - PMTCT_STAT_POS) * 1.0) / PMTCT_STAT) * 100)
+    except:
+        PSP = 0
+        PSPP = 0
+    try:
+        PA = round((PMTCT_ARV / PMTCT_STAT_POS) * 100)
+        PAP = round((((PMTCT_STAT_POS - PMTCT_ARV) * 1.0) / PMTCT_STAT_POS) * 100)
+    except:
+        PA = 0
+        PAP = 0
+    try:
+        PEP = round((PMTCT_EID_POS / PMTCT_EID) * 100)
+        PEPP = round((((PMTCT_EID - PMTCT_EID_POS) * 1.0) / PMTCT_EID) * 100)
+    except:
+        PEP = 0
+        PEPP = 0
     return {
         'HTC_TST': {
             'name': 'Number of individuals who received HIV Testing and Counseling (HTC) services for HIV and their\
@@ -460,12 +484,12 @@ def get_pepfar_profile(geo_code, geo_level, session):
             'positive': {
                 'name': 'HIV+',
                 'numerators' : {'this': HTC_TST_POS},
-                'values': {'this': round((HTC_TST_POS / HTC_TST) * 100)}
+                'values': {'this': HTP}
             },
             'negative': {
                 'name': 'HIV-',
                 'numerators': {'this': HTC_TST - HTC_TST_POS},
-                'values': {'this': round(((HTC_TST - HTC_TST_POS) * 1.0) / HTC_TST) * 100}
+                'values': {'this': HTPP}
             },
             'metadata': pepfar_data['metadata']
         },
@@ -502,12 +526,12 @@ def get_pepfar_profile(geo_code, geo_level, session):
             'positive': {
                 'name': 'HIV+',
                 'numerators': {'this': PMTCT_STAT_POS},
-                'values': {'this': round(((PMTCT_STAT_POS * 1.0) / PMTCT_STAT) * 100)}
+                'values': {'this': PSP}
             },
             'negative': {
                 'name': 'HIV-',
                 'numerators': {'this': PMTCT_STAT - PMTCT_STAT_POS},
-                'values': {'this': round((((PMTCT_STAT - PMTCT_STAT_POS) * 1.0) / PMTCT_STAT) * 100)}
+                'values': {'this': PSPP}
             },
             'metadata': pepfar_data['metadata']
         },
@@ -515,12 +539,12 @@ def get_pepfar_profile(geo_code, geo_level, session):
             'positive': {
                 'name': 'Receiving ARV',
                 'numerators': {'this': PMTCT_ARV},
-                'values': {'this': round((PMTCT_ARV / PMTCT_STAT_POS) * 100)}
+                'values': {'this': PA}
             },
             'negative': {
                 'name': 'Not receiving ARV',
                 'numerators': {'this': PMTCT_STAT_POS - PMTCT_ARV},
-                'values': {'this': round((((PMTCT_STAT_POS - PMTCT_ARV) * 1.0) / PMTCT_STAT_POS) * 100)}
+                'values': {'this': PAP}
             },
             'metadata': pepfar_data['metadata']
         },
@@ -528,12 +552,12 @@ def get_pepfar_profile(geo_code, geo_level, session):
             'positive': {
                 'name': 'HIV+',
                 'numerators': {'this': PMTCT_EID_POS},
-                'values': {'this': round((PMTCT_EID_POS / PMTCT_EID) * 100)}
+                'values': {'this': PEP}
             },
             'negative': {
                 'name': 'HIV-',
                 'numerators': {'this': PMTCT_EID - PMTCT_EID_POS},
-                'values': {'this': round((((PMTCT_EID - PMTCT_EID_POS) * 1.0) / PMTCT_EID) * 100)}
+                'values': {'this': PEPP}
             },
             'metadata': pepfar_data['metadata']
         },
