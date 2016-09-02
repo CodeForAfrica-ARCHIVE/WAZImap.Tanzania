@@ -179,26 +179,35 @@
             <div class="column-half">
                 {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.HTC_TST stat_type='number' %}
             </div>
+             <div class="column-half" id="chart-pie-pepfar-HTC_TST_POS" data-stat-type="percentage" data-chart-title="% of individuals who received HIV Testing and Counseling (HTC) services for HIV and positive test results."></div>
          </section>
 
          <section class="clearfix stat-row">
-            <div class="column-third"  id="chart-pie-pepfar-PMTCT_STAT" data-stat-type="scaled-percentage" data-chart-title="Number of pregnant women with known HIV status (includes women who were tested for
-HIV and received their results)"></div>
-            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_STAT_POS stat_type='number' %}</div>
-            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_ARV stat_type='number' %}</div>
-        </section>
-
-        <section class="clearfix stat-row">
-            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_EID stat_type='number' %}</div>
-            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_EID_POS stat_type='number' %}</div>
-            <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_CTX stat_type='number' %}</div>
+             <div class="column-third">
+                 {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_STAT stat_type='number' %}
+             </div>
+             <style>
+                 #chart-pie-pepfar-PMTCT_STAT_POS h3 {padding-bottom:45px;}
+             </style>
+             <div class="column-third" id="chart-pie-pepfar-PMTCT_STAT_POS" data-stat-type="percentage" data-chart-title="% of pregnant women with positive HIV status"></div>
+             <div class="column-third" id="chart-pie-pepfar-PMTCT_ARV" data-stat-type="percentage" data-chart-title="% of HIV-positive pregnant women who received antiretroviral medications to reduce risk of mother-to-child-transmission (MTCT) during pregnancy and delivery"></div>
+             <br clear="all">
+             <br clear="all">
+             <div class="column-third">
+                 {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_EID stat_type='number' %}
+             </div>
+             <div class="column-third" id="chart-pie-pepfar-PMTCT_EID_POS" data-stat-type="percentage" data-chart-title=" % of infants born to HIV-positive women who had a virologic HIV test done within two months of birth who tested positive for HIV"></div>
+              <div class="column-third">
+                 {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PMTCT_CTX stat_type='number' %}
+             </div>
         </section>
         <section class="clearfix stat-row">
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.CARE_NEW stat_type='number' %}</div>
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.TX_NEW stat_type='number' %}</div>
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.CARE_CURR stat_type='number' %}</div>
         </section>
-        <section class="clearfix stat-row">
+
+        <!--<section class="clearfix stat-row">
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.TB_SCREEN stat_type='number' %}</div>
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.TX_CURR stat_type='number' %}</div>
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.TB_ART stat_type='number' %}</div>
@@ -212,7 +221,7 @@ HIV and received their results)"></div>
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.OVC_SERV stat_type='number' %}</div>
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.PP_PREV stat_type='number' %}</div>
             <div class="column-third"> {% include 'profile/_blocks/_stat_list.html' with stat=pepfar.KP_PREV stat_type='number' %}</div>
-        </section>
+        </section>-->
     </div>
 </article>
 

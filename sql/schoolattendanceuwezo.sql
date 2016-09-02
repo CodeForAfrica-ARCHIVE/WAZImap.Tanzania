@@ -414,7 +414,30 @@ district	157	drop outs	6.8
 district	158	drop outs	4.8
 region	4	drop outs	5.9
 country	TZ	drop outs	4.2
+region	12	pupils in school	0
+region	12	drop outs	0
+district	159	pupils in school	0
+district	159	drop outs	0
+district	160	pupils in school	0
+district	160	drop outs	0
+district	161	pupils in school	0
+district	161	drop outs	0
+district	162	pupils in school	0
+district	162	drop outs	0
+district	163	pupils in school	0
+district	163	drop outs	0
+district	164	pupils in school	0
+district	164	drop outs	0
+district	165	pupils in school	0
+district	165	drop outs	0
+district	166	pupils in school	0
+district	166	drop outs	0
+district	167	pupils in school	0
+district	167	drop outs	0
+district	168	pupils in school	0
+district	168	drop outs	0
 \.
+
 --
 -- Name: schoolattendance_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --

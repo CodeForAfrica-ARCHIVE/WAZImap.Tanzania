@@ -792,6 +792,50 @@ district	157	english	10.3
 district	158	english	26.7
 region	4	english	16.6
 country	TZ	english	20.7
+region	12	english	0
+region	12	swahili	0
+region	12	math	0
+region	12	all subjects	0
+district	159	english	0
+district	159	math	0
+district	159	swahili	0
+district	159	all subjects	0
+district	160	english	0
+district	160	math	0
+district	160	swahili	0
+district	160	all subjects	0
+district	161	english	0
+district	161	math	0
+district	161	swahili	0
+district	161	all subjects	0
+district	162	english	0
+district	162	math	0
+district	162	swahili	0
+district	162	all subjects	0
+district	163	english	0
+district	163	math	0
+district	163	swahili	0
+district	163	all subjects	0
+district	164	english	0
+district	164	math	0
+district	164	swahili	0
+district	164	all subjects	0
+district	165	english	0
+district	165	math	0
+district	165	swahili	0
+district	165	all subjects	0
+district	166	english	0
+district	166	math	0
+district	166	swahili	0
+district	166	all subjects	0
+district	167	english	0
+district	167	math	0
+district	167	swahili	0
+district	167	all subjects	0
+district	168	english	0
+district	168	math	0
+district	168	swahili	0
+district	168	all subjects	0
 \.
 --
 -- Name: literacytest_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
