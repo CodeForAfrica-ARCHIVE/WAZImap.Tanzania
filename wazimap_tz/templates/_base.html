@@ -1,53 +1,115 @@
 {% extends '_base.html' %}
 {% load staticfiles %}
 
-{% block header_branding %}
-    <a href="http://www.mediamonitoringafrica.org/" target="_blank">
-        <img class="mma-logo" src="{% static 'img/mma.png' %}">
-    </a>
-{% endblock header_branding %}
+{% block header %}
+    <header id="page-header">
+        <div id="page-header-title" class="wrapper clearfix">
+            {% if not hide_nav_tools %}
+            <i id="menu-toggle" class="fa fa-bars"></i>
+            {% endif %}
+            <a class="title" href="{% url 'homepage' %}">
+                <img src="{% static 'img/wazimap-tanzania-logo.png' %}">
+            </a>
+            {% if not hide_nav_tools %}
+                {% block nav_tools %}
+                <div id="menu" class="tool-set clearfix">
+                    <div class="tool-group">
+                        <a href="/about" {%if about %} class="active"{%endif%}>About WAZImap</a>
+                    </div>
+                    <div class="tool-group">
+                        <a href="/howitworks" {%if howitworks%} class="active"{%endif%}>How WAZImap Works</a>
+                    </div>
+                    <div class="tool-group">
+                        <a href="/topics" {%if topics%} class="active"{%endif%}>Topics</a>
+                    </div>
+                    <div class="tool-group">
+                        <a href="/#page-footer">Contact</a>
+                    </div>
+                    <div class="search-section div-area">
+                        <div><span>Search for a place in {{WAZIMAP.country_name}}</span> <i class="fa fa-search"></i></div>
+                    </div>
+                    <div class="search-section input-area">
+                        <input name="geography_select" id="geography-select" type="text" autocomplete="off">
+                    </div>
+                    {% if not hide_nav_compare %}
+                    {% comment %}
+                    <span class="separator">or</span>
+                    <div class="tool-group">
+                        <a class="button" href="{% url 'table_search' %}">
+                            <i class="fa fa-chevron-circle-right"></i>
+                            Search for data
+                        </a>
+                    </div>
+                    {% endcomment %}
+                    {% endif %}
+                </div>
+                {% endblock %}
+            {% endif %}
+        </div>
+    </header>
+{% block header_content %}{% endblock header_content %}
+{% endblock %}
 
 {% block footer_content %}
-<div class="column-quarter">
-    <ul class="ul-icon-list">
-        <!--<li>
-            <i class="fa fa-bar-chart-o"></i> Census 2012 data from <a href="http://www.knbs.or.ke/" target="_blank">KNBS</a>
-        </li>-->
-        <li>
-            <i class="fa fa-github"></i> <a href="https://github.com/CodeForAfricaLabs/Wazimap.Tanzania" target="_blank">{{ WAZIMAP.name }} on Github</a>
-        </li>
-        <li>
-            <i class="fa fa-github"></i> Built on <a href="https://github.com/Code4SA/wazimap" target="_blank">Wazimap</a>
-        </li>
-        <li>
-            <i class="fa fa-twitter"></i> <a href="https://twitter.com/Code4Africa" target="_blank">@Code4Africa</a>
-        </li>
-        <li>
-            <i class="fa fa-envelope"></i> <a href="mailto:hello@codeforkenya.org">Email us</a>
-        </li>
-    </ul>
-</div>
+
 <div class="column-half">
+    <p>Wazimap, from the Xhosa word ulwazi for knowledge, is a joint project by Media Monitoring Africa and Code for South Africa that provides easy access to South African census and elections data. Read more about who we are and why we built Wazimap.</p>
+</div>
+
+<div class="column-quarter">
+    <h4>Social links</h4>
     <ul class="ul-icon-list">
-        
-        <li></li>
-        
+        <li>
+            <i class="fa fa-twitter"></i>
+            <a href="https://twitter.com/Code4Africa">Twitter</a>
+        </li>
+        <li>
+            <i class="fa fa-facebook"></i>
+            <a href="https://www.facebook.com/CodeForAfrica/">Facebook</a>
+        </li>
+        <li>
+            <i class="fa fa-github"></i>
+            <a href="https://github.com/CodeForAfrica/WAZImap">Github</a>
+        </li>
+        <li>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:hello@codeforafrica.org">Email us</a>
+        </li>
     </ul>
 </div>
-<div class="column-quarter" style="text-align: center;">
-    <ul class="ul-icon-list">
-        <li>A project by:</li>
-        <li>
-            <a href="https://codeforafrica.org/"><img src="{% static 'img/cftanzania-logo.png' %}" style="height: 50px;"></a>
-            <span style="height: 10px; display: inline-block;"></span>
-        </li>
-        <li>Supported by:</li>
-        <li>
-            <a href="http://twaweza.org/"><img src="{% static 'img/twaweza-logo.png' %}" style="height: 50px;"/></a>
-            <a href="https://codeforafrica.org/"><img src="{% static 'img/cfafrica-logo.png' %}" style="height: 50px;"/></a>
-            <span style="width: 10px; height: 1px; display: inline-block;"> </span>
-            <a href="http://icfj.org/"><img src="{% static 'img/icfj-logo.jpg' %}" style="height: 40px;"></a>
-        </li>
-    </ul>
+
+<div class="column-quarter" style="text-align:center;">
+    <p>A project by: </p>
+    <a href="https://codeforafrica.org/"><img src="{% static 'img/codeforafrica.png' %}"></a>
+    <br>
+    <br>
+    <a href="https://codeforafrica.org/"><img src="{% static 'img/mediamonitoringlogo.png' %}"></a>
 </div>
+<div class="column-full footer-links">
+    <a href="/about">About WAZImap</a> | <a href="https://github.com/Code4SA/WAZImap">Built on WAZImap</a> | <a href="https://censusreporter.org">Built on Census Reporter</a>
+</div>
+
 {% endblock footer_content %}
+
+{% block body_javascript_extra %}
+    <script type="text/javascript">
+    $('#geography-select').click(function() {
+        $(this).val('')
+    });
+    $('.div-area').click(function() {
+        $(this).css('display', 'none');
+        $('.search-section.input-area').css('display', 'block');
+        $('#geography-select').focus();
+    });
+    $('.search-section.input-area').focusout(function() {
+        $('.div-area').css('display', 'block')
+        $('.search-section.input-area').css('display', 'none');
+        val = $('#geography-select').val()
+        if (val != '') {
+            $('.div-area span').html(val)
+        } else {
+            $('.div-area span').html('Search for a place')
+        }
+    });
+    </script>
+{% endblock %}

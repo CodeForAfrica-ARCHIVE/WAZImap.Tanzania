@@ -3,23 +3,13 @@ from collections import OrderedDict
 from wazimap.geo import geo_data
 from wazimap.data.tables import get_model_from_fields
 from wazimap.data.utils import get_session, calculate_median, merge_dicts, get_stat_data, get_objects_by_geo, group_remainder
-
+from django.conf import settings
 
 # ensure tables are loaded
 import wazimap_tz.tables  # noqa
 
 
-PROFILE_SECTIONS = (
-    'demographics',
-    #'education',
-    #'employment',
-    #'households',
-    'literacy',
-    'attendance',
-    'pepfar',
-    #'pupil_teacher_ratios',
-    #'school_amenities',
-)
+SECTIONS = settings.WAZIMAP.get('topics', {})
 
 EMPLOYMENT_RECODES = OrderedDict([
     ('seeking work / no work available', 'Seeking work'),
@@ -40,17 +30,30 @@ WATER_SOURCE_RECODES = OrderedDict([
 ])
 
 
-def get_census_profile(geo_code, geo_level, profile_name=None):
+
+def get_census_profile(geo_code, geo_level, get_params,  profile_name=None):
     session = get_session()
     try:
         geo_summary_levels = geo_data.get_summary_geo_info(geo_code, geo_level)
         data = {}
+        sections = []
+        selected_sections = []
+        if get_params.get('topic'):
+            categories = get_params.get('topic').split(',')
+            for cat in categories:
+                selected_sections.extend(SECTIONS[cat]['profiles'])
+            data['selected_topics'] = categories
 
-        for section in PROFILE_SECTIONS:
+        for cat in SECTIONS:
+            sections.extend(SECTIONS[cat]['profiles'])
+
+        for section in sections:
+            section = section.lower().replace(' ', '_')
             function_name = 'get_%s_profile' % section
             if function_name in globals():
                 func = globals()[function_name]
                 data[section] = func(geo_code, geo_level, session)
+
 
                 # get profiles for province and/or country
                 for level, code in geo_summary_levels:
@@ -59,14 +62,19 @@ def get_census_profile(geo_code, geo_level, profile_name=None):
 
         # tweaks to make the data nicer
         # show X largest groups on their own and group the rest as 'Other'
-        #group_remainder(data['households']['roofing_material_distribution'], 5)
-        #group_remainder(data['households']['wall_material_distribution'], 5)
+        if 'households' in sections:
+            group_remainder(data['households']['roofing_material_distribution'], 5)
+            group_remainder(data['households']['wall_material_distribution'], 5)
 
+        data['all_sections'] = SECTIONS
+        if (selected_sections == []): selected_sections = sections
+        data['raw_selected_sections'] = selected_sections
+        data['selected_sections'] = [x.replace(' ','_').lower() for x in selected_sections]
+        print data
         return data
 
     finally:
         session.close()
-
 
 def get_demographics_profile(geo_code, geo_level, session):
     # sex
@@ -286,7 +294,8 @@ def get_literacy_profile(geo_code, geo_level, session):
             'name': 'Not competent',
             'numerators': {'this': 100 - english_test_dist},
             'values': {'this': 100 - round(english_test_dist, 2)},
-        }
+        },
+        'metadata': literacy_data['metadata']
     }
 
     swahili_test_dist = literacy_data['Swahili']['numerators']['this']
@@ -315,7 +324,8 @@ def get_literacy_profile(geo_code, geo_level, session):
             'name': 'Not competent',
             'numerators': {'this': 100 - numeracy_test_dist},
             'values': {'this': 100 - round(numeracy_test_dist, 2)},
-        }
+        },
+        'metadata': literacy_data['metadata']
     }
 
     return  {
@@ -351,7 +361,8 @@ def get_attendance_profile(geo_code, geo_level, session):
             'name': 'Dropped out',
             'numerators': {'this': 100 - dropped_out_dist},
             'values': {'this': 100 - round(dropped_out_dist, 2)},
-        }
+        },
+        'metadata': attendance_data['metadata']
     }
 
     out_of_school_dist = attendance_data['Drop outs']['numerators']['this']
@@ -365,7 +376,8 @@ def get_attendance_profile(geo_code, geo_level, session):
             'name': 'In school',
             'numerators': {'this': 100 - out_of_school_dist},
             'values': {'this': 100 - round(out_of_school_dist, 2)},
-        }
+        },
+        'metadata': attendance_data['metadata']
     }
     return  {
         'attendance_data': attendance_data,
@@ -385,10 +397,10 @@ def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):
 
     pupil_attendance_rate_dist = \
         ratio_data['Government school attendance rate']['numerators']['this']
-    pupil_attendance_rate_dist = get_dictionary("Attending school", "Absent", pupil_attendance_rate_dist)
+    pupil_attendance_rate_dist = get_dictionary("Attending school", "Absent", pupil_attendance_rate_dist, ratio_data)
 
     teachers_absent_dist = ratio_data['Teachers absent']['numerators']['this']
-    teachers_absent_dist = get_dictionary("Teachers absent", "Teachers present", teachers_absent_dist)
+    teachers_absent_dist = get_dictionary("Teachers absent", "Teachers present", teachers_absent_dist, ratio_data)
 
     return  {
         'pupil_attendance_rate_dist': pupil_attendance_rate_dist,
@@ -410,13 +422,13 @@ def get_school_amenities_profile(geo_code, geo_level, session):
     data, _ = get_stat_data('school amenity', geo_level, geo_code, session)
 
     library_data = data['Library']['numerators']['this']
-    library_data = get_dictionary("Have a library", "Don't", library_data)
+    library_data = get_dictionary("Have a library", "Don't", library_data, data)
 
     drinking_water_data = data['Drinking water']['numerators']['this']
-    drinking_water_data = get_dictionary("Have clean drinking water", "Don't", drinking_water_data)
+    drinking_water_data = get_dictionary("Have clean drinking water", "Don't", drinking_water_data, data)
 
     feeding_program_data = data['Feeding program']['numerators']['this']
-    feeding_program_data = get_dictionary("Have a feeding program", "Don't", feeding_program_data)
+    feeding_program_data = get_dictionary("Have a feeding program", "Don't", feeding_program_data, data)
 
     return  {
         'library_data': library_data,
@@ -565,7 +577,8 @@ def get_pepfar_profile(geo_code, geo_level, session):
 
     }
 
-def get_dictionary(key_one, key_two, val):
+
+def get_dictionary(key_one, key_two, val, dist):
     #return a dictionary with the second dictionary being 100 - val
     return {
         key_one: {
@@ -577,5 +590,19 @@ def get_dictionary(key_one, key_two, val):
             'name': key_two,
             'numerators': {'this': 100 - val},
             'values': {'this': 100 - round(val, 2)},
-        }
+        },
+        'metadata': dist['metadata']
     }
+
+def sum_up(arr, name):
+    s = 0
+    for x in arr:
+        s += x['values']['this']
+    return OrderedDict([('name', name), ('numerators', {'this': None}), ('values', {'this': s})])
+
+def divide_by_one_thousand(dist):
+    dist['values']['this'] =  round((dist['values']['this'] * 1.0) / 1000, 1)
+    return dist
+
+def replace_name(dist, new_name):
+    dist['name'] = new_name

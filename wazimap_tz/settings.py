@@ -1,5 +1,5 @@
 import os
-
+from collections import OrderedDict
 import dj_database_url
 
 # pull in the default wazimap settings
@@ -18,6 +18,7 @@ DATABASES['default']['ATOMIC_REQUESTS'] = True
 WAZIMAP['name'] = 'Wazimap Tanzania'
 WAZIMAP['url'] = 'https://tanzania.wazimap.org'
 WAZIMAP['country_code'] = 'TZ'
+WAZIMAP['country_name'] = 'Tanzania'
 WAZIMAP['profile_builder'] = 'wazimap_tz.profiles.get_census_profile'
 WAZIMAP['levels'] = {
     'country': {
@@ -44,3 +45,40 @@ WAZIMAP['twitter'] = '@Code4Africa'
 
 WAZIMAP['map_centre'] = [-6.1523563,35.6754813]
 WAZIMAP['map_zoom'] = 6
+
+WAZIMAP['topics'] = OrderedDict()
+
+WAZIMAP['topics']['census'] = {
+    'topic': 'census',
+    'name': 'census',
+    'icon': 'fa-users',
+    'order': 1,
+    'desc': 'Census data collected in 2009',
+    'profiles': [
+        'Demographics'
+    ]
+}
+
+WAZIMAP['topics']['health'] = {
+    'topic': 'health',
+    'name': 'health',
+    'icon': 'fa-medkit',
+    'order': 2,
+    'desc': 'Health data',
+    'profiles': [
+        'pepfar',
+    ]
+}
+
+
+WAZIMAP['topics']['education'] = {
+    'topic': 'education',
+    'name': 'education',
+    'icon': 'fa-graduation-cap',
+    'order': 2,
+    'desc': 'Education data from Twaweza',
+    'profiles': [
+        'literacy',
+        'attendance',
+    ]
+}
