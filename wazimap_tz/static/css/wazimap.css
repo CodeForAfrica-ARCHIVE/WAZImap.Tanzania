@@ -28,14 +28,18 @@ body {
     -webkit-border-radius: 4px;
     border-radius: 4px;
 }
+#page-header-title a:hover {
+    color: #1f9e95;
+    text-decoration: none;
+}
 #page-header,
 .box-header {
-    background-color: #beae1d;
+    background-color: #084A49;
 }
 #page-header-title .title img {
     margin: 0 3px 0 0;
     vertical-align: bottom;
-    height: 60px;
+    height: 70px;
 }
 #page-header-title .header-buttons {
     float: right;
@@ -50,8 +54,8 @@ body {
     vertical-align: middle;
 }
 #page-footer {
-    background-color: #084A49;
-    border-top: 1px solid #084A49;
+    background-color: #1f9e95;
+    border-top: 1px solid #1f9e95;
     color: #fff;
     padding: 70px 0px 0px;
 }
@@ -185,7 +189,7 @@ header.section-contents.table-explorer h1 a {
 }
 
 .banner {
-    background: #084A49;
+    background: #1f9e95;
     text-align:center;
     color: #fff;
     padding: 40px !important;
@@ -368,7 +372,7 @@ h2.table-title {
     margin-top:10px;
 }
 .topic:hover {
-    color:#beae1d !important;
+    color:#084A49 !important;
 }
 .filter-row-sub {
     display:none;
@@ -501,42 +505,37 @@ h2.table-title {
 }
 
 .toggle-set a:hover {
-    background-color: #beae1d;
-    border-bottom: 1px solid #beae1d;
+    background-color: #084A49;
+    border-bottom: 1px solid #084A49;
 }
 #data-table {
     margin-top:20px;
 }
 .showcase button {
     color: #fff;
-    background-color: #beae1d;
+    background-color: #084A49;
 }
 .showcase button:hover {
     color: #fff;
-    background-color: #084A49;
+    background-color: #1f9e95;
 }
 .toggle-set a.active,
 .toggle-set a:hover,
 .toggle-set a.hovered {
-    background-color: #beae1d;
+    background-color: #1f9e95;
     color: #fff;
 }
 .filter-row .end {
-    background-color: #beae1d;
+    background-color: #084A49;
 }
 #cover-profile a {
-    color: #beae1d;
+    color: #084A49;
     text-decoration:none;
 }
 .chart-title {
     font-weight: 500 !important;
 }
+
 .typeahead-container button {
-    background-color: #beae1d;
-}
-.filter-row-sub .box-checked {
-    background-color: #beae1d;
-}
-aside .action-button {
-    background-color: #beae1d;
+    background-color: #084A49;
 }
