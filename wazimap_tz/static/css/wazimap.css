@@ -351,6 +351,9 @@ h2.table-title {
     border-radius: 0px;
     line-height: 40px;
 }
+#geography-select {
+    width:100%;
+}
 .title {
     text-align:center;
 }
@@ -461,6 +464,77 @@ h2.table-title {
     .tool-group a {
         border-bottom: 1px solid #999;
     }
+    #slippy-map {
+        display:none;
+    }
+    #cover-profile {
+        margin-top: 0px !important;
+    }
+    #cover-profile article {
+        border: 1px solid #124a47;
+        width: 100%;
+        padding: 15px;
+        margin-top: 15px;
+    }
+    #profile .content-container {
+        margin-left:0px !important;
+    }
+    .filters {
+        top: 0 !important;
+        display:block;
+        margin-left:0px !important;
+        position:inherit;
+        height:auto;
+        width:100%;
+        display:none;
+    }
+    #suggestdata .shell {
+        width:90%;
+    }
+    .callout.with-icon {
+        width:100% !important;
+        float:right;
+        text-align:left;
+        padding-left:0px !important;
+    }
+    #page-header-title .title img {
+        height: 59px;
+        margin-left: 30px;
+    }
+    .banner {
+        display:none;
+    }
+    .banner.mobile {
+        display:block;
+    }
+    .div-area, .input-area {
+        width: 100%;
+        border-radius:10px;
+    }
+    .twitter-typeahead {
+        width:100%;
+    }
+    #menu {
+        width:100%;
+        float:none;
+    }
+    #menu .search-section  {
+        display:none;
+    }
+    #menu .tool-group {
+        width:100%;
+        padding:5px; 0px;
+        text-align:left;
+        line-height:20px;
+        border-top:1px solid #fff;
+    }
+    #menu .tool-group a {
+        margin-left:50px;
+        border-bottom:none;
+    }
+    .filter-toggle-button  {
+        display:block;
+    }
 }
 
 /** Button Dropdown **/
@@ -534,8 +608,4 @@ h2.table-title {
 }
 .chart-title {
     font-weight: 500 !important;
-}
-
-.typeahead-container button {
-    background-color: #084A49;
 }
