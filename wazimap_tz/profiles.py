@@ -70,62 +70,82 @@ def get_census_profile(geo_code, geo_level, get_params,  profile_name=None):
         if (selected_sections == []): selected_sections = sections
         data['raw_selected_sections'] = selected_sections
         data['selected_sections'] = [x.replace(' ','_').lower() for x in selected_sections]
-        print data
         return data
 
     finally:
         session.close()
 
 def get_demographics_profile(geo_code, geo_level, session):
-    # sex
-    sex_dist_data, total_pop = get_stat_data(
-        'sex', geo_level, geo_code, session,
-        table_fields=['age in completed years', 'sex', 'rural or urban'])
+    sex_dist_data = None
+    age_dist_data = None
+    age_cats = None
+    median = None
+    if geo_level != "ward":
+        # sex
+        sex_dist_data, total_pop = get_stat_data(
+            'sex', geo_level, geo_code, session,
+            table_fields=['age in completed years', 'sex', 'rural or urban'])
+    else:
+        # sex
+        sex_dist_data, total_pop = get_stat_data(
+            'sex', geo_level, geo_code, session,
+            table_fields=['sex', 'rural or urban'])
 
-    # urban/rural by sex
-    urban_dist_data, _ = get_stat_data(
-        ['rural or urban', 'sex'], geo_level, geo_code, session,
-        table_fields=['age in completed years', 'sex', 'rural or urban'])
-    total_urbanised = 0
-    for data in urban_dist_data['Urban'].itervalues():
-        if 'numerators' in data:
-            total_urbanised += data['numerators']['this']
+    if geo_level != "ward":
+        # urban/rural by sex
+        urban_dist_data, _ = get_stat_data(
+            ['rural or urban', 'sex'], geo_level, geo_code, session,
+            table_fields=['age in completed years', 'sex', 'rural or urban'])
+        total_urbanised = 0
+        for data in urban_dist_data['Urban'].itervalues():
+            if 'numerators' in data:
+                total_urbanised += data['numerators']['this']
+    else:
+        # urban/rural by sex
+        urban_dist_data, _ = get_stat_data(
+            ['rural or urban', 'sex'], geo_level, geo_code, session,
+            table_fields=['sex', 'rural or urban'])
+        total_urbanised = 0
+        for data in urban_dist_data['Urban'].itervalues():
+            if 'numerators' in data:
+                total_urbanised += data['numerators']['this']
 
-    # median age
-    db_model_age = get_model_from_fields(['age in completed years', 'sex', 'rural or urban'], geo_level)
-    objects = get_objects_by_geo(db_model_age, geo_code, geo_level, session, ['age in completed years'])
-    objects = sorted((o for o in objects if getattr(o, 'age in completed years') != 'unspecified'),
-                     key=lambda x: int(getattr(x, 'age in completed years').replace('+', '')))
-    median = calculate_median(objects, 'age in completed years')
+    if geo_level != "ward":
+        # median age
+        db_model_age = get_model_from_fields(['age in completed years', 'sex', 'rural or urban'], geo_level)
+        objects = get_objects_by_geo(db_model_age, geo_code, geo_level, session, ['age in completed years'])
+        objects = sorted((o for o in objects if getattr(o, 'age in completed years') != 'unspecified'),
+                         key=lambda x: int(getattr(x, 'age in completed years').replace('+', '')))
+        median = calculate_median(objects, 'age in completed years')
 
-    # age in 10 year groups
-    def age_recode(f, x):
-        age = int(x.replace('+', ''))
-        if age >= 80:
-            return '80+'
-        bucket = 10 * (age / 10)
-        return '%d-%d' % (bucket, bucket + 9)
+        # age in 10 year groups
+        def age_recode(f, x):
+            age = int(x.replace('+', ''))
+            if age >= 80:
+                return '80+'
+            bucket = 10 * (age / 10)
+            return '%d-%d' % (bucket, bucket + 9)
 
-    age_dist_data, _ = get_stat_data(
-        'age in completed years', geo_level, geo_code, session,
-        table_fields=['age in completed years', 'sex', 'rural or urban'],
-        recode=age_recode, exclude=['unspecified'])
+        age_dist_data, _ = get_stat_data(
+            'age in completed years', geo_level, geo_code, session,
+            table_fields=['age in completed years', 'sex', 'rural or urban'],
+            recode=age_recode, exclude=['unspecified'])
 
-    # age category
-    def age_cat_recode(f, x):
-        age = int(x.replace('+', ''))
-        if age < 18:
-            return 'Under 18'
-        elif age >= 65:
-            return '65 and over'
-        else:
-            return '18 to 64'
+        # age category
+        def age_cat_recode(f, x):
+            age = int(x.replace('+', ''))
+            if age < 18:
+                return 'Under 18'
+            elif age >= 65:
+                return '65 and over'
+            else:
+                return '18 to 64'
 
-    age_cats, _ = get_stat_data(
-        'age in completed years', geo_level, geo_code, session,
-        table_fields=['age in completed years', 'sex', 'rural or urban'],
-        recode=age_cat_recode,
-        exclude=['unspecified'])
+        age_cats, _ = get_stat_data(
+            'age in completed years', geo_level, geo_code, session,
+            table_fields=['age in completed years', 'sex', 'rural or urban'],
+            recode=age_cat_recode,
+            exclude=['unspecified'])
 
     final_data = {
         'sex_ratio': sex_dist_data,
@@ -150,6 +170,7 @@ def get_demographics_profile(geo_code, geo_level, session):
 
 
 def get_education_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # highest level reached
     edu_dist_data, total_pop = get_stat_data(
         'highest education level reached', geo_level, geo_code, session,
@@ -189,6 +210,7 @@ def get_education_profile(geo_code, geo_level, session):
 
 
 def get_employment_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # employment status
     employment_activity_dist, total_workers = get_stat_data(
         ['employment activity status', 'sex'], geo_level, geo_code, session,
@@ -212,6 +234,7 @@ def get_employment_profile(geo_code, geo_level, session):
 
 
 def get_households_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # main source of water
     water_source_dist, total_households = get_stat_data(
         'main source of water', geo_level, geo_code, session,
@@ -277,6 +300,7 @@ def get_households_profile(geo_code, geo_level, session):
     }
 
 def get_literacy_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # literacy tests stats
     literacy_data, _ = get_stat_data(
         'literacy test', geo_level, geo_code, session)
@@ -345,6 +369,7 @@ def get_literacy_profile(geo_code, geo_level, session):
     }
 
 def get_attendance_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # attendance stats
     attendance_data, _ = get_stat_data(
         'school attendance', geo_level, geo_code, session)
@@ -388,6 +413,7 @@ def get_attendance_profile(geo_code, geo_level, session):
     }
 
 def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # pupil teacher ratios
     ratio_data, _ = get_stat_data(
         'pupil teacher ratios', geo_level, geo_code, session)
@@ -418,6 +444,7 @@ def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):
     }
 
 def get_school_amenities_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # school amenities
     data, _ = get_stat_data('school amenity', geo_level, geo_code, session)
 
@@ -439,6 +466,7 @@ def get_school_amenities_profile(geo_code, geo_level, session):
 
 #PEPFAR DATA
 def get_pepfar_profile(geo_code, geo_level, session):
+    if geo_level == "ward": return {}
     # PEPFAR stats
     pepfar_data, _ = get_stat_data("pepfar", geo_level, geo_code, session)
     HTC_TST = pepfar_data['HTC_TST']['numerators']['this']
@@ -577,6 +605,92 @@ def get_pepfar_profile(geo_code, geo_level, session):
 
     }
 
+def get_causes_of_death_profile(geo_code, geo_level, session):
+    if geo_level != 'region': return {}
+
+    causes_of_death_under_five_data, _ = get_stat_data(
+        'causes of death under five', geo_level, geo_code, session)
+    causes_of_death_over_five_data, _ = get_stat_data(
+        'causes of death over five', geo_level, geo_code, session)
+    return {
+        'causes_of_death_under_five_data' : causes_of_death_under_five_data,
+        'causes_of_death_over_five_data': causes_of_death_over_five_data,
+        'source_link': 'http://www.opendata.go.tz/dataset/number-and-causes-of-death-occured-by-region',
+        'source_name': 'opendata.go.tz',
+    }
+
+def get_family_planning_clients_profile(geo_code, geo_level, session):
+    if geo_level != 'region': return {}
+
+    family_planning_clients_data, _ = get_stat_data(
+        'family planning clients', geo_level, geo_code, session)
+    total = family_planning_clients_data['Total']['numerators']['this']
+    rate = family_planning_clients_data['New client rate']['numerators']['this']
+    return {
+        'total': {
+            'name': 'Total number of women aged 15-49 using family planning methods (2013)',
+            'numerators': {'this': total},
+            'values': {'this': total}
+        },
+        'rate': get_dictionary("New clients rate", "", rate, family_planning_clients_data),
+        'source_link': 'http://www.opendata.go.tz/dataset/idadi-na-asilimia-ya-wateja-wa-huduma-ya-uzazi-wa-mpango-kwa-mikoa',
+        'source_name': 'opendata.go.tz',
+    }
+
+def get_place_of_delivery_profile(geo_code, geo_level, session):
+    if geo_level != 'region': return {}
+
+    delivery_data, _ = get_stat_data(
+        'place of delivery', geo_level, geo_code, session)
+    anc_projection = delivery_data['ANC projection']['numerators']['this']
+    facility_birth_rate = delivery_data['Facility birth rate']['numerators']['this']
+    del delivery_data['ANC projection']
+    del delivery_data['Facility birth rate']
+    return {
+        'anc_projection': {
+            'name': 'Antenatal care projection (2014)',
+            'numerators': {'this': anc_projection},
+            'values': {'this': anc_projection}
+        },
+        'facility_birth_rate': {
+            'name': 'Facility Birth Rate (2014)',
+            'numerators': {'this': facility_birth_rate},
+            'values': {'this': facility_birth_rate}
+        },
+        'delivery_data': delivery_data,
+        'source_link': 'http://www.opendata.go.tz/dataset/idadi-ya-wanaojifungulia-kwenye-vituo-vya-kutolea-huduma-za-afya-na-sehemu-zingine',
+        'source_name': 'opendata.go.tz',
+    }
+
+def get_health_workers_profile(geo_code, geo_level, session):
+    if geo_level != 'region': return {}
+
+    hw_data, _ = get_stat_data(
+        'health workers', geo_level, geo_code, session)
+
+    total = hw_data['Total']['numerators']['this']
+    hrh_patient_ratio = hw_data['HRH patient ratio']['numerators']['this']
+    del hw_data['Total']
+    del hw_data['HRH patient ratio']
+    del hw_data['MO and AMO per 10000']
+    del hw_data['Nurses and midwives per 10000']
+    del hw_data['Pharmacists per 10000']
+    del hw_data['Clinicians per 10000']
+    return {
+        'total': {
+            'name': 'Total health worker population (2014)',
+            'numerators': {'this': total},
+            'values': {'this': total}
+        },
+        'hrh_patient_ratio': {
+            'name': 'Skilled health worker patient ratio (2014)',
+            'numerators': {'this': hrh_patient_ratio},
+            'values': {'this': hrh_patient_ratio}
+        },
+        'health_worker_data': hw_data,
+        'source_link': 'hhttp://www.opendata.go.tz/dataset/idadi-ya-wafanyakazi-wa-afya-kwa-mikoa',
+        'source_name': 'opendata.go.tz',
+    }
 
 def get_dictionary(key_one, key_two, val, dist):
     #return a dictionary with the second dictionary being 100 - val

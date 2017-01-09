@@ -38,90 +38,6 @@
     </div>
 </article>
 
-<!--<article id="education" class="clearfix">-->
-    <!--<header class="section-contents">-->
-        <!--<h1>Education</h1>-->
-    <!--</header>-->
-    <!--<div class="section-container">-->
-
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#highest-education-level-reached" id="highest-education-level-reached">Educational level <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third">-->
-                <!--{% include 'profile/_blocks/_stat_list.html' with stat=education.education_reached_secondary_or_higher stat_type='percentage' %}-->
-            <!--</div>-->
-            <!--<div class="column-two-thirds" id="chart-histogram-education-education_reached_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by highest education level reached" data-qualifier="Universe: {{ education.education_reached_distribution.metadata.universe }}"></div>-->
-        <!--</section>-->
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#school-attendance" id="school-attendance">School attendance <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third">-->
-                <!--{% include 'profile/_blocks/_stat_list.html' with stat=education.school_attendance_never stat_type='percentage' %}-->
-            <!--</div>-->
-            <!--<div class="column-two-thirds" id="chart-grouped_column-education-school_attendance_distribution" data-stat-type="scaled-percentage" data-chart-title="School attendance by sex" data-qualifier="Universe: {{ education.school_attendance_distribution.metadata.universe }}"></div>-->
-        <!--</section>-->
-
-    <!--</div>-->
-<!--</article>-->
-
-<!--<article id="employment" class="clearfix">-->
-    <!--<header class="section-contents">-->
-        <!--<h1>Employment</h1>-->
-    <!--</header>-->
-    <!--<div class="section-container">-->
-
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#employment">Employment <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third">-->
-                <!--{% include 'profile/_blocks/_stat_list.html' with stat=employment.employed stat_type='percentage' %}-->
-            <!--</div>-->
-            <!--<div class="column-two-thirds" id="chart-grouped_column-employment-activity_status_distribution" data-stat-type="scaled-percentage" data-chart-title="Population by employment status" data-qualifier="Universe: {{ employment.activity_status_distribution.metadata.universe }}"></div>-->
-        <!--</section>-->
-
-    <!--</div>-->
-<!--</article>-->
-
-<!--<article id="households" class="clearfix">-->
-    <!--<header class="section-contents">-->
-        <!--<h1>Households</h1>-->
-    <!--</header>-->
-    <!--<div class="section-container">-->
-
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#households">Households <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third">-->
-                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.total_households stat_type='number' %}-->
-            <!--</div>-->
-        <!--</section>-->
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#households-water" id="households-water">Main source of water <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third">-->
-                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.piped_water stat_type='percentage' %}-->
-            <!--</div>-->
-            <!--<div class="column-two-thirds" id="chart-histogram-households-water_source_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main source of water"></div>-->
-        <!--</section>-->
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#households-lighting" id="households-lighting">Main source of lighting <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third">-->
-                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.lighting_electricity stat_type='percentage' %}-->
-            <!--</div>-->
-            <!--<div class="column-two-thirds" id="chart-histogram-households-lighting_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of lighting fuel"></div>-->
-        <!--</section>-->
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#households-waste" id="households-waste">Main mode of human waste disposal <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third">-->
-                <!--{% include 'profile/_blocks/_stat_list.html' with stat=households.sewer_or_septic stat_type='percentage' %}-->
-            <!--</div>-->
-            <!--<div class="column-two-thirds" id="chart-histogram-households-waste_disposal_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main mode of human waste disposal"></div>-->
-        <!--</section>-->
-        <!--<section class="clearfix stat-row">-->
-            <!--<h2><a class="permalink" href="#households-materials" id="households-materials">Household construction materials <i class="fa fa-link"></i></a></h2>-->
-            <!--<div class="column-third" id="chart-pie-households-roofing_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of roofing material"></div>-->
-            <!--<div class="column-third" id="chart-pie-households-floor_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of floor material"></div>-->
-            <!--<div class="column-third" id="chart-pie-households-wall_material_distribution" data-stat-type="scaled-percentage" data-chart-title="Households by main type of wall material"></div>-->
-        <!--</section>-->
-
-    <!--</div>-->
-<!--</article>-->
-
 <hr>
 <article class="clearfix">
     <h2><a href="#">Uwezo Annual Assessment Report 2015</a></h2>
@@ -262,4 +178,80 @@
     <!--</div>-->
 <!--</article>-->
 
+<article id="causes_of_death" class="clearfix">
+    <header class="section-contents">
+        <h1>Causes of death among Children</h1>
+    </header>
+    <div class="section-container">
+         <section class="clearfix stat-row">
+             <p class="source">Source: <a href="{{causes_of_death.source_link}}">{{causes_of_death.source_name}}</a></p>
+             <br clear="all">
+             <div class="column-full">
+                 <div id="chart-histogram-causes_of_death-causes_of_death_under_five_data" data-stat-type="scaled-percentage" data-chart-title="Causes of Death among children under five years of age (2013)"></div>
+            </div>
+            <div class="column-full">
+                <div id="chart-histogram-causes_of_death-causes_of_death_over_five_data" data-stat-type="scaled-percentage" data-chart-title="Causes of Death among children under over years of age (2013)"></div>
+            </div>
+        </section>
+    </div>
+</article>
+<article id="health_workers" class="clearfix">
+    <header class="section-contents">
+        <h1>Health Workers Distribution</h1>
+    </header>
+    <div class="section-container">
+         <section class="clearfix stat-row">
+             <p class="source">Source: <a href="{{health_workers.source_link}}">{{health_workers.source_name}}</a></p>
+             <br clear="all">
+              <div class="column-two-thirds">
+                {% include 'profile/_blocks/_stat_list.html' with stat=health_workers.total stat_type='number' %}
+              </div>
+             <div class="column-third">
+                {% include 'profile/_blocks/_stat_list.html' with stat=health_workers.hrh_patient_ratio stat_type='number' %}
+              </div>
+             <div class="column-full">
+                 <div id="chart-histogram-health_workers-health_worker_data" data-stat-type="number" data-chart-title="Number of health workers by region"></div>
+            </div>
+        </section>
+    </div>
+</article>
+
+<article id="family_planning_clients" class="clearfix">
+    <header class="section-contents">
+        <h1>Family Planning Clients</h1>
+    </header>
+    <div class="section-container">
+         <section class="clearfix stat-row">
+             <p class="source">Source: <a href="{{family_planning_clients.source_link}}">{{family_planning_clients.source_name}}</a></p>
+             <br clear="all">
+             <div class="column-two-thirds">
+                {% include 'profile/_blocks/_stat_list.html' with stat=family_planning_clients.total stat_type='number' %}
+            </div>
+            <div class="column-third">
+                <div id="chart-pie-family_planning_clients-rate" data-stat-type="scaled-percentage" data-chart-title="Rate of new family planning client enrollment"></div>
+            </div>
+        </section>
+    </div>
+</article>
+
+<article id="place_of_delivery" class="clearfix">
+    <header class="section-contents">
+        <h1>Place of Delivery</h1>
+    </header>
+    <div class="section-container">
+         <section class="clearfix stat-row">
+             <p class="source">Source: <a href="{{place_of_delivery.source_link}}">{{place_of_delivery.source_name}}</a></p>
+             <br clear="all">
+             <div class="column-half">
+                {% include 'profile/_blocks/_stat_list.html' with stat=place_of_delivery.anc_projection stat_type='number' %}
+            </div>
+             <div class="column-half">
+                {% include 'profile/_blocks/_stat_list.html' with stat=place_of_delivery.facility_birth_rate stat_type='percentage' %}
+            </div>
+            <div class="column-full">
+                <div id="chart-histogram-place_of_delivery-delivery_data" data-stat-type="scaled-percentage" data-chart-title="Number of deliveries taking place in health facilities, home, before arrival to health facility and to traditional birth attendants (2014)"></div>
+            </div>
+        </section>
+    </div>
+</article>
 {% endblock %}

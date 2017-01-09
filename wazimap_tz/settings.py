@@ -23,21 +23,26 @@ WAZIMAP['profile_builder'] = 'wazimap_tz.profiles.get_census_profile'
 WAZIMAP['levels'] = {
     'country': {
         'plural': 'countries',
-        'children': ['region'],
+        'children': ['region','district','ward'],
     },
     'region': {
         'plural': 'regions',
-        'children': ['district'],
+        'children': ['district','ward'],
     },
     'district': {
-        'plural': 'districts'
+        'plural': 'districts',
+        'children': ['ward'],
+    },
+    'ward': {
+        'plural': 'wards'
     }
 }
-WAZIMAP['comparative_levels'] = ['country']
+WAZIMAP['comparative_levels'] = ['ward']
 WAZIMAP['geometry_data'] = {
     'country': 'geo/country.topojson',
     'region': 'geo/region.topojson',
     'district': 'geo/district.topojson',
+    'ward': 'geo/ward.topojson',
 }
 
 WAZIMAP['ga_tracking_id'] = 'UA-44795600-8'
@@ -67,6 +72,10 @@ WAZIMAP['topics']['health'] = {
     'desc': 'Health data',
     'profiles': [
         'pepfar',
+        'causes of death',
+        'family planning clients',
+        'place of delivery',
+        'health workers'
     ]
 }
 

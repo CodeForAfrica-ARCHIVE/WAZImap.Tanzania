@@ -494,7 +494,7 @@ h2.table-title {
     .callout.with-icon {
         width:100% !important;
         float:right;
-        text-align:left;
+        text-align:center;
         padding-left:0px !important;
     }
     #page-header-title .title img {
