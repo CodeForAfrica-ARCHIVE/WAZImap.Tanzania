@@ -53,16 +53,16 @@ WAZIMAP['map_zoom'] = 6
 
 WAZIMAP['topics'] = OrderedDict()
 
-WAZIMAP['topics']['census'] = {
-    'topic': 'census',
-    'name': 'census',
-    'icon': 'fa-users',
-    'order': 1,
-    'desc': 'Census data collected in 2009',
-    'profiles': [
-        'Demographics'
-    ]
-}
+# WAZIMAP['topics']['census'] = {
+#     'topic': 'census',
+#     'name': 'census',
+#     'icon': 'fa-users',
+#     'order': 1,
+#     'desc': 'Census data collected in 2009',
+#     'profiles': [
+#         'Demographics'
+#     ]
+# }
 
 WAZIMAP['topics']['health'] = {
     'topic': 'health',
@@ -71,23 +71,25 @@ WAZIMAP['topics']['health'] = {
     'order': 2,
     'desc': 'Health data',
     'profiles': [
-        'pepfar',
+        #'pepfar',
         'causes of death',
         'family planning clients',
         'place of delivery',
-        'health workers'
+        'health workers',
+        'health_centers',
+        'tetanus vaccine',
     ]
 }
 
 
-WAZIMAP['topics']['education'] = {
-    'topic': 'education',
-    'name': 'education',
-    'icon': 'fa-graduation-cap',
-    'order': 2,
-    'desc': 'Education data from Twaweza',
-    'profiles': [
-        'literacy',
-        'attendance',
-    ]
-}
+# WAZIMAP['topics']['education'] = {
+#     'topic': 'education',
+#     'name': 'education',
+#     'icon': 'fa-graduation-cap',
+#     'order': 2,
+#     'desc': 'Education data from Twaweza',
+#     'profiles': [
+#         'literacy',
+#         'attendance',
+#     ]
+# }

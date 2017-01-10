@@ -606,24 +606,31 @@ def get_pepfar_profile(geo_code, geo_level, session):
     }
 
 def get_causes_of_death_profile(geo_code, geo_level, session):
-    if geo_level != 'region': return {}
+    if geo_level != 'region' and geo_level != 'country': return {}
 
     causes_of_death_under_five_data, _ = get_stat_data(
-        'causes of death under five', geo_level, geo_code, session)
+        'causes of death under five', geo_level, geo_code, session, order_by='-total')
     causes_of_death_over_five_data, _ = get_stat_data(
-        'causes of death over five', geo_level, geo_code, session)
+        'causes of death over five', geo_level, geo_code, session, order_by='-total')
+    inpatient_diagnosis_over_five_data, _ = get_stat_data(
+        'inpatient diagnosis over five', geo_level, geo_code, session, order_by='-total')
+    inpatient_diagnosis_under_five_data, _ = get_stat_data(
+        'inpatient diagnosis under five', geo_level, geo_code, session, order_by='-total')
     return {
         'causes_of_death_under_five_data' : causes_of_death_under_five_data,
         'causes_of_death_over_five_data': causes_of_death_over_five_data,
+        'inpatient_diagnosis_under_five_data':inpatient_diagnosis_under_five_data,
+        'inpatient_diagnosis_over_five_data':inpatient_diagnosis_over_five_data,
         'source_link': 'http://www.opendata.go.tz/dataset/number-and-causes-of-death-occured-by-region',
+        'source_link_2': 'http://www.opendata.go.tz/dataset/idadi-ya-magonjwa-kutoka-idara-ya-wagonjwa-waliolazwa-kwa-mikoa',
         'source_name': 'opendata.go.tz',
     }
 
 def get_family_planning_clients_profile(geo_code, geo_level, session):
-    if geo_level != 'region': return {}
+    if geo_level != 'region' and geo_level != 'country': return {}
 
     family_planning_clients_data, _ = get_stat_data(
-        'family planning clients', geo_level, geo_code, session)
+        'family planning clients', geo_level, geo_code, session, order_by='-total')
     total = family_planning_clients_data['Total']['numerators']['this']
     rate = family_planning_clients_data['New client rate']['numerators']['this']
     return {
@@ -632,16 +639,20 @@ def get_family_planning_clients_profile(geo_code, geo_level, session):
             'numerators': {'this': total},
             'values': {'this': total}
         },
-        'rate': get_dictionary("New clients rate", "", rate, family_planning_clients_data),
+        'rate': {
+            'name': 'New client rate (2013)',
+            'numerators': {'this': rate},
+            'values': {'this': rate}
+        },
         'source_link': 'http://www.opendata.go.tz/dataset/idadi-na-asilimia-ya-wateja-wa-huduma-ya-uzazi-wa-mpango-kwa-mikoa',
         'source_name': 'opendata.go.tz',
     }
 
 def get_place_of_delivery_profile(geo_code, geo_level, session):
-    if geo_level != 'region': return {}
+    if geo_level != 'region' and geo_level != 'country': return {}
 
     delivery_data, _ = get_stat_data(
-        'place of delivery', geo_level, geo_code, session)
+        'place of delivery', geo_level, geo_code, session, order_by='-total')
     anc_projection = delivery_data['ANC projection']['numerators']['this']
     facility_birth_rate = delivery_data['Facility birth rate']['numerators']['this']
     del delivery_data['ANC projection']
@@ -663,14 +674,12 @@ def get_place_of_delivery_profile(geo_code, geo_level, session):
     }
 
 def get_health_workers_profile(geo_code, geo_level, session):
-    if geo_level != 'region': return {}
+    if geo_level != 'region' and geo_level != 'country': return {}
 
-    hw_data, _ = get_stat_data(
-        'health workers', geo_level, geo_code, session)
+    hw_data, total = get_stat_data(
+        'health workers', geo_level, geo_code, session, order_by='-total')
 
-    total = hw_data['Total']['numerators']['this']
     hrh_patient_ratio = hw_data['HRH patient ratio']['numerators']['this']
-    del hw_data['Total']
     del hw_data['HRH patient ratio']
     del hw_data['MO and AMO per 10000']
     del hw_data['Nurses and midwives per 10000']
@@ -683,14 +692,64 @@ def get_health_workers_profile(geo_code, geo_level, session):
             'values': {'this': total}
         },
         'hrh_patient_ratio': {
-            'name': 'Skilled health worker patient ratio (2014)',
+            'name': 'Skilled health worker to patient ratio (2014)',
             'numerators': {'this': hrh_patient_ratio},
             'values': {'this': hrh_patient_ratio}
         },
         'health_worker_data': hw_data,
-        'source_link': 'hhttp://www.opendata.go.tz/dataset/idadi-ya-wafanyakazi-wa-afya-kwa-mikoa',
+        'source_link': 'http://www.opendata.go.tz/dataset/idadi-ya-wafanyakazi-wa-afya-kwa-mikoa',
         'source_name': 'opendata.go.tz',
     }
+
+def get_health_centers_profile(geo_code, geo_level, session):
+    if geo_level == 'ward': return {}
+
+    hc_data, total = get_stat_data(
+        'health centers', geo_level, geo_code, session, order_by='-total')
+    ho_data, _ = get_stat_data(
+        'health center ownership', geo_level, geo_code, session)
+    hiv_centers_data, hiv_c = get_stat_data(
+        'hiv centers', geo_level, geo_code, session)
+
+    return {
+        'total': {
+            'name': 'Total health centers in operation (2014)',
+            'numerators': {'this': total},
+            'values': {'this': total}
+        },
+        'hiv_centers': {
+            'name': 'HIV care and treatment centers (2014)',
+            'numerators': {'this': hiv_c},
+            'values': {'this': hiv_c}
+        },
+        'health_center_data': hc_data,
+        'health_center_ownership': ho_data,
+        'source_link': 'http://www.opendata.go.tz/dataset/list-of-health-facilities-with-geographical-location',
+        'source_name': 'opendata.go.tz',
+    }
+
+def get_tetanus_vaccine_profile(geo_code, geo_level, session):
+    if geo_level != 'region' and geo_level != 'country': return {}
+
+    tetanus_vaccine_data, _ = get_stat_data(
+        'tetanus vaccine', geo_level, geo_code, session, order_by='-total')
+    number_vaccinated = tetanus_vaccine_data['Vaccinated']['numerators']['this']
+    coverage = tetanus_vaccine_data['Coverage']['numerators']['this']
+    return {
+        'number_vaccinated': {
+            'name': 'Number of pregnant women received two or more Tetanus Toxoid vaccine (TT2+) (2014)',
+            'numerators': {'this': number_vaccinated},
+            'values': {'this': number_vaccinated}
+        },
+        'coverage': {
+            'name': 'Coverage of pregnant women who received two or more Tetanus Toxoid vaccine (TT2+) (2014)',
+            'numerators': {'this': coverage},
+            'values': {'this': coverage}
+        },
+        'source_link': 'http://www.opendata.go.tz/dataset/number-and-percentage-of-pregnant-women-received-two-or-more-tetanus-toxoid-vaccine-tt2-by-region',
+        'source_name': 'opendata.go.tz',
+    }
+
 
 def get_dictionary(key_one, key_two, val, dist):
     #return a dictionary with the second dictionary being 100 - val
