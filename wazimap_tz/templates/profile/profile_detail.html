@@ -201,6 +201,15 @@
              <div class="column-full">
                 <div id="chart-histogram-causes_of_death-inpatient_diagnosis_over_five_data" data-stat-type="scaled-percentage" data-chart-title="Inpatient diagnosis among persons over years of age (2014)"></div>
              </div>
+             <br clear="all">
+             <p class="source">Source: <a href="{{causes_of_death.source_link_3}}">{{causes_of_death.source_name}}</a></p>
+             <br clear="all">
+             <div class="column-full">
+                 <div id="chart-histogram-causes_of_death-outpatient_diagnosis_under_five_data" data-stat-type="scaled-percentage" data-chart-title="Outpatient diagnosis among persons under five years of age (2014)"></div>
+             </div>
+             <div class="column-full">
+                <div id="chart-histogram-causes_of_death-outpatient_diagnosis_over_five_data" data-stat-type="scaled-percentage" data-chart-title="Outpatient diagnosis among persons over years of age (2014)"></div>
+             </div>
         </section>
     </div>
 </article>
@@ -253,12 +262,15 @@
          <section class="clearfix stat-row">
              <p class="source">Source: <a href="{{family_planning_clients.source_link}}">{{family_planning_clients.source_name}}</a></p>
              <br clear="all">
-             <div class="column-two-thirds">
+             <div class="column-third">
                 {% include 'profile/_blocks/_stat_list.html' with stat=family_planning_clients.total stat_type='number' %}
-            </div>
-            <div class="column-third">
+             </div>
+             <div class="column-third">
+                {% include 'profile/_blocks/_stat_list.html' with stat=family_planning_clients.percentage_of_population stat_type='percentage' %}
+             </div>
+             <div class="column-third">
                 {% include 'profile/_blocks/_stat_list.html' with stat=family_planning_clients.rate stat_type='percentage' %}
-            </div>
+             </div>
         </section>
     </div>
 </article>

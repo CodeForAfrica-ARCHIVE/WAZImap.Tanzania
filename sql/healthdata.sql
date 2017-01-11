@@ -3002,12 +3002,8 @@ district	127	dispensary	37
 district	127	health centers	4
 district	127	hospital	2
 district	128	clinic	3
-district	128	dispensary	17
-district	128	health centers	7
-district	128	hospital	0
-district	128	clinic	0
-district	128	dispensary	10
-district	128	health centers	2
+district	128	dispensary	27
+district	128	health centers	9
 district	128	hospital	1
 district	129	clinic	0
 district	129	dispensary	44
@@ -4410,3 +4406,602 @@ ALTER TABLE ONLY hivcenters ADD CONSTRAINT hivcenters_pkey PRIMARY KEY (geo_leve
 --
 -- PostgreSQL database dump complete
 --
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+ALTER TABLE IF EXISTS ONLY public.outpatientdiagnosisoverfive DROP CONSTRAINT IF EXISTS outpatientdiagnosisoverfive_pkey;
+DROP TABLE IF EXISTS public.outpatientdiagnosisoverfive;
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: outpatientdiagnosisoverfive; Type: TABLE; Schema: public; Owner: -; Tablespace:
+--
+
+CREATE TABLE outpatientdiagnosisoverfive (
+    geo_level character varying(15) NOT NULL,
+    geo_code character varying(255) NOT NULL,
+    "outpatient diagnosis over five" character varying(128) NOT NULL,
+    total float NULL
+);
+
+
+--
+-- Data for Name: outpatientdiagnosisoverfive; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY outpatientdiagnosisoverfive (geo_level, geo_code, "outpatient diagnosis over five", total) FROM stdin;
+region	1	diarrhoea	28274
+region	1	hypertension	31121
+region	1	intestinal worms	23005
+region	1	malaria	33833
+region	1	surgical conditions	44772
+region	1	pneumonia	59702
+region	1	upper respiratory disorders	82980
+region	1	skin infections	43659
+region	1	UTI	65644
+region	3	diarrhoea	87029
+region	3	hypertension	82124
+region	3	intestinal worms	78960
+region	3	malaria	461786
+region	3	surgical conditions	49047
+region	3	pneumonia	63317
+region	3	upper respiratory disorders	157448
+region	3	skin infections	156592
+region	3	UTI	237459
+region	2	diarrhoea	39895
+region	2	hypertension	6549
+region	2	intestinal worms	22504
+region	2	malaria	126094
+region	2	surgical conditions	17481
+region	2	pneumonia	26152
+region	2	upper respiratory disorders	40710
+region	2	skin infections	29347
+region	2	UTI	41872
+region	4	diarrhoea	12682
+region	4	hypertension	3139
+region	4	intestinal worms	23311
+region	4	malaria	126160
+region	4	surgical conditions	5622
+region	4	pneumonia	9938
+region	4	upper respiratory disorders	15276
+region	4	skin infections	11985
+region	4	UTI	31396
+region	5	diarrhoea	22334
+region	5	hypertension	6459
+region	5	intestinal worms	15452
+region	5	malaria	60186
+region	5	surgical conditions	15703
+region	5	pneumonia	16745
+region	5	upper respiratory disorders	26056
+region	5	skin infections	23054
+region	5	UTI	24436
+region	6	diarrhoea	25226
+region	6	hypertension	13224
+region	6	intestinal worms	38606
+region	6	malaria	259856
+region	6	surgical conditions	15369
+region	6	pneumonia	20098
+region	6	upper respiratory disorders	41090
+region	6	skin infections	18662
+region	6	UTI	78677
+region	9	diarrhoea	7208
+region	9	hypertension	1730
+region	9	intestinal worms	8258
+region	9	malaria	41782
+region	9	surgical conditions	1682
+region	9	pneumonia	3560
+region	9	upper respiratory disorders	7776
+region	9	skin infections	5802
+region	9	UTI	10882
+region	10	diarrhoea	22293
+region	10	hypertension	5438
+region	10	intestinal worms	46894
+region	10	malaria	199323
+region	10	surgical conditions	8448
+region	10	pneumonia	13976
+region	10	upper respiratory disorders	39690
+region	10	skin infections	16465
+region	10	UTI	50819
+region	11	diarrhoea	20140
+region	11	hypertension	41422
+region	11	intestinal worms	38035
+region	11	malaria	63798
+region	11	surgical conditions	36984
+region	11	pneumonia	50911
+region	11	upper respiratory disorders	90294
+region	11	skin infections	43510
+region	11	UTI	59498
+region	14	diarrhoea	15204
+region	14	hypertension	9942
+region	14	intestinal worms	10487
+region	14	malaria	147525
+region	14	surgical conditions	11007
+region	14	pneumonia	12420
+region	14	upper respiratory disorders	19613
+region	14	skin infections	13174
+region	14	UTI	18998
+region	15	diarrhoea	21107
+region	15	hypertension	3106
+region	15	intestinal worms	14265
+region	15	malaria	75027
+region	15	surgical conditions	16759
+region	15	pneumonia	31601
+region	15	upper respiratory disorders	33651
+region	15	skin infections	127577
+region	15	UTI	26656
+region	16	diarrhoea	24014
+region	16	hypertension	4950
+region	16	intestinal worms	40183
+region	16	malaria	199835
+region	16	surgical conditions	15469
+region	16	pneumonia	16754
+region	16	upper respiratory disorders	31429
+region	16	skin infections	21752
+region	16	UTI	57655
+region	17	diarrhoea	45613
+region	17	hypertension	14672
+region	17	intestinal worms	25842
+region	17	malaria	104218
+region	17	surgical conditions	24136
+region	17	pneumonia	31531
+region	17	upper respiratory disorders	49634
+region	17	skin infections	36567
+region	17	UTI	39453
+region	18	diarrhoea	37771
+region	18	hypertension	18899
+region	18	intestinal worms	42646
+region	18	malaria	319602
+region	18	surgical conditions	24837
+region	18	pneumonia	31834
+region	18	upper respiratory disorders	52380
+region	18	skin infections	45028
+region	18	UTI	78748
+region	19	diarrhoea	16992
+region	19	hypertension	10680
+region	19	intestinal worms	12045
+region	19	malaria	192333
+region	19	surgical conditions	11923
+region	19	pneumonia	18654
+region	19	upper respiratory disorders	23771
+region	19	skin infections	15211
+region	19	UTI	25551
+region	20	diarrhoea	27941
+region	20	hypertension	9394
+region	20	intestinal worms	48618
+region	20	malaria	229520
+region	20	surgical conditions	14735
+region	20	pneumonia	20243
+region	20	upper respiratory disorders	39290
+region	20	skin infections	33815
+region	20	UTI	92271
+region	21	diarrhoea	13885
+region	21	hypertension	4208
+region	21	intestinal worms	6844
+region	21	malaria	27670
+region	21	surgical conditions	7296
+region	21	pneumonia	10561
+region	21	upper respiratory disorders	13198
+region	21	skin infections	13931
+region	21	UTI	11265
+region	22	diarrhoea	21128
+region	22	hypertension	15754
+region	22	intestinal worms	17434
+region	22	malaria	244679
+region	22	surgical conditions	16616
+region	22	pneumonia	17414
+region	22	upper respiratory disorders	45542
+region	22	skin infections	24472
+region	22	UTI	54574
+region	23	diarrhoea	17062
+region	23	hypertension	2559
+region	23	intestinal worms	11529
+region	23	malaria	69919
+region	23	surgical conditions	6476
+region	23	pneumonia	11275
+region	23	upper respiratory disorders	11379
+region	23	skin infections	13718
+region	23	UTI	16449
+region	24	diarrhoea	18192
+region	24	hypertension	11484
+region	24	intestinal worms	15023
+region	24	malaria	183819
+region	24	surgical conditions	16330
+region	24	pneumonia	20209
+region	24	upper respiratory disorders	27345
+region	24	skin infections	19308
+region	24	UTI	18919
+region	25	diarrhoea	24111
+region	25	hypertension	5590
+region	25	intestinal worms	21553
+region	25	malaria	157642
+region	25	surgical conditions	6871
+region	25	pneumonia	12182
+region	25	upper respiratory disorders	36171
+region	25	skin infections	19037
+region	25	UTI	43194
+region	26	diarrhoea	18586
+region	26	hypertension	1631
+region	26	intestinal worms	16511
+region	26	malaria	90687
+region	26	surgical conditions	3002
+region	26	pneumonia	10156
+region	26	upper respiratory disorders	20370
+region	26	skin infections	10868
+region	26	UTI	30865
+region	27	diarrhoea	33771
+region	27	hypertension	4043
+region	27	intestinal worms	16369
+region	27	malaria	95183
+region	27	surgical conditions	16802
+region	27	pneumonia	18858
+region	27	upper respiratory disorders	53355
+region	27	skin infections	22149
+region	27	UTI	31143
+region	29	diarrhoea	28323
+region	29	hypertension	4479
+region	29	intestinal worms	20844
+region	29	malaria	211160
+region	29	surgical conditions	7566
+region	29	pneumonia	12666
+region	29	upper respiratory disorders	32161
+region	29	skin infections	13597
+region	29	UTI	32539
+region	28	diarrhoea	36855
+region	28	hypertension	23839
+region	28	intestinal worms	34304
+region	28	malaria	300736
+region	28	surgical conditions	36421
+region	28	pneumonia	42122
+region	28	upper respiratory disorders	78197
+region	28	skin infections	60071
+region	28	UTI	76590
+region	7	diarrhoea	0
+region	7	hypertension	0
+region	7	intestinal worms	0
+region	7	malaria	0
+region	7	surgical conditions	0
+region	7	pneumonia	0
+region	7	upper respiratory disorders	0
+region	7	skin infections	0
+region	7	UTI	0
+region	8	diarrhoea	0
+region	8	hypertension	0
+region	8	intestinal worms	0
+region	8	malaria	0
+region	8	surgical conditions	0
+region	8	pneumonia	0
+region	8	upper respiratory disorders	0
+region	8	skin infections	0
+region	8	UTI	0
+region	12	diarrhoea	0
+region	12	hypertension	0
+region	12	intestinal worms	0
+region	12	malaria	0
+region	12	surgical conditions	0
+region	12	pneumonia	0
+region	12	upper respiratory disorders	0
+region	12	skin infections	0
+region	12	UTI	0
+region	13	diarrhoea	0
+region	13	hypertension	0
+region	13	intestinal worms	0
+region	13	malaria	0
+region	13	surgical conditions	0
+region	13	pneumonia	0
+region	13	upper respiratory disorders	0
+region	13	skin infections	0
+region	13	UTI	0
+region	30	diarrhoea	0
+region	30	hypertension	0
+region	30	intestinal worms	0
+region	30	malaria	0
+region	30	surgical conditions	0
+region	30	pneumonia	0
+region	30	upper respiratory disorders	0
+region	30	skin infections	0
+region	30	UTI	0
+country	TZ	diarrhoea	665636
+country	TZ	hypertension	336436
+country	TZ	intestinal worms	649522
+country	TZ	malaria	4022373
+country	TZ	surgical conditions	431354
+country	TZ	pneumonia	582879
+country	TZ	upper respiratory disorders	1068806
+country	TZ	skin infections	839351
+country	TZ	UTI	1255553
+\.
+--
+-- Name: outpatientdiagnosisoverfive_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
+--
+
+ALTER TABLE ONLY outpatientdiagnosisoverfive
+    ADD CONSTRAINT outpatientdiagnosisoverfive_pkey PRIMARY KEY (geo_level, geo_code, "outpatient diagnosis over five", total);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+ALTER TABLE IF EXISTS ONLY public.outpatientdiagnosisunderfive DROP CONSTRAINT IF EXISTS outpatientdiagnosisunderfive_pkey;
+DROP TABLE IF EXISTS public.outpatientdiagnosisunderfive;
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: outpatientdiagnosisunderfive; Type: TABLE; Schema: public; Owner: -; Tablespace:
+--
+
+CREATE TABLE outpatientdiagnosisunderfive (
+    geo_level character varying(15) NOT NULL,
+    geo_code character varying(255) NOT NULL,
+    "outpatient diagnosis under five" character varying(128) NOT NULL,
+    total float NULL
+);
+
+
+--
+-- Data for Name: outpatientdiagnosisunderfive; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY outpatientdiagnosisunderfive (geo_level, geo_code, "outpatient diagnosis under five", total) FROM stdin;
+region	1	diarrhoea	44781
+region	1	intestinal worms	14821
+region	1	malaria	18895
+region	1	pneumonia	80685
+region	1	skin infections	31260
+region	1	upper respiratory disorders	66511
+region	1	UTI	25098
+region	3	diarrhoea	108411
+region	3	intestinal worms	64692
+region	3	malaria	276762
+region	3	pneumonia	106899
+region	3	skin infections	145834
+region	3	upper respiratory disorders	137757
+region	3	UTI	161374
+region	2	diarrhoea	73926
+region	2	intestinal worms	17201
+region	2	malaria	111535
+region	2	pneumonia	47207
+region	2	skin infections	34253
+region	2	upper respiratory disorders	43846
+region	2	UTI	29084
+region	4	diarrhoea	31065
+region	4	intestinal worms	17547
+region	4	malaria	150911
+region	4	pneumonia	21016
+region	4	skin infections	16325
+region	4	upper respiratory disorders	17554
+region	4	UTI	25509
+region	5	diarrhoea	20846
+region	5	intestinal worms	7622
+region	5	malaria	29543
+region	5	pneumonia	19898
+region	5	skin infections	19403
+region	5	upper respiratory disorders	14569
+region	5	UTI	7798
+region	6	diarrhoea	44398
+region	6	intestinal worms	28579
+region	6	malaria	279216
+region	6	pneumonia	44583
+region	6	skin infections	16727
+region	6	upper respiratory disorders	38173
+region	6	UTI	30569
+region	9	diarrhoea	11429
+region	9	intestinal worms	6545
+region	9	malaria	36880
+region	9	pneumonia	5838
+region	9	skin infections	6016
+region	9	upper respiratory disorders	7147
+region	9	UTI	8715
+region	10	diarrhoea	38352
+region	10	intestinal worms	30229
+region	10	malaria	173188
+region	10	pneumonia	25366
+region	10	skin infections	18680
+region	10	upper respiratory disorders	42823
+region	10	UTI	37636
+region	11	diarrhoea	23657
+region	11	intestinal worms	18805
+region	11	malaria	21621
+region	11	pneumonia	55554
+region	11	skin infections	29244
+region	11	upper respiratory disorders	48257
+region	11	UTI	23345
+region	14	diarrhoea	22154
+region	14	intestinal worms	10562
+region	14	malaria	174654
+region	14	pneumonia	19883
+region	14	skin infections	14794
+region	14	upper respiratory disorders	20293
+region	14	UTI	10726
+region	15	diarrhoea	38082
+region	15	intestinal worms	10264
+region	15	malaria	59058
+region	15	pneumonia	53305
+region	15	skin infections	19588
+region	15	upper respiratory disorders	25994
+region	15	UTI	9868
+region	16	diarrhoea	37024
+region	16	intestinal worms	26219
+region	16	malaria	200050
+region	16	pneumonia	29973
+region	16	skin infections	20224
+region	16	upper respiratory disorders	26840
+region	16	UTI	38204
+region	17	diarrhoea	71511
+region	17	intestinal worms	17411
+region	17	malaria	84351
+region	17	pneumonia	55842
+region	17	skin infections	41943
+region	17	upper respiratory disorders	51389
+region	17	UTI	22341
+region	18	diarrhoea	43066
+region	18	intestinal worms	26349
+region	18	malaria	225126
+region	18	pneumonia	56095
+region	18	skin infections	43685
+region	18	upper respiratory disorders	41436
+region	18	UTI	52816
+region	19	diarrhoea	31262
+region	19	intestinal worms	12475
+region	19	malaria	216063
+region	19	pneumonia	32473
+region	19	skin infections	22166
+region	19	upper respiratory disorders	25355
+region	19	UTI	15339
+region	20	diarrhoea	65145
+region	20	intestinal worms	30837
+region	20	malaria	249147
+region	20	pneumonia	55269
+region	20	skin infections	48071
+region	20	upper respiratory disorders	46425
+region	20	UTI	52759
+region	21	diarrhoea	11691
+region	21	intestinal worms	3528
+region	21	malaria	15258
+region	21	pneumonia	13925
+region	21	skin infections	10372
+region	21	upper respiratory disorders	8933
+region	21	UTI	3249
+region	22	diarrhoea	29904
+region	22	intestinal worms	13668
+region	22	malaria	190204
+region	22	pneumonia	32296
+region	22	skin infections	24623
+region	22	upper respiratory disorders	41581
+region	22	UTI	26335
+region	23	diarrhoea	40704
+region	23	intestinal worms	9145
+region	23	malaria	73850
+region	23	pneumonia	17101
+region	23	skin infections	17718
+region	23	upper respiratory disorders	13483
+region	23	UTI	11591
+region	24	diarrhoea	26614
+region	24	intestinal worms	11711
+region	24	malaria	178686
+region	24	pneumonia	27612
+region	24	skin infections	20459
+region	24	upper respiratory disorders	27223
+region	24	UTI	9794
+region	25	diarrhoea	44455
+region	25	intestinal worms	14325
+region	25	malaria	159449.1
+region	25	pneumonia	28085
+region	25	skin infections	18625
+region	25	upper respiratory disorders	31540
+region	25	UTI	25035
+region	26	diarrhoea	39057
+region	26	intestinal worms	10624
+region	26	malaria	85640
+region	26	pneumonia	23571
+region	26	skin infections	13972
+region	26	upper respiratory disorders	17893
+region	26	UTI	22321
+region	27	diarrhoea	53021
+region	27	intestinal worms	9437
+region	27	malaria	64226
+region	27	pneumonia	25170
+region	27	skin infections	25894
+region	27	upper respiratory disorders	40604
+region	27	UTI	16011
+region	29	diarrhoea	53520
+region	29	intestinal worms	14003
+region	29	malaria	207585
+region	29	pneumonia	25191
+region	29	skin infections	15112
+region	29	upper respiratory disorders	29867
+region	29	UTI	18488
+region	28	diarrhoea	51523
+region	28	intestinal worms	24896
+region	28	malaria	194761
+region	28	pneumonia	84269
+region	28	skin infections	50188
+region	28	upper respiratory disorders	55611
+region	28	UTI	37431
+region	7	diarrhoea	0
+region	7	intestinal worms	0
+region	7	malaria	0
+region	7	pneumonia	0
+region	7	skin infections	0
+region	7	upper respiratory disorders	0
+region	7	UTI	0
+region	8	diarrhoea	0
+region	8	intestinal worms	0
+region	8	malaria	0
+region	8	pneumonia	0
+region	8	skin infections	0
+region	8	upper respiratory disorders	0
+region	8	UTI	0
+region	12	diarrhoea	0
+region	12	intestinal worms	0
+region	12	malaria	0
+region	12	pneumonia	0
+region	12	skin infections	0
+region	12	upper respiratory disorders	0
+region	12	UTI	0
+region	13	diarrhoea	0
+region	13	intestinal worms	0
+region	13	malaria	0
+region	13	pneumonia	0
+region	13	skin infections	0
+region	13	upper respiratory disorders	0
+region	13	UTI	0
+region	30	diarrhoea	0
+region	30	intestinal worms	0
+region	30	malaria	0
+region	30	pneumonia	0
+region	30	skin infections	0
+region	30	upper respiratory disorders	0
+region	30	UTI	0
+country	TZ	diarrhoea	1055598
+country	TZ	intestinal worms	451495
+country	TZ	malaria	3476659.1
+country	TZ	pneumonia	987106
+country	TZ	skin infections	725176
+country	TZ	upper respiratory disorders	921104
+country	TZ	UTI	721436
+\.
+--
+-- Name: outpatientdiagnosisunderfive_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
+--
+
+ALTER TABLE ONLY outpatientdiagnosisunderfive
+    ADD CONSTRAINT outpatientdiagnosisunderfive_pkey PRIMARY KEY (geo_level, geo_code, "outpatient diagnosis under five", total);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
