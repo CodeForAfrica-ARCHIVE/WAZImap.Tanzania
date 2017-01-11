@@ -34,10 +34,12 @@ WAZIMAP['levels'] = {
         'children': ['ward'],
     },
     'ward': {
-        'plural': 'wards'
+        'plural': 'wards',
+        'children': [],
     }
 }
-WAZIMAP['comparative_levels'] = ['ward']
+
+WAZIMAP['comparative_levels'] = ['ward', 'district', 'region', 'country']
 WAZIMAP['geometry_data'] = {
     'country': 'geo/country.topojson',
     'region': 'geo/region.topojson',
@@ -53,43 +55,53 @@ WAZIMAP['map_zoom'] = 6
 
 WAZIMAP['topics'] = OrderedDict()
 
-# WAZIMAP['topics']['census'] = {
-#     'topic': 'census',
-#     'name': 'census',
-#     'icon': 'fa-users',
-#     'order': 1,
-#     'desc': 'Census data collected in 2009',
-#     'profiles': [
-#         'Demographics'
-#     ]
-# }
+WAZIMAP['topics']['census'] = {
+    'topic': 'census',
+    'name': 'census',
+    'icon': '/static/img/census.png',
+    'order': 1,
+    'desc': 'Census data collected in 2009',
+    'profiles': [
+        'Demographics'
+    ]
+}
 
 WAZIMAP['topics']['health'] = {
     'topic': 'health',
     'name': 'health',
-    'icon': 'fa-medkit',
+    'icon': '/static/img/health.png',
     'order': 2,
     'desc': 'Health data',
     'profiles': [
-        #'pepfar',
+        'pepfar',
         'causes of death',
         'family planning clients',
         'place of delivery',
         'health workers',
-        'health_centers',
+        'health centers',
         'tetanus vaccine',
     ]
 }
 
+WAZIMAP['topics']['education'] = {
+    'topic': 'education',
+    'name': 'education',
+    'icon': '/static/img/education.png',
+    'order': 3,
+    'desc': 'Education data from Twaweza',
+    'profiles': [
+        'literacy and numeracy tests',
+        'attendance',
+    ]
+}
 
-# WAZIMAP['topics']['education'] = {
-#     'topic': 'education',
-#     'name': 'education',
-#     'icon': 'fa-graduation-cap',
-#     'order': 2,
-#     'desc': 'Education data from Twaweza',
-#     'profiles': [
-#         'literacy',
-#         'attendance',
-#     ]
-# }
+WAZIMAP['topics']['development'] = {
+    'topic': 'development',
+    'name': 'development',
+    'icon': '/static/img/development.png',
+    'order': 4,
+    'desc': '',
+    'profiles': [
+        #todo
+    ]
+}

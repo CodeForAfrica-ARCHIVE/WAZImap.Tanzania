@@ -2,12 +2,12 @@ from collections import OrderedDict
 
 from wazimap.geo import geo_data
 from wazimap.data.tables import get_model_from_fields
-from wazimap.data.utils import get_session, calculate_median, merge_dicts, get_stat_data, get_objects_by_geo, group_remainder
+from wazimap.data.utils import get_session, calculate_median, merge_dicts, get_stat_data, get_objects_by_geo, \
+    group_remainder
 from django.conf import settings
 
 # ensure tables are loaded
 import wazimap_tz.tables  # noqa
-
 
 SECTIONS = settings.WAZIMAP.get('topics', {})
 
@@ -30,8 +30,7 @@ WATER_SOURCE_RECODES = OrderedDict([
 ])
 
 
-
-def get_census_profile(geo_code, geo_level, get_params,  profile_name=None):
+def get_census_profile(geo_code, geo_level, get_params, profile_name=None):
     session = get_session()
     try:
         geo_summary_levels = geo_data.get_summary_geo_info(geo_code, geo_level)
@@ -54,7 +53,6 @@ def get_census_profile(geo_code, geo_level, get_params,  profile_name=None):
                 func = globals()[function_name]
                 data[section] = func(geo_code, geo_level, session)
 
-
                 # get profiles for province and/or country
                 for level, code in geo_summary_levels:
                     # merge summary profile into current geo profile
@@ -69,11 +67,12 @@ def get_census_profile(geo_code, geo_level, get_params,  profile_name=None):
         data['all_sections'] = SECTIONS
         if (selected_sections == []): selected_sections = sections
         data['raw_selected_sections'] = selected_sections
-        data['selected_sections'] = [x.replace(' ','_').lower() for x in selected_sections]
+        data['selected_sections'] = [x.replace(' ', '_').lower() for x in selected_sections]
         return data
 
     finally:
         session.close()
+
 
 def get_demographics_profile(geo_code, geo_level, session):
     sex_dist_data = None
@@ -253,9 +252,9 @@ def get_households_profile(geo_code, geo_level, session):
             total_sewer_or_septic += waste_disposal_dist[key]['numerators']['this']
 
     # lighting
-    lighting_dist, _ = get_stat_data(
-        'main type of lighting fuel', geo_level, geo_code, session,
-        key_order=['Electricity', 'Solar', 'Gas lamps', 'Pressure lamps', 'Tin lamps', 'Lanterns', 'Wood', 'Other'])
+    lighting_dist, _ = get_stat_data('main type of lighting fuel', geo_level, geo_code, session,
+                                     key_order=['Electricity', 'Solar', 'Gas lamps', 'Pressure lamps', 'Tin lamps',
+                                                'Lanterns', 'Wood', 'Other'])
     total_electricity = lighting_dist['Electricity']['numerators']['this']
 
     # construction materials
@@ -299,7 +298,8 @@ def get_households_profile(geo_code, geo_level, session):
         'wall_material_distribution': wall_dist,
     }
 
-def get_literacy_profile(geo_code, geo_level, session):
+
+def get_literacy_and_numeracy_tests_profile(geo_code, geo_level, session):
     if geo_level == "ward": return {}
     # literacy tests stats
     literacy_data, _ = get_stat_data(
@@ -352,7 +352,7 @@ def get_literacy_profile(geo_code, geo_level, session):
         'metadata': literacy_data['metadata']
     }
 
-    return  {
+    return {
         'literacy_data': literacy_data,
         'metadata': literacy_data['metadata'],
         'english_test_dist': english_test_dist,
@@ -367,6 +367,7 @@ def get_literacy_profile(geo_code, geo_level, session):
             'values': {'this': round(all_subjects, 2)}
         }
     }
+
 
 def get_attendance_profile(geo_code, geo_level, session):
     if geo_level == "ward": return {}
@@ -404,13 +405,14 @@ def get_attendance_profile(geo_code, geo_level, session):
         },
         'metadata': attendance_data['metadata']
     }
-    return  {
+    return {
         'attendance_data': attendance_data,
         'dropped_out_dist': dropped_out_dist,
         'out_of_school_dist': out_of_school_dist,
         'drop_out_sort': '-value' if dropped_out_dist <= 50 else 'value',
         'out_of_school_sort': '-value' if out_of_school_dist <= 50 else 'value'
     }
+
 
 def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):
     if geo_level == "ward": return {}
@@ -428,11 +430,11 @@ def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):
     teachers_absent_dist = ratio_data['Teachers absent']['numerators']['this']
     teachers_absent_dist = get_dictionary("Teachers absent", "Teachers present", teachers_absent_dist, ratio_data)
 
-    return  {
+    return {
         'pupil_attendance_rate_dist': pupil_attendance_rate_dist,
         'teachers_absent_dist': teachers_absent_dist,
         'pupil_teacher_ratio': {
-            'name': 'For every one teacher there are ' +  str(pupil_teacher_ratio) + " pupils",
+            'name': 'For every one teacher there are ' + str(pupil_teacher_ratio) + " pupils",
             'numerators': {'this': pupil_teacher_ratio},
             'values': {'this': pupil_teacher_ratio}
         },
@@ -442,6 +444,7 @@ def get_pupil_teacher_ratios_profile(geo_code, geo_level, session):
             'values': {'this': pupils_per_textbook}
         }
     }
+
 
 def get_school_amenities_profile(geo_code, geo_level, session):
     if geo_level == "ward": return {}
@@ -457,14 +460,15 @@ def get_school_amenities_profile(geo_code, geo_level, session):
     feeding_program_data = data['Feeding program']['numerators']['this']
     feeding_program_data = get_dictionary("Have a feeding program", "Don't", feeding_program_data, data)
 
-    return  {
+    return {
         'library_data': library_data,
         'drinking_water_data': drinking_water_data,
         'feeding_program_data': feeding_program_data,
 
     }
 
-#PEPFAR DATA
+
+# PEPFAR DATA
 def get_pepfar_profile(geo_code, geo_level, session):
     if geo_level == "ward": return {}
     # PEPFAR stats
@@ -523,7 +527,7 @@ def get_pepfar_profile(geo_code, geo_level, session):
         'HTC_TST_POS': {
             'positive': {
                 'name': 'HIV+',
-                'numerators' : {'this': HTC_TST_POS},
+                'numerators': {'this': HTC_TST_POS},
                 'values': {'this': HTP}
             },
             'negative': {
@@ -534,12 +538,12 @@ def get_pepfar_profile(geo_code, geo_level, session):
             'metadata': pepfar_data['metadata']
         },
         'PMTCT_STAT': {
-            'name':'Number of pregnant women with known HIV status (includes women who were tested for HIV and received their results)',
+            'name': 'Number of pregnant women with known HIV status (includes women who were tested for HIV and received their results)',
             'numerators': {'this': PMTCT_STAT},
             'values': {'this': PMTCT_STAT},
         },
         'PMTCT_EID': {
-            'name':'Number of infants born to HIV-positive women who had a virologic HIV test done within two months of birth',
+            'name': 'Number of infants born to HIV-positive women who had a virologic HIV test done within two months of birth',
             'numerators': {'this': PMTCT_EID},
             'values': {'this': PMTCT_EID},
         },
@@ -552,7 +556,7 @@ def get_pepfar_profile(geo_code, geo_level, session):
             'name': 'Number of HIV-positive adults and children newly enrolled in clinical care during the reporting period who received at least one of the following at enrollment: clinical assessment (WHO staging) OR CD4 count',
             'numerators': {'this': CARE_NEW},
             'values': {'this': CARE_NEW},
-        },'TX_NEW': {
+        }, 'TX_NEW': {
             'name': 'Number of adults and children newly enrolled on antiretroviral therapy (ART)',
             'numerators': {'this': TX_NEW},
             'values': {'this': TX_NEW},
@@ -605,6 +609,7 @@ def get_pepfar_profile(geo_code, geo_level, session):
 
     }
 
+
 def get_causes_of_death_profile(geo_code, geo_level, session):
     if geo_level != 'region' and geo_level != 'country': return {}
 
@@ -621,17 +626,18 @@ def get_causes_of_death_profile(geo_code, geo_level, session):
     outpatient_diagnosis_under_five_data, _ = get_stat_data(
         'outpatient diagnosis under five', geo_level, geo_code, session, order_by='-total')
     return {
-        'causes_of_death_under_five_data' : causes_of_death_under_five_data,
+        'causes_of_death_under_five_data': causes_of_death_under_five_data,
         'causes_of_death_over_five_data': causes_of_death_over_five_data,
-        'inpatient_diagnosis_under_five_data':inpatient_diagnosis_under_five_data,
-        'inpatient_diagnosis_over_five_data':inpatient_diagnosis_over_five_data,
-        'outpatient_diagnosis_over_five_data':outpatient_diagnosis_over_five_data,
-        'outpatient_diagnosis_under_five_data':outpatient_diagnosis_under_five_data,
+        'inpatient_diagnosis_under_five_data': inpatient_diagnosis_under_five_data,
+        'inpatient_diagnosis_over_five_data': inpatient_diagnosis_over_five_data,
+        'outpatient_diagnosis_over_five_data': outpatient_diagnosis_over_five_data,
+        'outpatient_diagnosis_under_five_data': outpatient_diagnosis_under_five_data,
         'source_link': 'http://www.opendata.go.tz/dataset/number-and-causes-of-death-occured-by-region',
         'source_link_2': 'http://www.opendata.go.tz/dataset/idadi-ya-magonjwa-kutoka-idara-ya-wagonjwa-waliolazwa-kwa-mikoa',
         'source_link_3': 'http://www.opendata.go.tz/dataset/idadi-ya-magonjwa-kutoka-idara-ya-wagonjwa-wa-nje-kwa-mikoa',
         'source_name': 'opendata.go.tz',
     }
+
 
 def get_family_planning_clients_profile(geo_code, geo_level, session):
     if geo_level != 'region' and geo_level != 'country': return {}
@@ -678,6 +684,7 @@ def get_family_planning_clients_profile(geo_code, geo_level, session):
         'source_name': 'opendata.go.tz',
     }
 
+
 def get_place_of_delivery_profile(geo_code, geo_level, session):
     if geo_level != 'region' and geo_level != 'country': return {}
 
@@ -702,6 +709,7 @@ def get_place_of_delivery_profile(geo_code, geo_level, session):
         'source_link': 'http://www.opendata.go.tz/dataset/idadi-ya-wanaojifungulia-kwenye-vituo-vya-kutolea-huduma-za-afya-na-sehemu-zingine',
         'source_name': 'opendata.go.tz',
     }
+
 
 def get_health_workers_profile(geo_code, geo_level, session):
     if geo_level != 'region' and geo_level != 'country': return {}
@@ -731,6 +739,7 @@ def get_health_workers_profile(geo_code, geo_level, session):
         'source_name': 'opendata.go.tz',
     }
 
+
 def get_health_centers_profile(geo_code, geo_level, session):
     if geo_level == 'ward': return {}
 
@@ -758,6 +767,7 @@ def get_health_centers_profile(geo_code, geo_level, session):
         'source_name': 'opendata.go.tz',
     }
 
+
 def get_tetanus_vaccine_profile(geo_code, geo_level, session):
     if geo_level != 'region' and geo_level != 'country': return {}
 
@@ -782,7 +792,7 @@ def get_tetanus_vaccine_profile(geo_code, geo_level, session):
 
 
 def get_dictionary(key_one, key_two, val, dist):
-    #return a dictionary with the second dictionary being 100 - val
+    # return a dictionary with the second dictionary being 100 - val
     return {
         key_one: {
             'name': key_one,
@@ -797,15 +807,18 @@ def get_dictionary(key_one, key_two, val, dist):
         'metadata': dist['metadata']
     }
 
+
 def sum_up(arr, name):
     s = 0
     for x in arr:
         s += x['values']['this']
     return OrderedDict([('name', name), ('numerators', {'this': None}), ('values', {'this': s})])
 
+
 def divide_by_one_thousand(dist):
-    dist['values']['this'] =  round((dist['values']['this'] * 1.0) / 1000, 1)
+    dist['values']['this'] = round((dist['values']['this'] * 1.0) / 1000, 1)
     return dist
+
 
 def replace_name(dist, new_name):
     dist['name'] = new_name

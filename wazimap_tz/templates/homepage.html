@@ -43,8 +43,8 @@
             topics = JSON.parse("{{topics|safe}}".replace(/'/g, '"'));
             for (k in topics) {
                 document.write ('<a href="/profiles/country-TZ-Tanzania/?topic='+  topics[k].topic  +'">')
-                document.write ('<div class="column-third topic">')
-                document.write ('<i class="fa '+ topics[k].icon +'" aria-hidden="true"></i>');
+                document.write ('<div class="column-quarter topic">')
+                document.write ('<img src="'+ topics[k].icon +'" aria-hidden="true" style="height:80px;"/>');
                 document.write ('<div class="topic-name"> ' + topics[k].name + '</div>');
                 document.write ('</div>');
                 document.write ('</a>');
@@ -61,17 +61,17 @@
         </header>
         <section>
             <div class="column-third callout with-icon">
-                <center><i class="fa fa-book fa-5x"></i></center>
+                <center><img src="/static/img/find_facts.png"/></center>
                 <h3>Find facts</h3>
                 <p>Populations and financial figures are broken down by category: Elections, Demographics, Service Delivery, Economics and Education.</p>
             </div>
             <div class="column-third callout with-icon">
-                <center><i class="fa fa-bar-chart-o"></i></center>
+                <center><img src="/static/img/get_context.png"/></center>
                 <h3>Visualize</h3>
                 <p>Our library of charts gives you insight into data from the places you research. Look for them on profile pages. You can even <a href="{% url 'example_detail' 'embed-charts' %}">embed the charts</a> on your own site.</p>
             </div>
             <div class="column-third callout with-icon">
-                <center><i class="fa fa-refresh"></i></center>
+                <center><img src="/static/img/visualise.png"/></center>
                 <h3>Get context</h3>
                 <p>Pre-computed statistics are presented alongside each data point, so you can see how each place fits into a larger context.</p>
             </div>

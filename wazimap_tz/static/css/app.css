@@ -607,8 +607,8 @@ aside#facets {
     padding-left: 14.4em;
 }
 .wrapper {
-    width: auto;
-    margin: 0 1.5em;
+    width: 1140px;
+    margin: 0 auto;
 }
 .full-width {
     clear: both;
@@ -620,6 +620,9 @@ aside#facets {
     position: relative;
     height: 35em;
     margin-bottom: 2em;
+}
+#profile #cover-map {
+    margin-top: 89px;
 }
 #slippy-map {
     position: absolute;
@@ -721,7 +724,7 @@ aside#facets {
     width: 65%;
 }
 .column-quarter {
-    width: 23%;
+    width: 25%;
 }
 .column-three-quarters {
     width: 73%;
@@ -888,6 +891,9 @@ h1.article-header-right {
 .callout.with-icon {
     padding-left: 36px;
     text-align: center;
+}
+.callout.with-icon  img {
+    height:80px;
 }
 .callout h3 {
     font-size: 22px;
@@ -2316,6 +2322,12 @@ dl#racial-iteration dt {
         margin-left: 0;
         margin-bottom: 1.5em;
     }
+    .wrapper {
+        width:100%;
+    }
+    .filters {
+        display:none;
+    }
 }
 /* END dl-horizontal borrowed from Twitter Bootstrap */
 
@@ -2564,7 +2576,7 @@ blockquote {
 }
 
 /* MEDIA QUERIES */
-@media only screen and (min-width: 1140px) {
+@media only screen and (max-width: 1140px) {
     .wrapper {
         width: 1120px;
         margin: 0 auto;
@@ -2576,7 +2588,23 @@ blockquote {
     }
 
 } /* END: @media only screen and (max-width: 1139px) */
+@media only screen and (max-width: 1000px) {
+    .wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 @media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
     article,
     article.column-full {
         margin-bottom: 2em;
@@ -2935,7 +2963,7 @@ blockquote {
      background-color:#1f9e95;
 }
 .showcase img {
-    height:285px;
+    height:285px !important;
 }
 .showcase h2 {
     text-align: center;
@@ -3005,6 +3033,15 @@ blockquote {
     height:50px;
     width:380px;
     display:none;
+}
+.filters.affix{
+    position:fixed;
+    top:90px !important;
+    right:0;
+    display:block;
+}
+.filters.clear-bottom {
+    bottom:415px !important;
 }
 .filter-row i {
     padding-right: 12px;

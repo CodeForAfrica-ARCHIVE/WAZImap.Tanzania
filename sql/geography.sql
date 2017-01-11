@@ -273,7 +273,7 @@ COPY wazimap_geography (id, geo_level, geo_code, name, parent_level, parent_code
 197	district	156	Mbogwe	region	4	Mbogwe	2012	0
 198	district	157	Bukombe	region	4	Bukombe	2012	10842
 199	district	158	Chato	region	4	Chato	2012	0
-200	country	TZ	Tanzania	\N	\N	Tanzania	2012	945bdf087
+200	country	TZ	Tanzania	\N	\N	Tanzania	2012	945087
 201	ward	1	Bumbuta	district	1	Bumbuta	2012	190
 202	ward	2	Pahi	district	1	Pahi	2012	110
 203	ward	3	Haubi	district	1	Haubi	2012	150
