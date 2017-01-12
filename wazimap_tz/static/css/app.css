@@ -2491,12 +2491,12 @@ aside .search .result-type {
 
 #body-spinner {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     margin: 65px 20px;
     height: 20px;
     width: 20px;
-    z-index: 100;
+    z-index: 100000;
 }
 
 .message {
@@ -3034,7 +3034,7 @@ blockquote {
     top:700px;
     padding: 10px 20px;
     height:50px;
-    width:380px;
+    width:340px;
     display:none;
 }
 .filters.affix{

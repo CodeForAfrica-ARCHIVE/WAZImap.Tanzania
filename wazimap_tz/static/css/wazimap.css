@@ -494,9 +494,8 @@ h2.table-title {
         margin-left:0px !important;
         position:inherit;
         height:auto;
-        width:380px;
+        width:27%;
         display:none;
-        float:left;
     }
     #suggestdata .shell {
         width:90%;

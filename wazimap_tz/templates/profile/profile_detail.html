@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block profile_detail %}
-<article id="demographics" class="clearfix">
+<article id="demographics" class="clearfix {% if 'census' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Demographics</h1>
     </header>
@@ -38,7 +38,7 @@
     </div>
 </article>
 
-<article id="literacy_and_numeracy_tests" class="clearfix">
+<article id="literacy_and_numeracy_tests" class="clearfix {% if 'education' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Literacy & numeracy tests</h1>
     </header>
@@ -60,7 +60,7 @@
     </div>
 </article>
 
-<article id="school_attendance" class="clearfix">
+<article id="school_attendance" class="clearfix {% if 'education' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>School attendance</h1>
     </header>
@@ -74,7 +74,7 @@
     </div>
 </article>
 
-<article id="pepfar" class="clearfix">
+<article id="pepfar" class="clearfix {% if 'health' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>PEPFAR</h1>
     </header>
@@ -170,7 +170,7 @@
     <!--</div>-->
 <!--</article>-->
 
-<article id="causes_of_death" class="clearfix">
+<article id="causes_of_death" class="clearfix {% if 'health' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Causes of death </h1>
     </header>
@@ -206,7 +206,7 @@
     </div>
 </article>
 
-<article id="health_centers_distribution" class="clearfix">
+<article id="health_centers_distribution" class="clearfix {% if 'health' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Health centers distribution</h1>
     </header>
@@ -228,7 +228,7 @@
     </div>
 </article>
 
-<article id="health_workers_distribution" class="clearfix">
+<article id="health_workers_distribution" class="clearfix {% if 'health' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Health workers distribution</h1>
     </header>
@@ -246,7 +246,7 @@
     </div>
 </article>
 
-<article id="family_planning_clients" class="clearfix">
+<article id="family_planning_clients" class="clearfix {% if 'health' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Family planning clients</h1>
     </header>
@@ -267,7 +267,7 @@
     </div>
 </article>
 
-<article id="place_of_delivery" class="clearfix">
+<article id="place_of_delivery" class="clearfix {% if 'health' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Place of delivery</h1>
     </header>
@@ -288,7 +288,7 @@
     </div>
 </article>
 
-<article id="tetanus_vaccine" class="clearfix">
+<article id="tetanus_vaccine" class="clearfix {% if 'health' not in selected_topics %}hide{% endif %}">
     <header class="section-contents">
         <h1>Tetanus vaccination</h1>
     </header>
