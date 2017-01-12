@@ -369,7 +369,7 @@ def get_literacy_and_numeracy_tests_profile(geo_code, geo_level, session):
     }
 
 
-def get_attendance_profile(geo_code, geo_level, session):
+def get_school_attendance_profile(geo_code, geo_level, session):
     if geo_level == "ward": return {}
     # attendance stats
     attendance_data, _ = get_stat_data(
@@ -711,7 +711,7 @@ def get_place_of_delivery_profile(geo_code, geo_level, session):
     }
 
 
-def get_health_workers_profile(geo_code, geo_level, session):
+def get_health_workers_distribution_profile(geo_code, geo_level, session):
     if geo_level != 'region' and geo_level != 'country': return {}
 
     hw_data, total = get_stat_data(
@@ -740,7 +740,7 @@ def get_health_workers_profile(geo_code, geo_level, session):
     }
 
 
-def get_health_centers_profile(geo_code, geo_level, session):
+def get_health_centers_distribution_profile(geo_code, geo_level, session):
     if geo_level == 'ward': return {}
 
     hc_data, total = get_stat_data(

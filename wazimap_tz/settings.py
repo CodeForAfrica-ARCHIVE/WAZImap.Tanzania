@@ -39,7 +39,7 @@ WAZIMAP['levels'] = {
     }
 }
 
-WAZIMAP['comparative_levels'] = ['ward', 'district', 'region', 'country']
+WAZIMAP['comparative_levels'] = ["ward", "district", "region", "country"]
 WAZIMAP['geometry_data'] = {
     'country': 'geo/country.topojson',
     'region': 'geo/region.topojson',
@@ -66,32 +66,30 @@ WAZIMAP['topics']['census'] = {
     ]
 }
 
-WAZIMAP['topics']['health'] = {
-    'topic': 'health',
-    'name': 'health',
-    'icon': '/static/img/health.png',
-    'order': 2,
-    'desc': 'Health data',
-    'profiles': [
-        'pepfar',
-        'causes of death',
-        'family planning clients',
-        'place of delivery',
-        'health workers',
-        'health centers',
-        'tetanus vaccine',
-    ]
-}
-
 WAZIMAP['topics']['education'] = {
     'topic': 'education',
     'name': 'education',
     'icon': '/static/img/education.png',
-    'order': 3,
     'desc': 'Education data from Twaweza',
     'profiles': [
         'literacy and numeracy tests',
-        'attendance',
+        'school attendance',
+    ]
+}
+
+WAZIMAP['topics']['health'] = {
+    'topic': 'health',
+    'name': 'health',
+    'icon': '/static/img/health.png',
+    'desc': 'Health data',
+    'profiles': [
+        'pepfar',
+        'causes of death',
+        'health centers distribution',
+        'health workers distribution',
+        'family planning clients',
+        'place of delivery',
+        'tetanus vaccine',
     ]
 }
 
@@ -99,7 +97,6 @@ WAZIMAP['topics']['development'] = {
     'topic': 'development',
     'name': 'development',
     'icon': '/static/img/development.png',
-    'order': 4,
     'desc': '',
     'profiles': [
         #todo

@@ -60,15 +60,15 @@
     </div>
 </article>
 
-<article id="attendance" class="clearfix">
+<article id="school_attendance" class="clearfix">
     <header class="section-contents">
         <h1>School attendance</h1>
     </header>
     <div class="section-container">
 
          <section class="clearfix stat-row">
-             <div class="column-half"  id="chart-pie-attendance-out_of_school_dist" data-stat-type="percentage" data-initial-sort="-value" data-chart-title="Percentage of children aged 7-16 who are not in school" data-initial-sort="{{attendance.out_of_school_sort}}"></div>
-             <div class="column-half"  id="chart-pie-attendance-dropped_out_dist" data-stat-type="percentage" data-initial-sort="-value" data-chart-title="Percentage of children aged 9-13 who dropped out of primary school" data-initial-sort="{{attendance.drop_out_sort}}"></div>
+             <div class="column-half"  id="chart-pie-school_attendance-out_of_school_dist" data-stat-type="percentage" data-initial-sort="-value" data-chart-title="Percentage of children aged 7-16 who are not in school" data-initial-sort="{{attendance.out_of_school_sort}}"></div>
+             <div class="column-half"  id="chart-pie-school_attendance-dropped_out_dist" data-stat-type="percentage" data-initial-sort="-value" data-chart-title="Percentage of children aged 9-13 who dropped out of primary school" data-initial-sort="{{attendance.drop_out_sort}}"></div>
         </section>
 
     </div>
@@ -206,41 +206,41 @@
     </div>
 </article>
 
-<article id="health_centers" class="clearfix">
+<article id="health_centers_distribution" class="clearfix">
     <header class="section-contents">
         <h1>Health centers distribution</h1>
     </header>
     <div class="section-container">
          <section class="clearfix stat-row">
-             <p class="source">Source: <a href="{{health_centers.source_link}}">{{health_centers.source_name}}</a></p>
+             <p class="source">Source: <a href="{{health_centers_distribution.source_link}}">{{health_centers_distribution.source_name}}</a></p>
              <br clear="all">
               <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=health_centers.total stat_type='number' %}
+                {% include 'profile/_blocks/_stat_list.html' with stat=health_centers_distribution.total stat_type='number' %}
               </div>
              <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=health_centers.hiv_centers stat_type='number' %}
+                {% include 'profile/_blocks/_stat_list.html' with stat=health_centers_distribution.hiv_centers stat_type='number' %}
               </div>
-             <div class="column-third" id="chart-pie-health_centers-health_center_ownership" data-initial-sort="-value" data-stat-type="scaled-percentage" data-initial-sort="-value" data-chart-title="Ownership"></div>
+             <div class="column-third" id="chart-pie-health_centers_distribution-health_center_ownership" data-initial-sort="-value" data-stat-type="scaled-percentage" data-initial-sort="-value" data-chart-title="Ownership"></div>
              <div class="column-full">
-                 <div id="chart-histogram-health_centers-health_center_data" data-stat-type="scaled-percentage" data-chart-title="Number of health centers by region (2014)"></div>
+                 <div id="chart-histogram-health_centers_distribution-health_center_data" data-stat-type="scaled-percentage" data-chart-title="Number of health centers by region (2014)"></div>
             </div>
         </section>
     </div>
 </article>
 
-<article id="health_workers" class="clearfix">
+<article id="health_workers_distribution" class="clearfix">
     <header class="section-contents">
         <h1>Health workers distribution</h1>
     </header>
     <div class="section-container">
          <section class="clearfix stat-row">
-             <p class="source">Source: <a href="{{health_workers.source_link}}">{{health_workers.source_name}}</a></p>
+             <p class="source">Source: <a href="{{health_workers_distribution.source_link}}">{{health_workers.source_name}}</a></p>
              <br clear="all">
              <div class="column-third">
-                {% include 'profile/_blocks/_stat_list.html' with stat=health_workers.hrh_patient_ratio stat_type='number' %}
+                {% include 'profile/_blocks/_stat_list.html' with stat=health_workers_distribution.hrh_patient_ratio stat_type='number' %}
               </div>
              <div class="column-full">
-                 <div id="chart-histogram-health_workers-health_worker_data" data-stat-type="scaled-percentage" data-chart-title="Number of health workers by region"></div>
+                 <div id="chart-histogram-health_workers_distribution-health_worker_data" data-stat-type="scaled-percentage" data-chart-title="Number of health workers by region"></div>
             </div>
         </section>
     </div>
