@@ -1,7 +1,3 @@
-body {
-    color: #124a47;
-    background-color:#fff;
-}
 #homepage #slippy-map {
   display: none;
 }
@@ -60,8 +56,8 @@ body {
     vertical-align: middle;
 }
 #page-footer {
-    background-color: #1f9e95;
-    border-top: 1px solid #1f9e95;
+    background-color: #084A49;
+    border-top: 1px solid #084A49;
     color: #fff;
 }
 #page-footer ul.ul-icon-list {
@@ -280,10 +276,13 @@ header.section-contents.table-explorer h1 a {
     float:right;
     line-height:22px;
 }
+#suggestdata {
+    width: 820px;
+    float: right;
+}
 #suggestdata .shell {
     border: 3px solid #084A49;
     padding:20px 30px;
-    width: 55%;
 }
 #suggestdata p {
     text-align:center;
@@ -296,6 +295,10 @@ header.section-contents.table-explorer h1 a {
     font-size: 21px;
     padding: 10px;
     border: none;
+    font-family: "Lato", sans-serif;
+}
+#suggestdata button:hover {
+    background-color: #1f9e95;
 }
 .profiles-container {
     float:right;
