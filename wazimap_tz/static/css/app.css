@@ -17,10 +17,11 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: #f7f8f3;
     line-height: 1.4;
     font-size: 14px;
     font-family: "Lato", sans-serif;
+    color: #124a47;
+    background-color:#fff;
 }
 h1, h2, h3 {
     font-family: "Poppins", sans-serif;
@@ -121,7 +122,7 @@ a.permalink:hover span,
 a.permalink:hover i {
     display: inherit;
 }
-p, .serif {
+p, .serif, button {
     font-family: "Lato",  sans-serif;
     margin: 0 0 1em;
     font-weight: 500;
@@ -489,7 +490,7 @@ header.section-contents h1 {
 }
 
 section {
-    margin-bottom: 2em;
+    margin-bottom: 10px;
 }
 .wide-content {
     overflow-x: auto;
@@ -607,7 +608,7 @@ aside#facets {
     padding-left: 14.4em;
 }
 .wrapper {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 .full-width {
@@ -711,22 +712,22 @@ aside#facets {
     margin: 0 2% 1em 0;
 }
 .column-full {
-    width: 98%;
+    width: 100%;
 }
 .column-half {
-    width: 48%;
+    width: 50%;
 }
 .column-third {
-    width: 31%;
+    width: 33%;
 }
 .column-two-thirds {
-    width: 65%;
+    width: 66%;
 }
 .column-quarter {
     width: 25%;
 }
 .column-three-quarters {
-    width: 73%;
+    width: 75%;
 }
 .column-golden-wide {
     width: 58%;
@@ -752,7 +753,6 @@ aside#facets {
 }
 h1.article-header {
     font-size: 30px;
-    margin-bottom: 15px;
     text-align: center;
     font-weight: 500;
 }
@@ -898,7 +898,7 @@ h1.article-header-right {
 }
 .partners .callout.with-icon  img {
     height:75px;
-    width:auto;
+    max-width:100%;
 }
 .callout h3 {
     font-size: 22px;
@@ -2960,7 +2960,7 @@ blockquote {
     color: #fff;
     background-color: #124a47;
     margin: 0 auto;
-    padding: 15px 19px 13px;
+    padding: 13px 19px 13px;
     font-size: 18px;
     border: none;
 }
@@ -2986,7 +2986,9 @@ blockquote {
     font-size: 21px;
     border: none;
 }
-
+.howitworks img {
+    height: 85px !important;
+}
 .howitworks button:focus, .howitworks button:hover {
     background-color:#124a47;
 }
@@ -3013,7 +3015,7 @@ blockquote {
     background-color:#eee;
 }
 .typeahead-container button {
-    background-color: #D75550;
+    background-color: #1f9e95;
     border:none;
     color: #fff;
     float:right;
@@ -3031,15 +3033,14 @@ blockquote {
 .filters {
     position: absolute;
     left: 0;
-    top:700px;
     padding: 10px 20px;
-    height:50px;
     width:340px;
     display:none;
+    top:700px;
 }
 .filters.affix{
     position:fixed;
-    top:90px !important;
+    top:90px;
     right:0;
     display:block;
 }
@@ -3069,7 +3070,7 @@ blockquote {
     font-size:17px;
 }
 .filter-row .hide-filters {
-    color:#D75550;
+    color:#1f9e95;
     float:right;
     padding-right:10px;
 }
@@ -3081,7 +3082,7 @@ blockquote {
 }
 .filter-row-sub .box-checked {
     height:20px;
-    background-color:#D75550;
+    background-color:#1f9e95;
     width:20px;
     float:right;
 }
@@ -3133,7 +3134,7 @@ blockquote {
     background-color:transparent;
 }
 .filters-reset {
-    color:#D75550;
+    color:#1f9e95;
     text-align:center;
     width:100%;
 }
